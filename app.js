@@ -1,6 +1,7 @@
 /**
- * Choice Aire — Steve Jobs-Grade Interaction Engine
- * Matches the 20-Panel High-Converting HVAC Blueprint
+ * Choice Aire — Steve Jobs-Grade Multi-Page Application Engine
+ * Handles Navigation Dropdowns, Mobile Menu, Solution Tabs,
+ * FAQ Accordions, Booking Drawers, and Interactive Forms across all routes.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -33,7 +34,7 @@ function initHeader() {
 }
 
 /* --------------------------------------------------------------------------
-   2. Mobile Menu Navigation
+   2. Mobile Menu Navigation (Supports Sub-menus)
    -------------------------------------------------------------------------- */
 function initMobileMenu() {
   const toggle = document.getElementById('mobileToggle');
@@ -55,13 +56,25 @@ function initMobileMenu() {
       navMenu.style.background = '#FFFFFF';
       navMenu.style.padding = '1.5rem 2rem';
       navMenu.style.borderBottom = '1px solid #E5E7EB';
-      navMenu.style.boxShadow = '0 10px 25px rgba(15, 23, 42, 0.1)';
+      navMenu.style.boxShadow = '0 12px 30px rgba(15, 23, 42, 0.12)';
       toggle.classList.add('active');
+
+      // Ensure dropdowns are visible on mobile click
+      const dropdowns = navMenu.querySelectorAll('.nav-dropdown');
+      dropdowns.forEach(d => {
+        d.style.position = 'static';
+        d.style.opacity = '1';
+        d.style.visibility = 'visible';
+        d.style.transform = 'none';
+        d.style.boxShadow = 'none';
+        d.style.border = 'none';
+        d.style.paddingLeft = '1rem';
+      });
     }
   });
 
-  // Close when clicking nav links
-  const navLinks = navMenu.querySelectorAll('.nav-link');
+  // Close when clicking simple nav links
+  const navLinks = navMenu.querySelectorAll('.nav-dropdown-item, .nav-link:not(.has-sub)');
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
       if (window.innerWidth <= 768) {
@@ -73,14 +86,13 @@ function initMobileMenu() {
 }
 
 /* --------------------------------------------------------------------------
-   3. Panel 3: Solution Category Switcher Tabs
+   3. Homepage: Solution Category Switcher Tabs
    -------------------------------------------------------------------------- */
 const solutionData = {
   repair: {
     title: 'Precision Diagnostics & Rapid Repairs',
     desc: 'From refrigerant leaks and dead capacitors to furnace ignition failures, our factory-trained specialists inspect every component to find the root cause and restore comfort quickly.',
     img: './assets/images/modern_heat_pump.jpg',
-    serviceKey: 'ac-repair',
     checks: [
       'Same-day emergency response in Summit, Stark & Medina',
       'Transparent upfront quote before any work begins',
@@ -91,7 +103,6 @@ const solutionData = {
     title: 'Energy-Efficient System Replacements',
     desc: 'Upgrade to high-efficiency Bryant inverter heat pumps or gas furnaces. Cut your seasonal electric and gas utility usage by up to 55% while qualifying for $2,850 in instant rebates.',
     img: './assets/images/modern_heat_pump.jpg',
-    serviceKey: 'ac-installation',
     checks: [
       'Top-tier Bryant Factory Authorized equipment',
       'Zero-down and 0% APR financing options available',
@@ -102,7 +113,6 @@ const solutionData = {
     title: '$89 Precision 26-Point Tune-Up & Safety Audit',
     desc: 'Seasonal preventative maintenance ensures maximum airflow, prevents unexpected freeze-ups, cleans critical coils, and verifies electrical amp draw and safety shutoffs.',
     img: './assets/images/technician.png',
-    serviceKey: 'tune-up',
     checks: [
       'Comprehensive 26-point furnace and AC inspection',
       'Signature No-Breakdown seasonal guarantee',
@@ -113,7 +123,6 @@ const solutionData = {
     title: 'Whole-Home Air Purification & Humidity Control',
     desc: 'Eliminate airborne allergens, bacteria, dust mites, and odors with whole-house MERV-16 hospital-grade filtration, active UV lamps, and automated steam humidifiers.',
     img: './assets/images/hero_home.jpg',
-    serviceKey: 'general-estimate',
     checks: [
       '99.98% capture rate for airborne contaminants',
       'Relief for allergy and asthma sufferers',
@@ -124,7 +133,6 @@ const solutionData = {
     title: 'Smart Thermostats & Multi-Zone Inverters',
     desc: 'Take complete control of every room in your home. Smart variable-capacity compressors automatically ramp up or down to keep each living zone at your desired temperature.',
     img: './assets/images/modern_heat_pump.jpg',
-    serviceKey: 'ac-installation',
     checks: [
       'Individual temperature control for bedrooms and living rooms',
       'Wi-Fi smartphone control and energy usage analytics',
@@ -169,7 +177,7 @@ function initSolutionTabs() {
 }
 
 /* --------------------------------------------------------------------------
-   4. Panel 14: FAQ Accordion
+   4. Universal FAQ Accordion
    -------------------------------------------------------------------------- */
 function initFaqAccordion() {
   const faqItems = document.querySelectorAll('.faq-item');
@@ -188,7 +196,7 @@ function initFaqAccordion() {
 }
 
 /* --------------------------------------------------------------------------
-   5. Panels 18 & 20: Booking Drawer & Modals
+   5. Booking Drawer & Modals across all routes
    -------------------------------------------------------------------------- */
 function initBookingDrawer() {
   const drawer = document.getElementById('bookingDrawer');
@@ -203,14 +211,15 @@ function initBookingDrawer() {
 
   const openDrawer = (serviceKey) => {
     if (serviceKey && serviceSelect) {
-      // Find matching option or default
       const exists = Array.from(serviceSelect.options).some(opt => opt.value === serviceKey);
       if (exists) {
         serviceSelect.value = serviceKey;
-      } else if (serviceKey === 'tune-up') {
-        serviceSelect.value = 'tune-up';
+      } else if (serviceKey.includes('furnace')) {
+        serviceSelect.value = 'furnace-repair';
       } else if (serviceKey.includes('install')) {
         serviceSelect.value = 'ac-installation';
+      } else if (serviceKey.includes('commercial')) {
+        serviceSelect.value = 'commercial-hvac';
       } else {
         serviceSelect.value = 'general-estimate';
       }
@@ -275,7 +284,7 @@ function initBookingDrawer() {
 }
 
 /* --------------------------------------------------------------------------
-   6. Floating Concierge Widget Click
+   6. Floating Concierge Trigger
    -------------------------------------------------------------------------- */
 function initConcierge() {
   const concierge = document.getElementById('conciergeWidget');
