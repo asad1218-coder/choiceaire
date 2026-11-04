@@ -1,6 +1,7 @@
 /**
  * Choice Aire — Universal Multi-Page Application Logic
  * High-performance, zero-friction client-side interactivity
+ * Steve Jobs-Grade Polish & Tactile Feedback
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -10,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTriageRouting();
   initRoiCalculator();
   initComparisonSlider();
+  initContactForm();
 });
 
 /* --------------------------------------------------------------------------
@@ -96,22 +98,21 @@ function initQuoteDrawer() {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const submitBtn = form.querySelector('button[type="submit"]');
-      const originalText = submitBtn.innerHTML;
       submitBtn.disabled = true;
       submitBtn.innerHTML = 'Transmitting Priority Dispatch...';
 
       setTimeout(() => {
         form.innerHTML = `
           <div style="text-align: center; padding: 2rem 1rem;">
-            <div style="width: 56px; height: 56px; background: rgba(16, 185, 129, 0.15); border: 1px solid #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem auto; color: #10b981; font-size: 1.5rem;">✓</div>
+            <div style="width: 58px; height: 58px; background: rgba(2, 132, 199, 0.15); border: 1px solid #38bdf8; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem auto; color: #38bdf8; font-size: 1.6rem;">✓</div>
             <h3 style="color: #fff; margin-bottom: 0.5rem;">Dispatch Request Confirmed</h3>
-            <p style="font-size: 0.95rem; color: #cbd5e1; margin-bottom: 1.5rem;">Your emergency request has been routed to our Akron Central Dispatcher. A master technician is reviewing your location.</p>
-            <div style="background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.08); padding: 1rem; border-radius: 8px; font-size: 0.88rem; color: #f59e0b; font-weight: 600;">
+            <p style="font-size: 0.96rem; color: #cbd5e1; margin-bottom: 1.5rem;">Your emergency request has been routed to our Akron Central Dispatcher. A master technician is reviewing your location.</p>
+            <div style="background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.08); padding: 1.15rem; border-radius: 10px; font-size: 0.92rem; color: #fbbf24; font-weight: 700;">
               Estimated On-Site Arrival Window: 35-45 Minutes
             </div>
           </div>
         `;
-      }, 1200);
+      }, 1000);
     });
   }
 }
@@ -231,5 +232,26 @@ function initComparisonSlider() {
   window.addEventListener('touchmove', (e) => {
     if (!isDragging) return;
     moveSlider(e.touches[0].clientX);
+  });
+}
+
+/* --------------------------------------------------------------------------
+   7. Contact Page Interactive Form
+   -------------------------------------------------------------------------- */
+function initContactForm() {
+  const form = document.getElementById('contact-page-form');
+  const successBox = document.getElementById('contact-form-success');
+  if (!form || !successBox) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.innerHTML = 'Connecting to Central Dispatch...';
+
+    setTimeout(() => {
+      form.style.display = 'none';
+      successBox.style.display = 'block';
+    }, 1000);
   });
 }
