@@ -17,6 +17,9 @@
   <!-- Typography: Plus Jakarta Sans (Headings) & Inter (Body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="preload" as="image" href="./assets/images/hero_home.webp" type="image/webp" fetchpriority="high">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="./styles.css">
@@ -258,7 +261,10 @@
 
           <div class="hero-visual">
             <div class="hero-visual-card">
-              <img src="./assets/images/hero_home.jpg" alt="Modern Ohio home with outdoor HVAC heat pump unit" width="620" height="460">
+              <picture>
+                <source srcset="./assets/images/hero_home.webp" type="image/webp">
+                <img src="./assets/images/hero_home.jpg" alt="Modern Ohio home with outdoor HVAC heat pump unit" width="620" height="460" fetchpriority="high" loading="eager" decoding="async">
+              </picture>
               <div class="hero-floating-pill">
                 <div class="pulse-dot"></div>
                 <div>
@@ -365,7 +371,10 @@
           </div>
 
           <div class="problem-visual-wrap">
-            <img src="./assets/images/stressed_homeowner.jpg" alt="Homeowner frustrated with thermostat failure" width="560" height="440">
+            <picture>
+              <source srcset="./assets/images/stressed_homeowner.webp" type="image/webp">
+              <img src="./assets/images/stressed_homeowner.jpg" alt="Homeowner frustrated with thermostat failure" width="560" height="440" loading="lazy" decoding="async">
+            </picture>
             <div class="problem-reassurance-badge">
               <strong>Immediate Relief Is One Call Away</strong>
               <span>Our master technicians arrive with fully stocked trucks to diagnose and fix 92% of issues on the spot.</span>
@@ -427,7 +436,7 @@
           </div>
 
           <div class="solution-visual-box">
-            <img src="./assets/images/modern_heat_pump.jpg" alt="High-Efficiency HVAC Inverter Heat Pump" id="solutionTabImg" width="460" height="360">
+            <img src="./assets/images/modern_heat_pump.webp" alt="High-Efficiency HVAC Inverter Heat Pump" id="solutionTabImg" width="460" height="360" loading="lazy" decoding="async">
           </div>
         </div>
 
@@ -598,7 +607,10 @@
 
           <div class="detail-visual">
             <div class="detail-visual-box">
-              <img src="./assets/images/technician.png" alt="Choice Aire Certified Master HVAC Technician Servicing AC" width="600" height="400">
+              <picture>
+                <source srcset="./assets/images/technician.webp" type="image/webp">
+                <img src="./assets/images/technician.png" alt="Choice Aire Certified Master HVAC Technician Servicing AC" width="600" height="400" loading="lazy" decoding="async">
+              </picture>
             </div>
           </div>
         </div>
@@ -640,7 +652,10 @@
 
           <div class="detail-visual">
             <div class="detail-visual-box">
-              <img src="./assets/images/modern_heat_pump.jpg" alt="Premium Inverter Heat Pump and AC Condenser" width="600" height="400">
+              <picture>
+                <source srcset="./assets/images/modern_heat_pump.webp" type="image/webp">
+                <img src="./assets/images/modern_heat_pump.jpg" alt="Premium Inverter Heat Pump and AC Condenser" width="600" height="400" loading="lazy" decoding="async">
+              </picture>
             </div>
           </div>
         </div>
@@ -655,7 +670,7 @@
           
           <div class="trust-signals-left">
             <div class="avatar-group">
-              <img src="./assets/images/sarah_testimonial.jpg" alt="Local Ohio Homeowner">
+              <img src="./assets/images/sarah_testimonial.webp" alt="Local Ohio Homeowner" width="44" height="44" loading="lazy" decoding="async">
               <div class="avatar-placeholder">JM</div>
               <div class="avatar-placeholder">DK</div>
               <div class="avatar-placeholder">TR</div>
@@ -671,9 +686,9 @@
           </div>
 
           <div class="trust-brand-badges">
-            <img src="./assets/images/bryant_logo.png" alt="Bryant Factory Authorized Dealer">
-            <img src="./assets/images/bbb_logo.png" alt="BBB Accredited A+">
-            <img src="./assets/images/nate_logo.png" alt="NATE Certified">
+            <img src="./assets/images/bryant_logo.png" alt="Bryant Factory Authorized Dealer" width="80" height="38" loading="lazy" decoding="async">
+            <img src="./assets/images/bbb_logo.png" alt="BBB Accredited A+" width="78" height="36" loading="lazy" decoding="async">
+            <img src="./assets/images/nate_logo.png" alt="NATE Certified" width="40" height="40" loading="lazy" decoding="async">
             <a href="./reviews.html" class="service-link-explore">See Reviews & Projects →</a>
           </div>
 
@@ -702,7 +717,10 @@
           </div>
 
           <div class="testimonial-avatar-box">
-            <img src="./assets/images/sarah_testimonial.jpg" alt="Sarah M. Choice Aire Customer" width="180" height="180">
+            <picture>
+              <source srcset="./assets/images/sarah_testimonial.webp" type="image/webp">
+              <img src="./assets/images/sarah_testimonial.jpg" alt="Sarah M. Choice Aire Customer" width="180" height="180" loading="lazy" decoding="async">
+            </picture>
             <div class="testimonial-stars">★★★★★</div>
             <div class="testimonial-verified-badge">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
@@ -801,7 +819,10 @@
           </div>
 
           <div class="guide-visual-wrap">
-            <img src="./assets/images/hvac_guide.jpg" alt="HVAC Guide Homeowner Handbook 3D Mockup" width="340" height="420">
+            <picture>
+              <source srcset="./assets/images/hvac_guide.webp" type="image/webp">
+              <img src="./assets/images/hvac_guide.jpg" alt="HVAC Guide Homeowner Handbook 3D Mockup" width="340" height="420" loading="lazy" decoding="async">
+            </picture>
           </div>
         </div>
 
@@ -845,7 +866,10 @@
           </div>
 
           <div class="map-visual-box">
-            <img src="./assets/images/counties_map.png" alt="Northeast Ohio Service Coverage Map" width="540" height="380">
+            <picture>
+              <source srcset="./assets/images/counties_map.webp" type="image/webp">
+              <img src="./assets/images/counties_map.png" alt="Northeast Ohio Service Coverage Map" width="540" height="380" loading="lazy" decoding="async">
+            </picture>
           </div>
         </div>
 
@@ -951,15 +975,15 @@
       <div class="footer-grid">
         
         <div class="footer-brand">
-          <img src="./assets/images/logo.png" alt="Choice Aire Logo">
+          <img src="./assets/images/logo.png" alt="Choice Aire Logo" width="180" height="42" loading="lazy" decoding="async">
           <div class="footer-slogan">Your comfort. Our priority.</div>
           <p>
             Locally owned and operated heating & air conditioning company serving Northeast Ohio for over 35 years. Bryant Factory Authorized Dealer.
           </p>
-          <div style="display: flex; gap: 12px; margin-top: 1rem;">
-            <img src="./assets/images/bbb_logo.png" alt="BBB" height="30" style="background:#fff; border-radius:4px; padding:2px;">
-            <img src="./assets/images/bryant_logo.png" alt="Bryant" height="30" style="background:#fff; border-radius:4px; padding:2px;">
-            <img src="./assets/images/nate_logo.png" alt="NATE" height="30" style="background:#fff; border-radius:4px; padding:2px;">
+          <div style="display: flex; gap: 12px; margin-top: 1rem; align-items: center;">
+            <img src="./assets/images/bbb_logo.png" alt="BBB Accredited" width="65" height="30" loading="lazy" decoding="async" style="background:#fff; border-radius:4px; padding:2px;">
+            <img src="./assets/images/bryant_logo.png" alt="Bryant Authorized" width="63" height="30" loading="lazy" decoding="async" style="background:#fff; border-radius:4px; padding:2px;">
+            <img src="./assets/images/nate_logo.png" alt="NATE Certified" width="30" height="30" loading="lazy" decoding="async" style="background:#fff; border-radius:4px; padding:2px;">
           </div>
         </div>
 
@@ -1024,7 +1048,7 @@
 
   <!-- PANEL 18 & 20: STICKY CONCIERGE & BOOKING DRAWER -->
   <div class="floating-concierge" id="conciergeWidget" title="Chat with Choice Aire Assistant">
-    <img src="./assets/images/sarah_testimonial.jpg" alt="Support Specialist" class="concierge-avatar">
+    <img src="./assets/images/sarah_testimonial.webp" alt="Support Specialist" class="concierge-avatar" width="48" height="48" loading="lazy" decoding="async">
     <div class="concierge-text">
       <div class="concierge-title">How can we help you today?</div>
       <div class="concierge-sub">N.A.T.E. Master Tech on standby</div>

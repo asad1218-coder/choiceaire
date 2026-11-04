@@ -104,7 +104,7 @@ const solutionData = {
   repair: {
     title: 'Precision Diagnostics & Rapid Repairs',
     desc: 'From refrigerant leaks and dead capacitors to furnace ignition failures, our factory-trained specialists inspect every component to find the root cause and restore comfort quickly.',
-    img: './assets/images/modern_heat_pump.jpg',
+    img: './assets/images/modern_heat_pump.webp',
     checks: [
       'Same-day emergency response in Summit, Stark & Medina',
       'Transparent upfront quote before any work begins',
@@ -114,7 +114,7 @@ const solutionData = {
   installation: {
     title: 'Energy-Efficient System Replacements',
     desc: 'Upgrade to high-efficiency Bryant inverter heat pumps or gas furnaces. Cut your seasonal electric and gas utility usage by up to 55% while qualifying for $2,850 in instant rebates.',
-    img: './assets/images/modern_heat_pump.jpg',
+    img: './assets/images/modern_heat_pump.webp',
     checks: [
       'Top-tier Bryant Factory Authorized equipment',
       'Zero-down and 0% APR financing options available',
@@ -124,7 +124,7 @@ const solutionData = {
   maintenance: {
     title: '$89 Precision 26-Point Tune-Up & Safety Audit',
     desc: 'Seasonal preventative maintenance ensures maximum airflow, prevents unexpected freeze-ups, cleans critical coils, and verifies electrical amp draw and safety shutoffs.',
-    img: './assets/images/technician.png',
+    img: './assets/images/technician.webp',
     checks: [
       'Comprehensive 26-point furnace and AC inspection',
       'Signature No-Breakdown seasonal guarantee',
@@ -134,7 +134,7 @@ const solutionData = {
   iaq: {
     title: 'Whole-Home Air Purification & Humidity Control',
     desc: 'Eliminate airborne allergens, bacteria, dust mites, and odors with whole-house MERV-16 hospital-grade filtration, active UV lamps, and automated steam humidifiers.',
-    img: './assets/images/hero_home.jpg',
+    img: './assets/images/hero_home.webp',
     checks: [
       '99.98% capture rate for airborne contaminants',
       'Relief for allergy and asthma sufferers',
@@ -144,7 +144,7 @@ const solutionData = {
   upgrade: {
     title: 'Smart Thermostats & Multi-Zone Inverters',
     desc: 'Take complete control of every room in your home. Smart variable-capacity compressors automatically ramp up or down to keep each living zone at your desired temperature.',
-    img: './assets/images/modern_heat_pump.jpg',
+    img: './assets/images/modern_heat_pump.webp',
     checks: [
       'Individual temperature control for bedrooms and living rooms',
       'Wi-Fi smartphone control and energy usage analytics',
