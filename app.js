@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initBookingDrawer();
   initConcierge();
   initSmoothScroll();
+  initScrollReveal();
+  initStatCounters();
 });
 
 /* --------------------------------------------------------------------------
@@ -155,6 +157,7 @@ const solutionData = {
 
 function initSolutionTabs() {
   const tabsNav = document.getElementById('solutionTabsNav');
+  const panel = document.getElementById('solutionContentPanel');
   if (!tabsNav) return;
 
   const tabButtons = tabsNav.querySelectorAll('.solution-tab-btn');
@@ -165,6 +168,8 @@ function initSolutionTabs() {
 
   tabButtons.forEach(btn => {
     btn.addEventListener('click', () => {
+      if (btn.classList.contains('active')) return;
+
       tabButtons.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
@@ -172,18 +177,30 @@ function initSolutionTabs() {
       const data = solutionData[tabKey];
       if (!data) return;
 
-      if (titleEl) titleEl.textContent = data.title;
-      if (descEl) descEl.textContent = data.desc;
-      if (imgEl) imgEl.src = data.img;
-
-      if (checklistEl) {
-        checklistEl.innerHTML = data.checks.map(c => `
-          <div class="solution-check-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            <span>${c}</span>
-          </div>
-        `).join('');
+      if (panel) {
+        panel.style.opacity = '0.3';
+        panel.style.transform = 'translateY(6px)';
       }
+
+      setTimeout(() => {
+        if (titleEl) titleEl.textContent = data.title;
+        if (descEl) descEl.textContent = data.desc;
+        if (imgEl) imgEl.src = data.img;
+
+        if (checklistEl) {
+          checklistEl.innerHTML = data.checks.map(c => `
+            <div class="solution-check-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>${c}</span>
+            </div>
+          `).join('');
+        }
+
+        if (panel) {
+          panel.style.opacity = '1';
+          panel.style.transform = 'translateY(0)';
+        }
+      }, 150);
     });
   });
 }
@@ -334,3 +351,96 @@ function initSmoothScroll() {
     });
   });
 }
+
+/* --------------------------------------------------------------------------
+   8. Kinetic Scroll Reveal System (Zero-Overhead IntersectionObserver)
+   -------------------------------------------------------------------------- */
+function initScrollReveal() {
+  const revealElements = document.querySelectorAll('.reveal, .reveal-stagger');
+  if (!revealElements.length) return;
+
+  if (!('IntersectionObserver' in window)) {
+    revealElements.forEach(el => el.classList.add('revealed'));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, {
+    root: null,
+    rootMargin: '0px 0px -40px 0px',
+    threshold: 0.12
+  });
+
+  revealElements.forEach(el => observer.observe(el));
+}
+
+/* --------------------------------------------------------------------------
+   9. Animated Stat Counters with Easing
+   -------------------------------------------------------------------------- */
+function initStatCounters() {
+  const statNumbers = document.querySelectorAll('.stat-number[data-target]');
+  if (!statNumbers.length) return;
+
+  const animateCounter = (el) => {
+    const target = parseFloat(el.getAttribute('data-target'));
+    const isK = el.getAttribute('data-format') === 'k';
+    const decimals = parseInt(el.getAttribute('data-decimal') || '0', 10);
+    const suffix = el.getAttribute('data-suffix') || '';
+    const duration = 1800;
+    const startTime = performance.now();
+
+    const update = (now) => {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      // easeOutCubic
+      const easeProgress = 1 - Math.pow(1 - progress, 3);
+      const currentVal = target * easeProgress;
+
+      if (isK) {
+        const valInK = Math.floor(currentVal / 1000);
+        el.textContent = `${valInK}K${suffix}`;
+      } else if (decimals > 0) {
+        el.textContent = `${currentVal.toFixed(decimals)}${suffix}`;
+      } else {
+        el.textContent = `${Math.floor(currentVal)}${suffix}`;
+      }
+
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      } else {
+        if (isK) {
+          el.textContent = `${Math.floor(target / 1000)}K${suffix}`;
+        } else if (decimals > 0) {
+          el.textContent = `${target.toFixed(decimals)}${suffix}`;
+        } else {
+          el.textContent = `${target}${suffix}`;
+        }
+      }
+    };
+
+    requestAnimationFrame(update);
+  };
+
+  if (!('IntersectionObserver' in window)) {
+    statNumbers.forEach(animateCounter);
+    return;
+  }
+
+  const statsObserver = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  statNumbers.forEach(num => statsObserver.observe(num));
+}
+

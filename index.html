@@ -293,38 +293,38 @@
     <!-- CUSTOMER JOURNEYS GATEWAY (5 Distinct Entry Points) -->
     <section style="background:#FFFFFF; padding: 2rem 0; border-bottom: 1px solid var(--color-border-subtle);">
       <div class="container container-wide">
-        <div style="display:grid; grid-template-columns: repeat(5, 1fr); gap: 1rem;" class="journeys-grid">
+        <div style="display:grid; grid-template-columns: repeat(5, 1fr); gap: 1rem;" class="journeys-grid reveal-stagger">
           
           <!-- Journey 1 -->
-          <a href="tel:3309456223" style="display:block; padding:1.2rem; background:var(--color-alert-light); border:1.5px solid rgba(239,68,68,0.3); border-radius:var(--radius-md); text-align:center;">
+          <a href="tel:3309456223" class="journey-card" style="display:block; padding:1.2rem; background:var(--color-alert-light); border:1.5px solid rgba(239,68,68,0.3); border-radius:var(--radius-md); text-align:center;">
             <div style="color:var(--color-alert); font-weight:800; font-size:0.9rem; text-transform:uppercase; margin-bottom:4px;">🚨 Emergency</div>
             <div style="font-weight:700; color:var(--color-neutral-dark); font-size:1rem;">No Heat or AC?</div>
             <div style="font-size:0.82rem; color:var(--color-neutral-muted); margin-top:4px;">Call 24/7: (330) 945-6223</div>
           </a>
 
           <!-- Journey 2 -->
-          <a href="./services/ac-repair.html" style="display:block; padding:1.2rem; background:var(--bg-subtle); border:1.5px solid var(--color-border); border-radius:var(--radius-md); text-align:center;">
+          <a href="./services/ac-repair.html" class="journey-card" style="display:block; padding:1.2rem; background:var(--bg-subtle); border:1.5px solid var(--color-border); border-radius:var(--radius-md); text-align:center;">
             <div style="color:var(--color-primary); font-weight:800; font-size:0.9rem; text-transform:uppercase; margin-bottom:4px;">🔧 Repair</div>
             <div style="font-weight:700; color:var(--color-neutral-dark); font-size:1rem;">Strange Noises / Leak?</div>
             <div style="font-size:0.82rem; color:var(--color-neutral-muted); margin-top:4px;">Same-Day Diagnosis</div>
           </a>
 
           <!-- Journey 3 -->
-          <a href="./services/ac-installation.html" style="display:block; padding:1.2rem; background:var(--bg-subtle); border:1.5px solid var(--color-border); border-radius:var(--radius-md); text-align:center;">
+          <a href="./services/ac-installation.html" class="journey-card" style="display:block; padding:1.2rem; background:var(--bg-subtle); border:1.5px solid var(--color-border); border-radius:var(--radius-md); text-align:center;">
             <div style="color:var(--color-secondary-hover); font-weight:800; font-size:0.9rem; text-transform:uppercase; margin-bottom:4px;">❄️ Replacement</div>
             <div style="font-weight:700; color:var(--color-neutral-dark); font-size:1rem;">System Over 12 Yrs?</div>
             <div style="font-size:0.82rem; color:var(--color-neutral-muted); margin-top:4px;">$2,850 Rebates & Free Quote</div>
           </a>
 
           <!-- Journey 4 -->
-          <a href="./maintenance.html" style="display:block; padding:1.2rem; background:var(--bg-subtle); border:1.5px solid var(--color-border); border-radius:var(--radius-md); text-align:center;">
+          <a href="./maintenance.html" class="journey-card" style="display:block; padding:1.2rem; background:var(--bg-subtle); border:1.5px solid var(--color-border); border-radius:var(--radius-md); text-align:center;">
             <div style="color:var(--color-accent-hover); font-weight:800; font-size:0.9rem; text-transform:uppercase; margin-bottom:4px;">📋 Tune-Up</div>
             <div style="font-weight:700; color:var(--color-neutral-dark); font-size:1rem;">Seasonal Checkup</div>
             <div style="font-size:0.82rem; color:var(--color-neutral-muted); margin-top:4px;">$89 26-Point Inspection</div>
           </a>
 
           <!-- Journey 5 -->
-          <a href="./commercial.html" style="display:block; padding:1.2rem; background:#0F172A; border:1.5px solid #1E293B; border-radius:var(--radius-md); text-align:center; color:#FFF;">
+          <a href="./commercial.html" class="journey-card" style="display:block; padding:1.2rem; background:#0F172A; border:1.5px solid #1E293B; border-radius:var(--radius-md); text-align:center; color:#FFF;">
             <div style="color:#60A5FA; font-weight:800; font-size:0.9rem; text-transform:uppercase; margin-bottom:4px;">🏢 Commercial</div>
             <div style="font-weight:700; color:#FFF; font-size:1rem;">RTUs & Facilities</div>
             <div style="font-size:0.82rem; color:#94A3B8; margin-top:4px;">Custom Sheet Metal & SLAs</div>
@@ -339,7 +339,7 @@
       <div class="container">
         <div class="problem-grid">
           
-          <div class="problem-content">
+          <div class="problem-content reveal">
             <div class="section-eyebrow">Common Warning Signs</div>
             <h2>Is Your HVAC System Giving You Trouble?</h2>
             <p>Heating and cooling problems never happen at a convenient time. If your unit is struggling, catching issues early saves thousands in repair bills.</p>
@@ -381,7 +381,7 @@
             </p>
           </div>
 
-          <div class="problem-visual-wrap">
+          <div class="problem-visual-wrap reveal">
             <picture>
               <source srcset="./assets/images/stressed_homeowner.webp" type="image/webp">
               <img src="./assets/images/stressed_homeowner.jpg" alt="Homeowner frustrated with thermostat failure" width="560" height="440" loading="lazy" decoding="async">
@@ -400,13 +400,13 @@
     <section class="section-solution" id="solutions">
       <div class="container">
         
-        <div class="section-head">
+        <div class="section-head reveal">
           <div class="section-eyebrow">Comprehensive Expertise</div>
           <h2>Complete HVAC Solutions Under One Roof</h2>
           <p>Everything your home or business needs to maintain balanced temperatures, clean purified air, and maximum energy efficiency year-round.</p>
         </div>
 
-        <div class="solution-tabs-nav" id="solutionTabsNav">
+        <div class="solution-tabs-nav reveal" id="solutionTabsNav">
           <button type="button" class="solution-tab-btn active" data-tab="repair">Repair</button>
           <button type="button" class="solution-tab-btn" data-tab="installation">Installation</button>
           <button type="button" class="solution-tab-btn" data-tab="maintenance">Maintenance</button>
@@ -414,7 +414,7 @@
           <button type="button" class="solution-tab-btn" data-tab="upgrade">System Upgrade</button>
         </div>
 
-        <div class="solution-content-panel" id="solutionContentPanel">
+        <div class="solution-content-panel reveal" id="solutionContentPanel">
           <div class="solution-panel-left">
             <h3 id="solutionTabTitle">Precision Diagnostics & Rapid Repairs</h3>
             <p id="solutionTabDesc">
@@ -459,7 +459,7 @@
       <div class="container">
         <div class="benefits-grid">
           
-          <div class="benefits-cards-wrap">
+          <div class="benefits-cards-wrap reveal-stagger">
             <div class="benefit-card">
               <div class="benefit-icon-wrap">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
@@ -493,7 +493,7 @@
             </div>
           </div>
 
-          <div class="benefits-shield-preview">
+          <div class="benefits-shield-preview reveal">
             <div class="shield-icon-large">
               <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
@@ -518,7 +518,7 @@
       <div class="container">
         
         <div class="services-top-bar">
-          <div class="section-head">
+          <div class="section-head reveal">
             <div class="section-eyebrow">Proven Capabilities</div>
             <h2>Our HVAC Services</h2>
             <p>Dedicated residential and commercial solutions backed by factory authorization and licensed master technicians.</p>
@@ -528,7 +528,7 @@
           </a>
         </div>
 
-        <div class="services-grid-4">
+        <div class="services-grid-4 reveal-stagger">
           <div class="service-overview-card">
             <div class="service-card-icon-box">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -583,7 +583,7 @@
         
         <!-- AC Repair Detail -->
         <div class="service-detail-row">
-          <div class="detail-content">
+          <div class="detail-content reveal">
             <span class="detail-badge-pill blue">Same-Day Priority Dispatch</span>
             <h2>AC Repair</h2>
             <div class="detail-tagline">Fast. Reliable. Professional.</div>
@@ -616,7 +616,7 @@
             </div>
           </div>
 
-          <div class="detail-visual">
+          <div class="detail-visual reveal">
             <div class="detail-visual-box">
               <picture>
                 <source srcset="./assets/images/technician.webp" type="image/webp">
@@ -628,7 +628,7 @@
 
         <!-- Installation Detail -->
         <div class="service-detail-row reverse">
-          <div class="detail-content">
+          <div class="detail-content reveal">
             <span class="detail-badge-pill amber">High-Efficiency Upgrades</span>
             <h2>AC & Heat Pump Installation</h2>
             <div class="detail-tagline">Energy-Efficient & Reliable</div>
@@ -661,7 +661,7 @@
             </div>
           </div>
 
-          <div class="detail-visual">
+          <div class="detail-visual reveal">
             <div class="detail-visual-box">
               <picture>
                 <source srcset="./assets/images/modern_heat_pump.webp" type="image/webp">
@@ -711,13 +711,13 @@
     <section class="section-testimonials" id="reviews">
       <div class="container">
         
-        <div class="section-head">
+        <div class="section-head reveal">
           <div class="section-eyebrow">Real Experiences</div>
           <h2>What Our Customers Are Saying</h2>
           <p>Read genuine reviews from local homeowners who rely on Choice Aire for their home comfort.</p>
         </div>
 
-        <div class="testimonial-card-single">
+        <div class="testimonial-card-single reveal">
           <div class="testimonial-quote-wrap">
             <div class="quote-mark">“</div>
             <div class="testimonial-quote-text">
@@ -747,17 +747,17 @@
     <section class="section-stats" id="stats">
       <div class="container">
         
-        <div class="section-head" style="margin-bottom: 2.5rem;">
+        <div class="section-head reveal" style="margin-bottom: 2.5rem;">
           <h2 style="color: #FFFFFF;">Our Impact in Ohio</h2>
           <p style="color: #94A3B8;">Decades of steadfast reliability, honest pricing, and master-level craftsmanship.</p>
         </div>
 
-        <div class="stats-grid">
+        <div class="stats-grid reveal-stagger">
           <div class="stat-item">
             <div class="stat-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
             </div>
-            <div class="stat-number">10K+</div>
+            <div class="stat-number" data-target="10000" data-format="k" data-suffix="+">10K+</div>
             <div class="stat-label">Happy Customers</div>
           </div>
 
@@ -765,7 +765,7 @@
             <div class="stat-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             </div>
-            <div class="stat-number">4.9★</div>
+            <div class="stat-number" data-target="4.9" data-decimal="1" data-suffix="★">4.9★</div>
             <div class="stat-label">Customer Rating</div>
           </div>
 
@@ -781,7 +781,7 @@
             <div class="stat-icon">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </div>
-            <div class="stat-number">35+</div>
+            <div class="stat-number" data-target="35" data-suffix="+">35+</div>
             <div class="stat-label">Years in Business</div>
           </div>
         </div>
@@ -793,7 +793,7 @@
     <section class="section-guide" id="guides">
       <div class="container">
         
-        <div class="guide-box">
+        <div class="guide-box reveal">
           <div class="guide-content">
             <div class="section-eyebrow">Homeowner Knowledge</div>
             <h2>HVAC Tips & Maintenance Handbook</h2>
@@ -845,7 +845,7 @@
       <div class="container">
         
         <div class="local-presence-grid">
-          <div class="local-presence-content">
+          <div class="local-presence-content reveal">
             <div class="section-eyebrow">Local Commitment</div>
             <h2>Proudly Serving Ohio Communities</h2>
             <p>
@@ -876,7 +876,7 @@
             </a>
           </div>
 
-          <div class="map-visual-box">
+          <div class="map-visual-box reveal">
             <picture>
               <source srcset="./assets/images/counties_map.webp" type="image/webp">
               <img src="./assets/images/counties_map.png" alt="Northeast Ohio Service Coverage Map" width="540" height="380" loading="lazy" decoding="async">
@@ -891,13 +891,13 @@
     <section class="section-faq" id="faq">
       <div class="container">
         
-        <div class="section-head">
+        <div class="section-head reveal">
           <div class="section-eyebrow">Clear Answers</div>
           <h2>Frequently Asked Questions</h2>
           <p>Everything you need to know about our heating, cooling, and maintenance services.</p>
         </div>
 
-        <div class="faq-list">
+        <div class="faq-list reveal">
           <div class="faq-item active">
             <button type="button" class="faq-question">
               <span>How often should I service my HVAC system?</span>
@@ -945,7 +945,7 @@
     <!-- PANEL 15: CALL TO ACTION (MID) -->
     <section class="section-mid-cta">
       <div class="container">
-        <div class="mid-cta-box">
+        <div class="mid-cta-box reveal">
           <div class="mid-cta-text">
             <h2>Need Help Now?</h2>
             <p>Get a Free Estimate or Schedule Priority Dispatch Today!</p>
@@ -969,7 +969,7 @@
     <section class="section-final-cta">
       <div class="final-cta-bg" style="background-image: url('./assets/images/hero_home.jpg');"></div>
       <div class="container">
-        <div class="final-cta-content">
+        <div class="final-cta-content reveal">
           <h2>Ready for Ultimate Comfort?</h2>
           <p>Schedule your HVAC service today and feel the difference of authentic Ohio craftsmanship, upfront transparent pricing, and 100% guaranteed satisfaction.</p>
           <button type="button" class="btn btn-primary btn-lg open-booking-btn" data-service="final-cta">
