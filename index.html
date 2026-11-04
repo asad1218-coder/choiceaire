@@ -3,1451 +3,558 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Choice Aire | Precision Heating & Air Conditioning • Akron & Canton, OH</title>
-  <meta name="description" content="Northeast Ohio's premier 24/7 HVAC engineering authority. NATE-certified emergency furnace & AC repair, ultra-efficient Bryant system replacement. Backed by our 10-Year No-Lemon Guarantee. Call (330) 945-6223.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <title>Choice Aire | Northeast Ohio's Premier Heating & Air Conditioning Empire</title>
+  <meta name="description" content="Since 1989, Choice Aire has provided elite HVAC, Heat Pump, and Commercial cooling solutions across Akron, Canton, and Northeast Ohio. Ohio Lic. #30725 & #30306.">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❄️</text></svg>">
 </head>
 <body>
 
-  <!-- ====================================================================
-       CHUNK 1: EMERGENCY STICKY HEADER & NAV
-       ==================================================================== -->
-  <div class="emergency-top-ribbon">
-    <div class="container ribbon-inner">
-      <div class="ribbon-status">
-        <span class="live-dot pulse"></span>
-        <span class="status-text">
-          <strong>Technicians on Duty Now</strong> across Akron & Canton <span class="dim">•</span> <span class="highlight">Average Arrival: 38 Mins</span>
-        </span>
+  <!-- Top Notification Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span class="top-badge"><span class="radar-dot"></span> <strong>Live Dispatch:</strong> 4 Vans Currently En Route in Summit & Stark County</span>
+        <span>Ohio State Lic. #30725 & #30306</span>
       </div>
-      <div class="ribbon-meta">
-        <span class="meta-item">Ohio Lic. #30725 & #30306</span>
-        <span class="sep">•</span>
-        <span class="meta-item rebate-highlight">⚡ $2,000 Federal IRA Rebates Active</span>
-        <span class="sep">•</span>
-        <a href="tel:3309456223" class="ribbon-phone">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-          24/7 Hotline: (330) 945-6223
-        </a>
+      <div class="top-bar-right">
+        <span>Bryant Factory Authorized Dealer</span>
+        <span>BBB Accredited A+</span>
+        <a href="tel:3309456223" style="color: var(--color-ice-blue-light); font-weight: 700;">24/7 Emergency Line: (330) 945-6223</a>
       </div>
     </div>
   </div>
 
-  <header class="main-header" id="mainHeader">
-    <div class="container nav-inner">
-      <a href="#" class="brand-logo">
-        <div class="logo-mark">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14" stroke="#0ea5e9"/>
-            <circle cx="12" cy="12" r="3.5" fill="#f59e0b" stroke="none"/>
+  <!-- Main Header & Navigation -->
+  <header class="header">
+    <div class="container header-inner">
+      <!-- Logo -->
+      <a href="./index.html" class="logo">
+        <div class="logo-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93"/>
           </svg>
         </div>
-        <div class="brand-text">
-          <span class="brand-name">CHOICE AIRE</span>
-          <span class="brand-sub">HEATING & AIR CONDITIONING</span>
+        <div class="logo-text">
+          <span class="logo-title">CHOICE AIRE</span>
+          <span class="logo-sub">Heating & Air Conditioning</span>
         </div>
       </a>
 
-      <nav class="desktop-nav">
-        <a href="#diagnostics" class="nav-link">Diagnostics</a>
-        <a href="#pricing" class="nav-link">Pricing & Financing</a>
-        <a href="#case-studies" class="nav-link">Case Studies</a>
-        <a href="#guarantees" class="nav-link">Guarantees</a>
-        <a href="#divisions" class="nav-link">Commercial & Residential</a>
-        <a href="#proof" class="nav-link">Job Proof</a>
-        <a href="#reviews" class="nav-link">Reviews</a>
+      <!-- Desktop Nav -->
+      <nav>
+        <ul class="nav-list">
+          <li><a href="./index.html" class="nav-link active">Home</a></li>
+          <li class="has-dropdown">
+            <a href="./services.html" class="nav-link">Services ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="./services.html#emergency-ac">Emergency AC Repair</a></li>
+              <li><a href="./services.html#heat-pumps">High-Efficiency Heat Pumps</a></li>
+              <li><a href="./services.html#furnaces">Furnaces & Heating</a></li>
+              <li><a href="./services.html#commercial">Commercial HVAC & Chillers</a></li>
+              <li><a href="./services.html#air-quality">Indoor Air Quality (IAQ)</a></li>
+            </ul>
+          </li>
+          <li><a href="./case-studies.html" class="nav-link">Case Studies</a></li>
+          <li><a href="./pricing.html" class="nav-link">Pricing & Rebates</a></li>
+          <li><a href="./about.html" class="nav-link">About Us</a></li>
+          <li><a href="./contact.html" class="nav-link">Contact</a></li>
+        </ul>
       </nav>
 
-      <div class="nav-actions">
-        <a href="tel:3309456223" class="btn btn-call">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-          <span class="call-txt">
-            <small>24/7 RAPID DISPATCH</small>
-            <strong>(330) 945-6223</strong>
-          </span>
+      <!-- Header CTAs -->
+      <div class="header-ctas">
+        <a href="tel:3309456223" class="btn btn-outline btn-sm">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          (330) 945-6223
         </a>
-        <button class="btn btn-primary open-drawer-btn" data-service="Emergency Dispatch">
-          <span>Book Dispatch</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <button type="button" class="btn btn-primary btn-sm open-drawer-btn" id="quoteBtn">Schedule Dispatch</button>
+        <button class="mobile-toggle" aria-label="Toggle Navigation">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
         </button>
       </div>
-
-      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Menu">
-        <span></span><span></span><span></span>
-      </button>
     </div>
   </header>
 
-  <!-- ====================================================================
-       CHUNK 2: THE HERO SECTION (CINEMATIC AUTHORITY)
-       ==================================================================== -->
-  <section class="hero-section">
-    <div class="hero-bg-fx">
-      <div class="ambient-glow cyan"></div>
-      <div class="ambient-glow amber"></div>
-      <div class="grid-overlay"></div>
-    </div>
-
-    <div class="container hero-content-grid">
-      <div class="hero-copy">
-        <div class="trust-pill">
-          <div class="stars">★★★★★</div>
-          <span class="pill-text"><strong>4.9/5 Rating</strong> Across 1,480+ Local Homeowners</span>
-          <span class="pill-divider">|</span>
-          <span class="pill-highlight">Bryant Factory Authorized</span>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="stars">★★★★★</span>
+          <span>4.9 Star Rating · 14,000+ Homes Protected Since 1989</span>
         </div>
-
-        <h1 class="hero-headline">
-          Precision Heating & Air Conditioning.
-          <span class="highlight-gradient">Done Right Today, or You Don’t Pay.</span>
-        </h1>
-
-        <p class="hero-subtext">
-          Fast, flat-rate emergency repair and ultra-efficient system replacements across Akron, Canton & Northeast Ohio. Fully licensed (OH #30725 & #30306), N.A.T.E. certified master mechanics, backed by our 10-Year No-Lemon Guarantee.
+        <h1>Heating & Air Conditioning for <span class="text-cyan">Northeast Ohio's</span> Premier Properties</h1>
+        <p class="lead">
+          When your system fails in freezing January or blistering July, don't gamble with uncertified subcontractors. Choice Aire delivers master Bryant-certified technicians, transparent flat rates, and guaranteed same-day relief.
         </p>
-
-        <div class="hero-cta-group">
-          <button class="btn btn-emergency open-drawer-btn" data-service="Emergency Dispatch">
-            <span class="btn-icon">🚨</span>
-            <span class="btn-text">
-              <strong>Request Emergency Dispatch</strong>
-              <small>Average Arrival: Under 45 Mins</small>
-            </span>
+        <div class="hero-actions">
+          <button type="button" class="btn btn-primary btn-lg open-drawer-btn" data-service="emergency">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+            </svg>
+            Book Guaranteed Dispatch
           </button>
-          <button class="btn btn-glass open-quiz-btn">
-            <span class="btn-icon">⚡</span>
-            <span class="btn-text">
-              <strong>Calculate New HVAC Cost</strong>
-              <small>Instant 60-Sec Estimator & Rebates</small>
-            </span>
-          </button>
+          <a href="./case-studies.html" class="btn btn-outline btn-lg">View Proven Results</a>
         </div>
-
-        <div class="hero-badges-row">
-          <div class="mini-badge">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <span>Ohio Lic. #30725 & #30306</span>
-          </div>
-          <div class="mini-badge">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
-            <span>$0 Overtime or Weekend Fees</span>
-          </div>
-          <div class="mini-badge">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-            <span>$0 Down, 0% APR Financing</span>
-          </div>
+        <div class="hero-trust-bar">
+          <span>✓ 100% Upfront Pricing</span>
+          <span>✓ Bryant Factory Dealer</span>
+          <span>✓ No-Lemon Guarantee</span>
+          <span>✓ 0% APR Financing Available</span>
         </div>
       </div>
 
-      <!-- HERO DISPATCH COMMAND CENTER -->
-      <div class="hero-visual">
-        <div class="dispatch-cockpit-card">
-          <div class="cockpit-header">
-            <div class="live-indicator">
-              <span class="live-dot pulse"></span>
-              <span>LIVE FLEET RADAR</span>
-            </div>
-            <div class="system-time" id="systemClock">Akron Hub: ONLINE</div>
+      <!-- Hero Right: Live Emergency Triage Card -->
+      <div class="hero-card">
+        <div class="hero-card-header">
+          <div>
+            <div class="hero-card-title">Instant Emergency Triage</div>
+            <div style="font-size: 0.8rem; color: var(--text-muted);">Select your symptom for immediate dispatch routing</div>
           </div>
-
-          <div class="radar-visual">
-            <div class="radar-circle circle-1"></div>
-            <div class="radar-circle circle-2"></div>
-            <div class="radar-circle circle-3"></div>
-            <div class="radar-sweep"></div>
-            
-            <div class="tech-ping ping-1" style="top: 32%; left: 45%;">
-              <div class="ping-wave"></div>
-              <div class="ping-dot"></div>
-              <div class="ping-label">Steve • Akron (0.8 mi)</div>
-            </div>
-            <div class="tech-ping ping-2" style="top: 58%; left: 68%;">
-              <div class="ping-wave"></div>
-              <div class="ping-dot"></div>
-              <div class="ping-label">Dave • Canton (En Route)</div>
-            </div>
-            <div class="tech-ping ping-3" style="top: 65%; left: 30%;">
-              <div class="ping-wave"></div>
-              <div class="ping-dot"></div>
-              <div class="ping-label">Van #4 • Cuyahoga Falls</div>
-            </div>
+          <div class="dispatch-status-pill">
+            <span class="radar-dot"></span> Radar Active
           </div>
-
-          <div class="cockpit-stats">
-            <div class="stat-box">
-              <span class="stat-lbl">Active Service Fleet</span>
-              <span class="stat-val num-cyan">14 Vans On Duty</span>
+        </div>
+        <div class="hero-triage-list">
+          <button type="button" class="triage-btn" data-issue="AC Blowing Warm Air">
+            <div class="triage-btn-left">
+              <div class="triage-icon">❄️</div>
+              <span>AC Blowing Warm Air</span>
             </div>
-            <div class="stat-box">
-              <span class="stat-lbl">Next Arrival Window</span>
-              <span class="stat-val num-amber">Within 38 Mins</span>
+            <span class="triage-eta">ETA ~35 Min</span>
+          </button>
+          <button type="button" class="triage-btn" data-issue="Furnace Locked Out / No Heat">
+            <div class="triage-btn-left">
+              <div class="triage-icon">🔥</div>
+              <span>Furnace Won't Ignite / No Heat</span>
             </div>
-            <div class="stat-box">
-              <span class="stat-lbl">Emergency Response</span>
-              <span class="stat-val num-green">24/7 Guaranteed</span>
+            <span class="triage-eta">Priority Red</span>
+          </button>
+          <button type="button" class="triage-btn" data-issue="Heat Pump Frozen / Outdoor Ice">
+            <div class="triage-btn-left">
+              <div class="triage-icon">⚡</div>
+              <span>Heat Pump Frozen or Clicking</span>
             </div>
-          </div>
-
-          <div class="cockpit-action">
-            <a href="tel:3309456223" class="btn btn-block btn-primary">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-              <span>Instant Dispatch Call: (330) 945-6223</span>
-            </a>
-          </div>
+            <span class="triage-eta">ETA ~45 Min</span>
+          </button>
+          <button type="button" class="triage-btn" data-issue="High Energy Bills / System Replacement">
+            <div class="triage-btn-left">
+              <div class="triage-icon">💰</div>
+              <span>System Replacement & $2K Tax Credit</span>
+            </div>
+            <span class="triage-eta">Free Estimate</span>
+          </button>
+        </div>
+        <div style="text-align: center; font-size: 0.82rem; color: var(--text-muted);">
+          Akron HQ Dispatch: <strong>(330) 945-6223</strong> · 1940 Englewood Ave
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ====================================================================
-       CHUNK 3: PEACE-OF-MIND METRIC TICKER
-       ==================================================================== -->
-  <section class="ticker-section">
+  <!-- Stats Banner (Lawnline Style) -->
+  <section class="stats-banner">
+    <div class="container stats-grid">
+      <div class="stat-item">
+        <div class="stat-value num text-cyan">$15.4M+</div>
+        <div class="stat-label">Energy Dollars Saved for Homeowners</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value num">14,200+</div>
+        <div class="stat-label">Ohio Homes & Facilities Serviced</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value num text-amber">35+</div>
+        <div class="stat-label">Years of Continuous Ownership (Est. 1989)</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value num text-emerald">100%</div>
+        <div class="stat-label">N.A.T.E. Master-Certified Technicians</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Services Showcase -->
+  <section class="section" id="services">
     <div class="container">
-      <div class="ticker-grid">
-        <div class="ticker-item">
-          <div class="ticker-num">&lt; 45 Mins</div>
-          <div class="ticker-label">Average Emergency Arrival</div>
-          <div class="ticker-sub">Fast response across Summit & Stark</div>
+      <div class="section-header">
+        <span class="section-label">Core Capabilities</span>
+        <h2>Engineering-Grade <span class="text-cyan">HVAC Solutions</span></h2>
+        <p>From emergency diagnostics on zero-degree winter nights to whisper-quiet 24 SEER inverter installations, our systems are calibrated for Northeast Ohio's extreme climate swings.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93"/>
+            </svg>
+          </div>
+          <h3>Emergency AC Repair</h3>
+          <p>Rapid dispatch for frozen evaporator coils, failed dual-run capacitors, locked compressors, and refrigerant leaks. Flat-rate pricing with zero overtime shock.</p>
+          <ul class="service-features-list">
+            <li>✓ Same-day arrival guarantee</li>
+            <li>✓ Fully stocked Bryant factory parts on truck</li>
+            <li>✓ Comprehensive digital safety checklist</li>
+          </ul>
+          <a href="./services.html#emergency-ac" class="service-link">View Service Details →</a>
         </div>
-        <div class="ticker-item">
-          <div class="ticker-num">100%</div>
-          <div class="ticker-label">N.A.T.E. Certified Master Techs</div>
-          <div class="ticker-sub">Drug-tested & background-checked</div>
+
+        <!-- Service 2 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+            </svg>
+          </div>
+          <h3>High-Efficiency Heat Pumps</h3>
+          <p>Next-generation cold-climate heat pumps delivering extreme heating efficiency down to -15°F while slashing summer cooling bills by up to 50%.</p>
+          <ul class="service-features-list">
+            <li>✓ Eligible for $2,000 Federal IRA 25C Tax Credit</li>
+            <li>✓ Up to 24 SEER2 whisper-quiet operation</li>
+            <li>✓ Instant utility rebate filing included</li>
+          </ul>
+          <a href="./services.html#heat-pumps" class="service-link">View Service Details →</a>
         </div>
-        <div class="ticker-item">
-          <div class="ticker-num">$0</div>
-          <div class="ticker-label">Overtime, Night or Holiday Surcharges</div>
-          <div class="ticker-sub">Guaranteed flat rate 24/7/365</div>
+
+        <!-- Service 3 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2c5 4 8 8.5 8 13a8 8 0 0 1-16 0c0-4.5 3-9 8-13z"/>
+            </svg>
+          </div>
+          <h3>Furnaces & Heating</h3>
+          <p>98% AFUE modulating gas furnaces that eliminate cold spots and dry air. Engineered with stainless steel secondary heat exchangers for decades of reliable warmth.</p>
+          <ul class="service-features-list">
+            <li>✓ 10-Year parts and labor warranty</li>
+            <li>✓ Carbon monoxide & draft safety testing</li>
+            <li>✓ Custom sheet metal duct transitions</li>
+          </ul>
+          <a href="./services.html#furnaces" class="service-link">View Service Details →</a>
         </div>
-        <div class="ticker-item">
-          <div class="ticker-num">10 Years</div>
-          <div class="ticker-label">Parts & Labor Guarantee</div>
-          <div class="ticker-sub">Backed by our Ironclad "No-Lemon" policy</div>
+
+        <!-- Service 4 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+            </svg>
+          </div>
+          <h3>Commercial HVAC & Chillers</h3>
+          <p>Mission-critical rooftop packaged units (RTUs), chillers, and split systems for medical offices, high-volume restaurants, and industrial warehouses across Akron & Canton.</p>
+          <ul class="service-features-list">
+            <li>✓ Guaranteed < 45-minute commercial SLA</li>
+            <li>✓ Cold-chain and inventory protection</li>
+            <li>✓ Custom preventative maintenance plans</li>
+          </ul>
+          <a href="./services.html#commercial" class="service-link">View Service Details →</a>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 15a4 4 0 0 0 4 4h10a4 4 0 0 0 4-4 4 4 0 0 0-4-4 6 6 0 0 0-11-2 4 4 0 0 0-3 6z"/>
+            </svg>
+          </div>
+          <h3>Indoor Air Quality (IAQ)</h3>
+          <p>Whole-home hospital-grade MERV-16 air filtration, whole-house steam humidifiers, and germicidal UV lamps that destroy 99% of airborne pathogens and mold spores.</p>
+          <ul class="service-features-list">
+            <li>✓ Total allergen and dust eradication</li>
+            <li>✓ Silent duct sanitizer integration</li>
+            <li>✓ Winter dry skin and static shock relief</li>
+          </ul>
+          <a href="./services.html#air-quality" class="service-link">View Service Details →</a>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3>Choice Comfort Club VIP</h3>
+          <p>Comprehensive bi-annual 26-point precision tune-ups that prevent 95% of unexpected breakdowns, preserve manufacturer warranties, and grant front-of-line VIP dispatch.</p>
+          <ul class="service-features-list">
+            <li>✓ Zero overtime or emergency dispatch fees</li>
+            <li>✓ 15% discount on all repairs</li>
+            <li>✓ $50 annual replacement credit accumulation</li>
+          </ul>
+          <a href="./pricing.html" class="service-link">View Membership Tiers →</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ====================================================================
-       STRATEGIC AUTHORITY PARTNERSHIP BANNER
-       ==================================================================== -->
-  <section class="partner-callout-section">
+  <!-- Featured Case Studies Spotlight (Lawnline Style) -->
+  <section class="section" style="background: var(--bg-surface);">
     <div class="container">
-      <div class="partner-callout-card">
-        <div class="partner-badge-glow">OFFICIAL MANUFACTURER AUTHORITY</div>
-        <div class="partner-content-flex">
-          <div class="partner-text-block">
-            <h3 class="partner-title">Bryant Factory Authorized Dealer & Ohio Clean Energy Hub</h3>
-            <p class="partner-desc">Choice Aire is designated as a premier Tier-1 dealer in Northeast Ohio. We directly process your <strong>$2,000 Federal IRA 25C Clean Energy Tax Credit</strong> and local utility rebates (Dominion East Ohio & FirstEnergy) straight onto your invoice — zero paperwork burden for you.</p>
-          </div>
-          <div class="partner-perks">
-            <div class="perk-pill"><span>✓</span> Up to $1,200 Instant Local Utility Rebates</div>
-            <div class="perk-pill"><span>✓</span> $2,000 Federal IRA Clean Energy Credit</div>
-            <div class="perk-pill"><span>✓</span> Factory-Stocked OEM Bryant Parts on Mobile Vans</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====================================================================
-       CHUNK 4: INTERACTIVE ISSUE DIAGNOSTIC TOOL ("WHAT'S GOING WRONG?")
-       ==================================================================== -->
-  <section class="section diagnostics-section" id="diagnostics">
-    <div class="container">
-      <div class="section-head text-center">
-        <div class="section-badge">INTERACTIVE TRIAGE</div>
-        <h2 class="section-title">What Is Going Wrong With Your HVAC System?</h2>
-        <p class="section-desc">Select your symptoms below to get instant diagnostic guidance and dispatch our nearest master technician pre-briefed on your issue.</p>
-      </div>
-
-      <div class="diagnostics-grid">
-        <!-- CARD 1 -->
-        <div class="diagnostic-card issue-card" data-issue="AC Blowing Warm Air" data-desc="Refrigerant leak, capacitor failure, or frozen coils">
-          <div class="card-icon-box">❄️</div>
-          <div class="card-body">
-            <span class="card-urgency-tag">High Priority</span>
-            <h3 class="card-title">AC Blowing Warm Air?</h3>
-            <p class="card-snippet">Fan runs but air is lukewarm or humid. Commonly caused by low refrigerant, failed run capacitor, or frozen evaporator coils.</p>
-            <ul class="diagnostic-bullets">
-              <li>Same-day cooldown guarantee</li>
-              <li>Factory Bryant & universal parts on trucks</li>
-              <li>EPA-certified refrigerant recovery</li>
-            </ul>
-          </div>
-          <div class="card-action">
-            <button class="btn btn-diag">
-              <span>Fix Warm Air Today</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-          </div>
-        </div>
-
-        <!-- CARD 2 -->
-        <div class="diagnostic-card issue-card" data-issue="Furnace Not Heating or Clicking" data-desc="Ignitor failure, flame sensor, or cracked heat exchanger">
-          <div class="card-icon-box">🔥</div>
-          <div class="card-body">
-            <span class="card-urgency-tag urgent-tag">Urgent Safety</span>
-            <h3 class="card-title">Furnace Clicking or No Heat?</h3>
-            <p class="card-snippet">Furnace cycles on and shuts down immediately, clicks repeatedly, or blows cold air. Potential carbon monoxide or ignition safety lockout.</p>
-            <ul class="diagnostic-bullets">
-              <li>Comprehensive 21-point safety inspection</li>
-              <li>Electronic heat exchanger integrity testing</li>
-              <li>24/7 immediate winter heating restore</li>
-            </ul>
-          </div>
-          <div class="card-action">
-            <button class="btn btn-diag">
-              <span>Restore Heating Fast</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-          </div>
-        </div>
-
-        <!-- CARD 3 -->
-        <div class="diagnostic-card issue-card" data-issue="Strange Noises or Burning Smell" data-desc="Blower motor bearing, electrical wiring, or belt failure">
-          <div class="card-icon-box">🔊</div>
-          <div class="card-body">
-            <span class="card-urgency-tag urgent-tag">Hazard Prevention</span>
-            <h3 class="card-title">Screeching, Banging or Burning Smell?</h3>
-            <p class="card-snippet">Loud metal-on-metal screeching, ductwork banging, or burning plastic odor. Shut down unit immediately to prevent motor fire.</p>
-            <ul class="diagnostic-bullets">
-              <li>Emergency electrical amp-draw test</li>
-              <li>Blower wheel & bearings replacement</li>
-              <li>Electrical fire hazard shutdown protocol</li>
-            </ul>
-          </div>
-          <div class="card-action">
-            <button class="btn btn-diag">
-              <span>Dispatch Noise Specialist</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-          </div>
-        </div>
-
-        <!-- CARD 4 -->
-        <div class="diagnostic-card issue-card" data-issue="Commercial HVAC or Refrigeration Breakdown" data-desc="Rooftop RTUs, walk-in coolers, ventilation & sheet metal">
-          <div class="card-icon-box">🏢</div>
-          <div class="card-body">
-            <span class="card-urgency-tag">Commercial Division</span>
-            <h3 class="card-title">Commercial RTU or Refrigeration Down?</h3>
-            <p class="card-snippet">Serving restaurants, offices, clinics, and industrial facilities. Rooftop unit repair, commercial chillers, beverage systems, and duct fabrication.</p>
-            <ul class="diagnostic-bullets">
-              <li>Priority commercial SLA dispatch</li>
-              <li>Certified commercial refrigeration mechanics</li>
-              <li>Custom in-house sheet metal shop</li>
-            </ul>
-          </div>
-          <div class="card-action">
-            <button class="btn btn-diag">
-              <span>Request Commercial Tech</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====================================================================
-       CHUNK 5: TRANSPARENT GOOD / BETTER / BEST PRICING & FINANCING MATRIX
-       ==================================================================== -->
-  <section class="section pricing-section" id="pricing">
-    <div class="container">
-      <div class="section-head text-center">
-        <div class="section-badge">UPFRONT INTEGRITY • ZERO HIDDEN FEES</div>
-        <h2 class="section-title">Transparent System Pricing & Financing</h2>
-        <p class="section-desc">Contractors who hide pricing often hit you with surprise fees. At Choice Aire, we provide clear tier choices with $0 down and 0% APR financing options.</p>
-      </div>
-
-      <div class="pricing-matrix-grid">
-        <!-- TIER 1 -->
-        <div class="pricing-card">
-          <div class="tier-badge">TIER 1 • DEPENDABLE STANDARD</div>
-          <h3 class="tier-title">Reliable Standard</h3>
-          <p class="tier-subtitle">15–16 SEER2 High Efficiency System</p>
-          <div class="tier-price-box">
-            <div class="tier-monthly">
-              <span class="currency">$</span>
-              <span class="amount" id="tier1Monthly">89</span>
-              <span class="period">/month</span>
-            </div>
-            <div class="tier-total">or from $4,850 installed upfront</div>
-          </div>
-          <div class="tier-features">
-            <div class="feat-item check"><span>Single-Stage Bryant Dependable Compressor</span></div>
-            <div class="feat-item check"><span>Digital Programmable Smart Thermostat</span></div>
-            <div class="feat-item check"><span>Standard Sound Reduction Package (72 dB)</span></div>
-            <div class="feat-item check"><span>10-Year Parts Limited Factory Warranty</span></div>
-            <div class="feat-item check"><span>Choice Aire 1-Year Labor Guarantee</span></div>
-            <div class="feat-item uncheck"><span>Qualifies for $2,000 IRA Federal Tax Rebate</span></div>
-          </div>
-          <button class="btn btn-outline-light open-drawer-btn" data-service="Tier 1 System Quote">
-            Select Reliable Standard
-          </button>
-        </div>
-
-        <!-- TIER 2: FEATURED -->
-        <div class="pricing-card featured">
-          <div class="popular-ribbon">MOST POPULAR IN NORTHEAST OHIO</div>
-          <div class="tier-badge featured-badge">TIER 2 • OPTIMAL BALANCE</div>
-          <h3 class="tier-title">High-Efficiency Two-Stage</h3>
-          <p class="tier-subtitle">18 SEER2 Bryant Preferred Series</p>
-          <div class="tier-price-box">
-            <div class="tier-monthly">
-              <span class="currency">$</span>
-              <span class="amount" id="tier2Monthly">129</span>
-              <span class="period">/month</span>
-            </div>
-            <div class="tier-total">or from $6,950 installed upfront</div>
-            <div class="rebate-pill">Includes up to $1,200 State & Utility Rebates</div>
-          </div>
-          <div class="tier-features">
-            <div class="feat-item check"><span>Two-Stage Compressor (Ultra-Low Energy Draw)</span></div>
-            <div class="feat-item check"><span>Ecobee Smart Thermostat with Room Sensors</span></div>
-            <div class="feat-item check"><span>Whisper-Quiet Operation (Under 64 dB)</span></div>
-            <div class="feat-item check"><span>Enhanced Summer Dehumidification Mode</span></div>
-            <div class="feat-item check"><span>10-Year Parts & 5-Year Labor Guarantee</span></div>
-            <div class="feat-item check"><span>Qualifies for Local Ohio Utility Rebates</span></div>
-          </div>
-          <button class="btn btn-primary open-drawer-btn" data-service="Tier 2 High-Efficiency Quote">
-            Get Tier 2 Estimate
-          </button>
-        </div>
-
-        <!-- TIER 3 -->
-        <div class="pricing-card">
-          <div class="tier-badge luxury-badge">TIER 3 • THE LUXURY SUITE</div>
-          <h3 class="tier-title">Inverter Ultimate Variable</h3>
-          <p class="tier-subtitle">20+ SEER2 Bryant Evolution System</p>
-          <div class="tier-price-box">
-            <div class="tier-monthly">
-              <span class="currency">$</span>
-              <span class="amount" id="tier3Monthly">169</span>
-              <span class="period">/month</span>
-            </div>
-            <div class="tier-total">or from $9,400 installed upfront</div>
-            <div class="rebate-pill gold">Qualifies for $2,000 Federal IRA Tax Credit</div>
-          </div>
-          <div class="tier-features">
-            <div class="feat-item check"><span>Full Variable-Speed Inverter (50+ Modulation Speeds)</span></div>
-            <div class="feat-item check"><span>Bryant Evolution Connex Smart Touch Control</span></div>
-            <div class="feat-item check"><span>Library-Quiet Acoustic Blanket (54 dB)</span></div>
-            <div class="feat-item check"><span>Whole-Home HEPA & Electronic Air Purifier</span></div>
-            <div class="feat-item check"><span>10-Year Full Parts & 10-Year Labor No-Lemon Warranty</span></div>
-            <div class="feat-item check"><span>Max Federal Clean Energy IRA $2,000 Credit</span></div>
-          </div>
-          <button class="btn btn-outline-light open-drawer-btn" data-service="Tier 3 Inverter Ultimate Quote">
-            Inquire Inverter Ultimate
-          </button>
-        </div>
-      </div>
-
-      <!-- FINANCING INTERACTIVE CALCULATOR BAR -->
-      <div class="financing-calculator-box">
-        <div class="calc-header">
-          <div class="calc-info">
-            <h4 class="calc-title">Interactive Monthly Investment Calculator</h4>
-            <p class="calc-sub">Select your estimated credit profile and down payment to see real-time financing terms.</p>
-          </div>
-          <div class="calc-apr-badge">
-            <span>Special: 0% APR for 18 Months Available</span>
-          </div>
-        </div>
-
-        <div class="calc-controls">
-          <div class="control-group">
-            <label for="creditScoreSelect">Credit Profile:</label>
-            <select id="creditScoreSelect" class="calc-select">
-              <option value="tierA" selected>Excellent (740+) — 0% Promotional / 6.99%</option>
-              <option value="tierB">Good (680–739) — 8.99% Standard</option>
-              <option value="tierC">Fair (620–679) — Flexible Terms</option>
-            </select>
-          </div>
-
-          <div class="control-group range-group">
-            <div class="range-labels">
-              <label for="downPaymentSlider">Down Payment:</label>
-              <span class="range-val" id="downPaymentValue">$0 Down</span>
-            </div>
-            <input type="range" id="downPaymentSlider" min="0" max="3000" step="500" value="0" class="calc-range">
-          </div>
-
-          <div class="control-group">
-            <button class="btn btn-amber open-drawer-btn" data-service="Pre-Qualify Financing">
-              Apply For Instant $0 Down Pre-Approval
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- INSTANT 10-YEAR ENERGY ROI & REBATES CALCULATOR -->
-      <div class="roi-calculator-box">
-        <div class="roi-head">
-          <div class="roi-badge">APPLE-GRADE FINANCIAL TOOL</div>
-          <h3 class="roi-title">Calculate Your 10-Year Energy Savings & Government Rebates</h3>
-          <p class="roi-subtitle">Older HVAC units (10–12 SEER) run continuously, wasting hundreds every season. See your projected savings with a Bryant Inverter.</p>
-        </div>
-        <div class="roi-grid">
-          <div class="roi-input-pane">
-            <div class="roi-control">
-              <label for="systemAgeSelect">Current HVAC System Age:</label>
-              <select id="systemAgeSelect" class="calc-select">
-                <option value="old10">10–14 Years Old (12-13 SEER)</option>
-                <option value="old15" selected>15–19 Years Old (10-11 SEER)</option>
-                <option value="old20">20+ Years Old (R-22 Freon Era, 8-10 SEER)</option>
-              </select>
-            </div>
-            <div class="roi-control">
-              <div class="range-labels">
-                <label for="currentBillSlider">Average Monthly Energy Bill:</label>
-                <span class="range-val" id="currentBillVal">$350/mo</span>
-              </div>
-              <input type="range" id="currentBillSlider" min="150" max="650" step="25" value="350" class="calc-range">
-            </div>
-          </div>
-          <div class="roi-output-pane">
-            <div class="roi-stat-row">
-              <div class="roi-stat-col">
-                <span class="roi-num" id="annualSavingsVal">$1,680</span>
-                <span class="roi-lbl">Annual Utility Bill Reduction</span>
-              </div>
-              <div class="roi-stat-col">
-                <span class="roi-num" id="taxCreditVal">$2,000</span>
-                <span class="roi-lbl">Federal IRA 25C Tax Credit</span>
-              </div>
-            </div>
-            <div class="roi-total-box">
-              <span class="roi-total-lbl">Estimated 10-Year Total Net Financial Gain:</span>
-              <span class="roi-total-val" id="tenYearSavingsVal">$18,800+</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====================================================================
-       CHUNK 5B: VERIFIED HARDCORE CASE STUDIES (PROVEN ROI)
-       ==================================================================== -->
-  <section class="section case-studies-section" id="case-studies">
-    <div class="container">
-      <div class="section-head text-center">
-        <div class="section-badge">QUANTIFIABLE EVIDENCE</div>
-        <h2 class="section-title">Verified Northeast Ohio Case Studies</h2>
-        <p class="section-desc">We do not ask you to trust vague promises. Here are the exact numbers, utility bill reductions, and emergency outcomes from real local homeowners and commercial managers.</p>
+      <div class="section-header">
+        <span class="section-label">Proven Impact</span>
+        <h2>Real Ohio Homes. <span class="text-amber">Verifiable Numbers.</span></h2>
+        <p>We don't deal in empty marketing promises. Here is how our engineering transformations directly lowered bills and safeguarded commercial revenue across Ohio.</p>
       </div>
 
       <div class="case-studies-grid">
-        <!-- CASE STUDY 1: RESIDENTIAL SAVINGS -->
-        <div class="case-study-card">
-          <div class="cs-badge">RESIDENTIAL UPGRADE • CANTON, OH</div>
-          <h3 class="cs-title">The Henderson Residence</h3>
-          <p class="cs-property">3,400 Sq Ft Single-Family Home • 21-Year-Old Lennox R-22 System</p>
-          
-          <div class="cs-metrics-box">
-            <div class="cs-metric-highlight">
-              <span class="cs-metric-big">$460 → $175/mo</span>
-              <span class="cs-metric-sub">62% Winter Gas & Electric Reduction</span>
-            </div>
-            <div class="cs-metric-subgrid">
-              <div class="cs-sub-metric">
-                <span class="val">+$2,850</span>
-                <span class="lbl">IRA & Dominion Rebates</span>
-              </div>
-              <div class="cs-sub-metric">
-                <span class="val">100% $0 Down</span>
-                <span class="lbl">Financed at $129/mo</span>
-              </div>
-            </div>
+        <!-- Case 1 -->
+        <div class="case-card">
+          <div class="case-card-location">
+            <span>Canton, Ohio · Residential</span>
+            <span class="case-badge">62% Energy Cut</span>
           </div>
-
-          <div class="cs-story">
-            <strong>The Problem:</strong> Homeowner’s furnace struggled in sub-freezing January weather, running constantly and causing noisy vibrations.
-            <br><strong>The Solution:</strong> Replaced with a Bryant Evolution 18 SEER2 two-stage heat pump and matched high-efficiency gas furnace with custom laser-straight transition duct.
-            <br><strong>The Financial Reality:</strong> Monthly energy savings ($285/mo) significantly exceed monthly financing ($129/mo), delivering net-positive cashflow from month one!
+          <div class="case-metric-box">
+            <div class="case-big-num num">$460 → $175/mo</div>
+            <div class="case-metric-sub">Monthly Electric Bill Slashed</div>
           </div>
-
-          <div class="cs-action">
-            <button class="btn btn-outline-light btn-block open-drawer-btn" data-service="Henderson Case Study Quote">
-              Replicate These Savings in Canton &rarr;
-            </button>
+          <h3 style="font-size: 1.2rem; color: #fff; margin-bottom: 0.5rem;">The Henderson Residence</h3>
+          <p>Replaced an ailing 19-year-old 10-SEER Freon unit with a Bryant Evolution Extreme 24-SEER Variable Inverter. Monthly energy savings completely exceeded their low financing payment.</p>
+          <div class="case-stats-row">
+            <span>Rebates: <strong>+$2,850 Captured</strong></span>
+            <span>Payback: <strong>Net Cash Flow Positive</strong></span>
           </div>
         </div>
 
-        <!-- CASE STUDY 2: COMMERCIAL EMERGENCY SLA -->
-        <div class="case-study-card featured-cs">
-          <div class="cs-featured-ribbon">CRITICAL EMERGENCY RESCUE</div>
-          <div class="cs-badge">COMMERCIAL SLA • CUYAHOGA FALLS, OH</div>
-          <h3 class="cs-title">The Bistro at Falls (Dining & Bar)</h3>
-          <p class="cs-property">High-Volume Restaurant • Walk-in Freezer & Rooftop RTU Breakdown</p>
-          
-          <div class="cs-metrics-box">
-            <div class="cs-metric-highlight">
-              <span class="cs-metric-big">28 Min Arrival</span>
-              <span class="cs-metric-sub">Zero Dining Downtime • $0 Food Loss</span>
-            </div>
-            <div class="cs-metric-subgrid">
-              <div class="cs-sub-metric">
-                <span class="val">$14,500</span>
-                <span class="lbl">Perishable Food Saved</span>
-              </div>
-              <div class="cs-sub-metric">
-                <span class="val">1 Trip Fix</span>
-                <span class="lbl">OEM Compressor on Truck</span>
-              </div>
-            </div>
+        <!-- Case 2 -->
+        <div class="case-card">
+          <div class="case-card-location">
+            <span>Cuyahoga Falls, Ohio · Commercial</span>
+            <span class="case-badge" style="background: rgba(14, 165, 233, 0.12); color: var(--color-ice-blue-light); border-color: rgba(14, 165, 233, 0.3);">28-Min SLA</span>
           </div>
-
-          <div class="cs-story">
-            <strong>The Emergency:</strong> On a 92°F Friday at 3:15 PM, the kitchen walk-in compressor seized and the main dining rooftop unit blew its contactor, threatening dinner rush.
-            <br><strong>The Response:</strong> Master technician Steve dispatched from our Cuyahoga Falls mobile hub, arriving in 28 minutes. Repaired by 4:45 PM.
-            <br><strong>The Impact:</strong> Zero cancelled reservations and complete protection of perishable meat and seafood inventory.
+          <div class="case-metric-box">
+            <div class="case-big-num num">$14,500 Saved</div>
+            <div class="case-metric-sub">Perishable Inventory Protected</div>
           </div>
-
-          <div class="cs-action">
-            <button class="btn btn-primary btn-block open-drawer-btn" data-service="Commercial SLA Priority">
-              Get Commercial Priority SLA &rarr;
-            </button>
+          <h3 style="font-size: 1.2rem; color: #fff; margin-bottom: 0.5rem;">The Bistro at Falls (Restaurant)</h3>
+          <p>Walk-in refrigeration condenser failed on a 92°F Friday dinner rush. Choice Aire commercial van arrived in 28 minutes, replaced the dual contactor, and saved their full weekend dinner service.</p>
+          <div class="case-stats-row">
+            <span>Downtime: <strong>0 Dining Minutes Lost</strong></span>
+            <span>Response: <strong>28-Min On-Site</strong></span>
           </div>
         </div>
 
-        <!-- CASE STUDY 3: MEDICAL FACILITY -->
-        <div class="case-study-card">
-          <div class="cs-badge">HEALTHCARE FACILITY • AKRON, OH</div>
-          <h3 class="cs-title">St. Luke Medical Arts Complex</h3>
-          <p class="cs-property">Multi-Tenant Medical Office • Strict Noise & Particulate Mandate</p>
-          
-          <div class="cs-metrics-box">
-            <div class="cs-metric-highlight">
-              <span class="cs-metric-big">42% Sound Cut</span>
-              <span class="cs-metric-sub">Whisper 52 dB Acoustic Spec Met</span>
-            </div>
-            <div class="cs-metric-subgrid">
-              <div class="cs-sub-metric">
-                <span class="val">MERV-16</span>
-                <span class="lbl">Hospital-Grade Air Scrubbing</span>
-              </div>
-              <div class="cs-sub-metric">
-                <span class="val">10-Yr Parts</span>
-                <span class="lbl">Commercial Warranty</span>
-              </div>
-            </div>
+        <!-- Case 3 -->
+        <div class="case-card">
+          <div class="case-card-location">
+            <span>Akron, Ohio · Medical Complex</span>
+            <span class="case-badge">Cleanroom IAQ</span>
           </div>
+          <div class="case-metric-box">
+            <div class="case-big-num num">52 dB Whisper</div>
+            <div class="case-metric-sub">42% Sound Cut + MERV-16 Clean</div>
+          </div>
+          <h3 style="font-size: 1.2rem; color: #fff; margin-bottom: 0.5rem;">St. Luke Medical Arts</h3>
+          <p>Outdated rooftop equipment was rattling consultation rooms and failing air filtration audits. We re-engineered custom acoustic transitions and integrated germicidal UV-C purification.</p>
+          <div class="case-stats-row">
+            <span>Air Purity: <strong>99.9% Pathogen Kill</strong></span>
+            <span>Noise: <strong>Whisper 52 dB</strong></span>
+          </div>
+        </div>
+      </div>
 
-          <div class="cs-story">
-            <strong>The Challenge:</strong> Patients and doctors complained of noisy airflow and stale air in consultation rooms. Previous contractor quoted standard noisy package units.
-            <br><strong>The Solution:</strong> Engineered 4 custom sound-attenuated rooftop curb adapters in our in-house sheet metal facility and installed Bryant variable-capacity systems with MERV-16 UV germicidal irradiation.
-          </div>
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="./case-studies.html" class="btn btn-outline btn-lg">Explore Full Case Studies & Before/Afters →</a>
+      </div>
+    </div>
+  </section>
 
-          <div class="cs-action">
-            <button class="btn btn-outline-light btn-block open-drawer-btn" data-service="Medical Complex Quote">
-              Inquire Facility Modernization &rarr;
-            </button>
+  <!-- Strategic Bryant Authorized Allocation -->
+  <section class="section">
+    <div class="container about-grid">
+      <div>
+        <span class="section-label">Strategic Allocation</span>
+        <h2>Why Bryant Factory Authorization <span class="text-cyan">Protects Your Investment</span></h2>
+        <p style="margin-bottom: 1.25rem;">
+          Only the top 3% of HVAC contractors in North America earn Bryant Factory Authorized Dealer status. This isn't a bought sticker — it requires rigorous factory training, ongoing customer satisfaction audits, and 100% genuine OEM tooling.
+        </p>
+        <p style="margin-bottom: 1.75rem;">
+          When Choice Aire installs your Bryant system, your 10-year parts warranty is backed directly by the factory, with 100% money-back satisfaction guarantees built into your contract.
+        </p>
+        <a href="./about.html" class="btn btn-primary">Learn About Our 35-Year Legacy</a>
+      </div>
+
+      <div class="about-card-badge-box">
+        <div class="credentials-list">
+          <div class="credential-item">
+            <h4>Bryant FAD</h4>
+            <p>Factory Authorized Dealer</p>
           </div>
+          <div class="credential-item">
+            <h4>N.A.T.E. Master</h4>
+            <p>Certified Tech Excellence</p>
+          </div>
+          <div class="credential-item">
+            <h4>EPA Universal</h4>
+            <p>Clean Refrigerant Certified</p>
+          </div>
+          <div class="credential-item">
+            <h4>BBB A+</h4>
+            <p>Zero Unresolved Complaints</p>
+          </div>
+        </div>
+        <div style="background: rgba(0,0,0,0.3); border: 1px solid var(--border-subtle); padding: 1.25rem; border-radius: 8px; font-size: 0.88rem; color: var(--text-secondary);">
+          <strong>Direct Utility Rebate Integration:</strong> As an authorized trade ally, we file your Dominion East Ohio and FirstEnergy rebates directly on your behalf — putting up to $2,850 in cash back into your hands.
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ====================================================================
-       CHUNK 6: THE 4 IRONCLAD GUARANTEES (RISK REVERSAL)
-       ==================================================================== -->
-  <section class="section guarantees-section" id="guarantees">
+  <!-- CTA Banner -->
+  <section class="cta-banner">
     <div class="container">
-      <div class="section-head text-center">
-        <div class="section-badge">ABSOLUTE PEACE OF MIND</div>
-        <h2 class="section-title">The 4 Ironclad Guarantees</h2>
-        <p class="section-desc">We bear 100% of the financial risk so you never have to worry about paying for shoddy workmanship or lemon equipment.</p>
-      </div>
-
-      <div class="guarantees-grid">
-        <div class="guarantee-card">
-          <div class="g-icon-wrap">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><circle cx="12" cy="11" r="3"/></svg>
-          </div>
-          <h3 class="g-title">1. The "No-Lemon" Guarantee</h3>
-          <p class="g-text">If the compressor on your new Bryant system fails in the first 5 years of ownership, we do not simply patch it — we replace the entire outdoor condensing unit with a brand new one free of charge.</p>
-        </div>
-
-        <div class="guarantee-card">
-          <div class="g-icon-wrap">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-          </div>
-          <h3 class="g-title">2. The "Clean Home" Guarantee</h3>
-          <p class="g-text">Our technicians always wear protective shoe covers and lay durable floor runners through all work zones. If we leave behind any mess or trace of dirt, we pay for a professional maid service to clean your home.</p>
-        </div>
-
-        <div class="guarantee-card">
-          <div class="g-icon-wrap">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <h3 class="g-title">3. The "On-Time or We Pay You"</h3>
-          <p class="g-text">We value your schedule. If our dispatch tech arrives even 5 minutes past your agreed scheduled service window without notifying you, we immediately credit $50 toward your repair or maintenance bill.</p>
-        </div>
-
-        <div class="guarantee-card">
-          <div class="g-icon-wrap">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-          </div>
-          <h3 class="g-title">4. Upfront Flat-Rate Guarantee</h3>
-          <p class="g-text">No hourly bill shock. You receive a guaranteed flat-rate price quotation in writing before any technician touches a screw. What we quote is exactly what you pay — no surprise fees ever.</p>
-        </div>
+      <h2>Ready for Guaranteed Indoor Comfort?</h2>
+      <p>Whether you need emergency triage right now or a transparent upfront quote on a next-generation inverter system, our master technicians are ready.</p>
+      <div class="cta-banner-actions">
+        <a href="tel:3309456223" class="btn btn-primary btn-lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          Call (330) 945-6223
+        </a>
+        <button type="button" class="btn btn-outline btn-lg open-drawer-btn">Schedule Online Dispatch</button>
       </div>
     </div>
   </section>
 
-  <!-- ====================================================================
-       CHUNK 7: REAL JOB PHOTOS & ARCHITECTURAL BEFORE/AFTER SLIDER
-       ==================================================================== -->
-  <section class="section proof-section" id="proof">
+  <!-- Footer -->
+  <footer class="footer">
     <div class="container">
-      <div class="section-head text-center">
-        <div class="section-badge">ENGINEERING CRAFTSMANSHIP</div>
-        <h2 class="section-title">Local Northeast Ohio Job Proof</h2>
-        <p class="section-desc">Laser-straight insulated line sets, precision electrical conduit, and pristine Bryant installations across Summit, Stark, Portage, and Medina counties.</p>
-      </div>
-
-      <!-- ARCHITECTURAL BEFORE / AFTER SLIDER -->
-      <div class="comparison-block">
-        <div class="comparison-header">
-          <div class="comp-tag">INTERACTIVE SPECIFICATION • HIGHLAND SQUARE, AKRON, OH</div>
-          <h3 class="comp-title">Slide to Compare: 18-Year-Old Corroded Plant vs. Bryant Preferred Evolution</h3>
-        </div>
-
-        <div class="before-after-container" id="beforeAfterContainer">
-          <!-- AFTER: BRYANT EVOLUTION -->
-          <div class="img-wrapper after-wrapper">
-            <div class="visual-card-clean after-card">
-              <div class="card-badge-flag new-badge">AFTER: BRYANT EVOLUTION 18 SEER2</div>
-              <div class="spec-telemetry-box">
-                <div class="spec-chip">Acoustics: 54 dB (Library Quiet)</div>
-                <div class="spec-chip">Line Set: Laser-Straight Insulated</div>
-                <div class="spec-chip">Pad: Composite Vibration Isolation</div>
-              </div>
-              <div class="hvac-graphic-sim new-system">
-                <div class="hvac-housing modern-housing">
-                  <div class="modern-fan rotating"></div>
-                  <div class="oem-badge">BRYANT AUTHORIZED OEM</div>
-                </div>
-              </div>
-              <div class="comp-caption">
-                <strong>Highland Square Replacement (Completed Yesterday)</strong>
-                <p>Two-Stage Bryant Condenser installed with hurricane-rated composite pad, seamless electrical disconnect whip, and 18 SEER2 energy efficiency.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- BEFORE: AGED R-22 UNIT -->
-          <div class="img-wrapper before-wrapper" id="beforeWrapper">
-            <div class="visual-card-clean before-card">
-              <div class="card-badge-flag old-badge">BEFORE: FAILING 1998 R-22 PLANT</div>
-              <div class="spec-telemetry-box old-spec">
-                <div class="spec-chip warn">Acoustics: 78 dB (High Vibration)</div>
-                <div class="spec-chip warn">Energy Draw: $420/mo Utility Spike</div>
-                <div class="spec-chip warn">Refrigerant: R-22 Phaseout Leak</div>
-              </div>
-              <div class="hvac-graphic-sim old-system">
-                <div class="hvac-housing old-housing">
-                  <div class="rust-indicator">RUSTED HEAT EXCHANGER</div>
-                </div>
-              </div>
-              <div class="comp-caption">
-                <strong>Original System Before Choice Aire Overhaul</strong>
-                <p>Electric bills spiking to $420/month, loud compressor struggling in 88°F humidity, and corroded electrical disconnect.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- SLIDER DIVIDER HANDLE -->
-          <div class="slider-handle" id="sliderHandle">
-            <div class="handle-line"></div>
-            <div class="handle-button">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18-6-6 6-6M15 6l6 6-6 6"/></svg>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- RECENT COMPLETED JOBS FEED -->
-      <div class="recent-jobs-grid">
-        <div class="job-item">
-          <div class="job-meta">
-            <span class="job-pin">📍 North Canton, OH (Zip 44720)</span>
-            <span class="job-date">Completed 6 Hours Ago</span>
-          </div>
-          <h4 class="job-title">Emergency Furnace Inducer Motor Replaced</h4>
-          <p class="job-desc">Homeowner without heat at 18°F. Master mechanic Dave dispatched in 32 minutes. Repaired on first trip with truck-stocked Bryant OEM parts.</p>
-          <div class="job-tag-list">
-            <span>Furnace Repair</span>
-            <span>N.A.T.E. Master</span>
-            <span>42 Min SLA</span>
-          </div>
-        </div>
-
-        <div class="job-item">
-          <div class="job-meta">
-            <span class="job-pin">📍 Cuyahoga Falls, OH (Zip 44221)</span>
-            <span class="job-date">Completed Yesterday</span>
-          </div>
-          <h4 class="job-title">Full System Replacement: Bryant 2-Stage Heat Pump</h4>
-          <p class="job-desc">Replaced failing oil furnace with modern high-efficiency heat pump. Client qualified for $2,000 IRA Federal tax credits and $600 local rebates.</p>
-          <div class="job-tag-list">
-            <span>Heat Pump Install</span>
-            <span>$2,000 Tax Credit</span>
-            <span>10-Yr Guarantee</span>
-          </div>
-        </div>
-
-        <div class="job-item">
-          <div class="job-meta">
-            <span class="job-pin">📍 Medina, OH (Zip 44256)</span>
-            <span class="job-date">Completed 2 Days Ago</span>
-          </div>
-          <h4 class="job-title">Commercial Rooftop 10-Ton RTU Installation</h4>
-          <p class="job-desc">Fast crane lift and precision custom sheet metal transition curb for local medical clinic. Zero downtime during business operating hours.</p>
-          <div class="job-tag-list">
-            <span>Commercial RTU</span>
-            <span>Custom Sheet Metal</span>
-            <span>Zero Downtime</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====================================================================
-       CHUNK 8: OFFICIAL MANUFACTURER & REGULATORY AUTHORITY
-       ==================================================================== -->
-  <section class="section authority-section">
-    <div class="container">
-      <div class="auth-head">
-        <span>ACCREDITATIONS & FACTORY STANDARDS</span>
-      </div>
-      <div class="auth-badges-grid">
-        <div class="auth-badge-card">
-          <div class="badge-icon-circ">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <div class="badge-texts">
-            <strong>Bryant Factory Authorized Dealer</strong>
-            <span>Rigorous factory technical training & genuine OEM parts</span>
-          </div>
-        </div>
-
-        <div class="auth-badge-card">
-          <div class="badge-icon-circ">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-          </div>
-          <div class="badge-texts">
-            <strong>N.A.T.E. Certified Master Techs</strong>
-            <span>North American Technician Excellence gold standard</span>
-          </div>
-        </div>
-
-        <div class="auth-badge-card">
-          <div class="badge-icon-circ">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          </div>
-          <div class="badge-texts">
-            <strong>EPA Universal Certified</strong>
-            <span>Federal compliance for safe refrigerant recovery</span>
-          </div>
-        </div>
-
-        <div class="auth-badge-card">
-          <div class="badge-icon-circ">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          </div>
-          <div class="badge-texts">
-            <strong>BBB A+ Accredited Business</strong>
-            <span>Proven decades of verified customer satisfaction in Ohio</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====================================================================
-       CHUNK 9: RESIDENTIAL VS COMMERCIAL DIVISION TABS + B2B SLA TIERS
-       ==================================================================== -->
-  <section class="section divisions-section" id="divisions">
-    <div class="container">
-      <div class="section-head text-center">
-        <div class="section-badge">FULL-SPECTRUM MASTERY</div>
-        <h2 class="section-title">Specialized HVAC Divisions</h2>
-        <p class="section-desc">Whether restoring comfort to a private residence or maintaining multi-ton rooftop plants for a commercial complex, our dedicated divisions deliver exact engineering.</p>
-      </div>
-
-      <!-- DIVISION TAB BUTTONS -->
-      <div class="division-tabs-bar">
-        <button class="div-tab-btn active" data-tab="residential">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-          <span>Residential Heating & Cooling</span>
-        </button>
-        <button class="div-tab-btn" data-tab="commercial">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M9 22v-4h6v4M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/></svg>
-          <span>Commercial HVAC, Refrigeration & Sheet Metal</span>
-        </button>
-      </div>
-
-      <!-- TAB 1: RESIDENTIAL -->
-      <div class="division-tab-content active" id="tab-residential">
-        <div class="div-content-grid">
-          <div class="div-card">
-            <div class="div-icon">🔥</div>
-            <h3 class="div-title">Furnace Repair & Installation</h3>
-            <p class="div-text">Keep your home warm during harsh Northeast Ohio winters. From sudden blower motor burnouts to high-efficiency furnace replacements, our trucks are stocked to fix 90% of issues on the very first call.</p>
-            <ul class="div-list">
-              <li>24/7 emergency heat restoration</li>
-              <li>Carbon monoxide safety inspection</li>
-              <li>High-efficiency 96%+ AFUE systems</li>
-            </ul>
-          </div>
-
-          <div class="div-card">
-            <div class="div-icon">❄️</div>
-            <h3 class="div-title">Air Conditioning & Heat Pumps</h3>
-            <p class="div-text">Beat summer humidity with Bryant multi-stage and variable inverter air conditioners. Quiet operation, precision temperature control, and dramatic reductions in your monthly electric bill.</p>
-            <ul class="div-list">
-              <li>Fast leak detection & refrigerant recharge</li>
-              <li>Dual-fuel heat pump transitions</li>
-              <li>Whisper-quiet compressor technology</li>
-            </ul>
-          </div>
-
-          <div class="div-card">
-            <div class="div-icon">🌿</div>
-            <h3 class="div-title">Whole-Home Indoor Air Quality</h3>
-            <p class="div-text">Eliminate airborne allergens, dust mites, virus particles, and winter dry air. We install hospital-grade HEPA filters, steam humidifiers, and UV air purifiers into your existing ductwork.</p>
-            <ul class="div-list">
-              <li>Whole-home Aprilaire humidifiers</li>
-              <li>Photocatalytic germicidal UV lights</li>
-              <li>Smart Ecobee & Bryant Evolution integration</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- TAB 2: COMMERCIAL -->
-      <div class="division-tab-content" id="tab-commercial">
-        <div class="div-content-grid">
-          <div class="div-card">
-            <div class="div-icon">🏗️</div>
-            <h3 class="div-title">Rooftop Package Units (RTU)</h3>
-            <p class="div-text">Design, crane rigging, installation, and planned maintenance for commercial rooftop heating and cooling units up to 50+ tons. Minimize downtime for your business and tenants.</p>
-            <ul class="div-list">
-              <li>Fast crane dispatch & curb adaptation</li>
-              <li>Economizer control & ventilation compliance</li>
-              <li>Commercial maintenance service agreements</li>
-            </ul>
-          </div>
-
-          <div class="div-card">
-            <div class="div-icon">🧊</div>
-            <h3 class="div-title">Commercial Refrigeration & Beverage</h3>
-            <p class="div-text">Dedicated commercial refrigeration mechanics serving restaurants, supermarkets, breweries, and food service establishments throughout the Akron/Canton corridor.</p>
-            <ul class="div-list">
-              <li>Walk-in coolers & freezers</li>
-              <li>Beverage lines & ice machine repair</li>
-              <li>Emergency refrigeration cold-chain rescue</li>
-            </ul>
-          </div>
-
-          <div class="div-card">
-            <div class="div-icon">⚙️</div>
-            <h3 class="div-title">Custom In-House Sheet Metal Shop</h3>
-            <p class="div-text">Unlike contractors who buy cheap pre-made flex duct, Choice Aire owns and operates our own precision sheet metal fabrication shop for custom transitions, ductwork, and ventilation.</p>
-            <ul class="div-list">
-              <li>Computerized laser cutting & brake forming</li>
-              <li>Commercial exhaust & make-up air systems</li>
-              <li>Industrial dust collection & ventilation</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- B2B COMMERCIAL SLA TIERS -->
-        <div class="commercial-sla-box">
-          <div class="sla-header">
-            <span class="sla-badge">B2B FACILITY MANAGEMENT CONTRACTS</span>
-            <h3 class="sla-title">Commercial Preventative Maintenance Programs</h3>
-            <p class="sla-sub">Tailored service level agreements (SLAs) designed for property managers, restaurant operators, and facility executives.</p>
-          </div>
-          <div class="sla-grid">
-            <div class="sla-card">
-              <span class="sla-tier-tag">PROGRAM 1 • RETAIL & OFFICES</span>
-              <h4>Core Property Care</h4>
-              <p>Bi-annual comprehensive coil cleaning, belt & filter replacements, electrical safety check, and guaranteed 2-hour priority emergency window.</p>
-            </div>
-            <div class="sla-card featured-sla">
-              <span class="sla-tier-tag highlight">PROGRAM 2 • RESTAURANTS & CLINICS</span>
-              <h4>Priority Enterprise SLA</h4>
-              <p>&lt; 45-minute guaranteed dispatch, $0 emergency dispatch fees, dedicated assigned master mechanic, and cold-chain refrigeration monitoring.</p>
-            </div>
-            <div class="sla-card">
-              <span class="sla-tier-tag">PROGRAM 3 • INDUSTRIAL & HEALTHCARE</span>
-              <h4>Mission-Critical Titanium</h4>
-              <p>Continuous vibration telemetry, redundant server & surgical cooling standby, direct priority access to our in-house custom sheet metal fabrication shop.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====================================================================
-       CHUNK 10: UNFILTERED 5-STAR REVIEWS & VIDEO TESTIMONIALS
-       ==================================================================== -->
-  <section class="section reviews-section" id="reviews">
-    <div class="container">
-      <div class="section-head text-center">
-        <div class="section-badge">VERIFIED LOCAL TRUST</div>
-        <h2 class="section-title">What Your Northeast Ohio Neighbors Say</h2>
-        <p class="section-desc">Over 1,480+ five-star reviews across Google, BBB, and Angi. Here is what real homeowners say about our speed, honesty, and workmanship.</p>
-      </div>
-
-      <div class="reviews-grid">
-        <div class="review-card">
-          <div class="review-top">
-            <div class="reviewer-stars">★★★★★</div>
-            <span class="verified-pill">Google Verified</span>
-          </div>
-          <p class="review-quote">"Our furnace died at 9 PM on a Sunday in January when it was 12 degrees outside. I called Choice Aire in a panic. The technician, Dave, arrived in 35 minutes, had the exact ignitor on his truck, and had our heat blowing warm within an hour. No extra weekend charge either!"</p>
-          <div class="reviewer-info">
-            <div class="reviewer-avatar">MR</div>
-            <div>
-              <strong class="reviewer-name">Michael R.</strong>
-              <span class="reviewer-loc">Akron, OH • Emergency Furnace Repair</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="review-card highlight-review">
-          <div class="review-top">
-            <div class="reviewer-stars">★★★★★</div>
-            <span class="verified-pill">Google Verified</span>
-          </div>
-          <p class="review-quote">"Two other local companies quoted me over $11,000 for a new AC and pressured me to sign that day. Choice Aire gave me three transparent Good/Better/Best tiers. We went with the Bryant 18 SEER2. The install crew wore shoe covers the entire time and left the basement cleaner than they found it!"</p>
-          <div class="reviewer-info">
-            <div class="reviewer-avatar">SK</div>
-            <div>
-              <strong class="reviewer-name">Sarah K.</strong>
-              <span class="reviewer-loc">Canton, OH • New System Installation</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="review-card">
-          <div class="review-top">
-            <div class="reviewer-stars">★★★★★</div>
-            <span class="verified-pill">Google Verified</span>
-          </div>
-          <p class="review-quote">"We run a busy restaurant in Cuyahoga Falls. When our rooftop AC gave out right before lunch rush, Choice Aire had a commercial master technician on our roof in 40 minutes. They saved thousands of dollars in lost dining revenue. Customer for life."</p>
-          <div class="reviewer-info">
-            <div class="reviewer-avatar">BM</div>
-            <div>
-              <strong class="reviewer-name">Brian M.</strong>
-              <span class="reviewer-loc">Cuyahoga Falls, OH • Commercial RTU Repair</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====================================================================
-       CHUNK 11: URGENT BOTTOM CTA BANNER (EMERGENCY TECH ON STANDBY)
-       ==================================================================== -->
-  <section class="section urgent-cta-section">
-    <div class="container">
-      <div class="urgent-banner-card">
-        <div class="urgent-glow-fx"></div>
-        <div class="urgent-left">
-          <div class="urgent-status-pill">
-            <span class="live-dot pulse"></span>
-            <span>EMERGENCY DISPATCH ON STANDBY</span>
-          </div>
-          <h2 class="urgent-heading">Is Your AC or Furnace Down Right Now?</h2>
-          <p class="urgent-sub">Do not suffer in an overheated or freezing home. Our on-duty master technicians are prepped with truck-stocked parts across Northeast Ohio.</p>
-          <div class="urgent-guarantee-badges">
-            <span>✓ Same-Day Arrival Guaranteed</span>
-            <span>✓ $0 Overtime Charges</span>
-            <span>✓ Upfront Pricing Approval</span>
-          </div>
-        </div>
-
-        <div class="urgent-right">
-          <a href="tel:3309456223" class="btn btn-urgent-call">
-            <div class="call-icon-circ">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            </div>
-            <div class="call-txt-block">
-              <span class="call-sub">TAP TO CALL DISPATCH NOW</span>
-              <strong class="call-num">(330) 945-6223</strong>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="./index.html" class="logo" style="margin-bottom: 1rem;">
+            <div class="logo-icon">❄️</div>
+            <div class="logo-text">
+              <span class="logo-title">CHOICE AIRE</span>
+              <span class="logo-sub">Heating & Air Conditioning</span>
             </div>
           </a>
-          <button class="btn btn-urgent-online open-drawer-btn" data-service="Emergency Dispatch">
-            Or Schedule Service Window Online &rarr;
-          </button>
+          <p>Northeast Ohio's premier residential & commercial heating, ventilation, and air conditioning contractor. Serving Summit, Stark, Portage, Medina, Cuyahoga, and Wayne counties since 1989.</p>
+          <div style="font-size: 0.85rem; color: var(--color-emerald-radar); font-weight: 600;">
+            Ohio State License #30725 & #30306
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ====================================================================
-       CHUNK 12: FOOTER & COMPREHENSIVE SERVICE AREA DIRECTORY
-       ==================================================================== -->
-  <footer class="main-footer">
-    <div class="container footer-content-grid">
-      <div class="footer-col brand-col">
-        <div class="brand-logo footer-logo">
-          <div class="logo-mark">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14" stroke="#0ea5e9"/>
-              <circle cx="12" cy="12" r="3" fill="#f59e0b" stroke="none"/>
+        <div class="footer-col">
+          <h5>Services</h5>
+          <ul class="footer-links">
+            <li><a href="./services.html#emergency-ac">Emergency AC Repair</a></li>
+            <li><a href="./services.html#heat-pumps">Heat Pumps & Inverters</a></li>
+            <li><a href="./services.html#furnaces">Furnaces & Heating</a></li>
+            <li><a href="./services.html#commercial">Commercial HVAC & RTUs</a></li>
+            <li><a href="./services.html#air-quality">Indoor Air Quality</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul class="footer-links">
+            <li><a href="./about.html">About Choice Aire</a></li>
+            <li><a href="./case-studies.html">Case Studies & Metrics</a></li>
+            <li><a href="./pricing.html">Pricing & Financing</a></li>
+            <li><a href="./contact.html">Service Areas & Map</a></li>
+            <li><a href="./contact.html">24/7 Dispatch</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Akron Headquarters</h5>
+          <div class="footer-contact-row">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
             </svg>
+            <span>1940 Englewood Ave.<br>Akron, OH 44312</span>
           </div>
-          <div class="brand-text">
-            <span class="brand-name">CHOICE AIRE</span>
-            <span class="brand-sub">NORTHEAST OHIO HVAC EMPIRE</span>
+          <div class="footer-contact-row">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <a href="tel:3309456223" style="color: #fff; font-weight: 700;">(330) 945-6223</a>
           </div>
-        </div>
-        <p class="footer-about">
-          Choice Aire provides premier 24/7 residential and commercial heating, cooling, refrigeration, and custom sheet metal engineering throughout Northeast Ohio.
-        </p>
-        <div class="footer-contacts">
-          <div class="contact-item">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>1940 Englewood Ave., Akron, OH 44312</span>
-          </div>
-          <div class="contact-item">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            <a href="tel:3309456223">Direct 24/7 Hotline: (330) 945-6223</a>
-          </div>
-          <div class="contact-item">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            <a href="mailto:service@choiceaire.com">service@choiceaire.com</a>
+          <div class="footer-contact-row">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <span>service@choiceaire.com</span>
           </div>
         </div>
       </div>
 
-      <div class="footer-col links-col">
-        <h4 class="footer-heading">Services</h4>
-        <ul class="footer-nav">
-          <li><a href="#diagnostics">Emergency AC Repair</a></li>
-          <li><a href="#diagnostics">Furnace Repair & Replacement</a></li>
-          <li><a href="#pricing">Heat Pump Systems</a></li>
-          <li><a href="#case-studies">Verified Case Studies</a></li>
-          <li><a href="#divisions">Commercial RTU Solutions</a></li>
-          <li><a href="#divisions">Commercial Refrigeration</a></li>
-          <li><a href="#divisions">Custom Sheet Metal Fabrication</a></li>
-          <li><a href="#guarantees">Maintenance Club Membership</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col service-area-col">
-        <h4 class="footer-heading">Ohio Counties & Zip Codes Serviced</h4>
-        <p class="service-area-intro">Dispatch vans permanently stationed across Northeast Ohio:</p>
-        <div class="county-tags">
-          <span class="c-tag">Summit County</span>
-          <span class="c-tag">Stark County</span>
-          <span class="c-tag">Portage County</span>
-          <span class="c-tag">Medina County</span>
-          <span class="c-tag">Cuyahoga County</span>
-          <span class="c-tag">Wayne County</span>
-        </div>
-        <div class="zip-directory">
-          <small>Key Cities & Zip Codes:</small>
-          <p>Akron (44312, 44313, 44303, 44320, 44333), Canton (44708, 44718, 44720), Cuyahoga Falls (44221, 44223), Hudson (44236), Stow (44224), Medina (44256), Barberton (44203), Green (44720), Massillon (44646), Wadsworth (44281).</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-bottom-bar">
-      <div class="container footer-bottom-inner">
-        <div class="license-note">
-          State of Ohio License #30725 & #30306 • Fully Bonded, Insured & Worker's Comp Certified
-        </div>
-        <div class="copyright">
-          © 2026 Choice Aire. All rights reserved. Built to $100M Enterprise Standards.
+      <div class="footer-bottom">
+        <p>© 2026 Choice Aire Heating & Air Conditioning. All rights reserved. Registered Ohio Contractor Lic. #30725 & #30306.</p>
+        <div class="footer-legal-links">
+          <a href="./about.html">Privacy Policy</a>
+          <a href="./about.html">Terms of Service</a>
+          <a href="./contact.html">Emergency SLA</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- ====================================================================
-       APPLE SETUP-GRADE SLIDE-OUT TECH DISPATCH DRAWER
-       ==================================================================== -->
-  <div class="drawer-overlay" id="drawerOverlay"></div>
-  <aside class="dispatch-drawer" id="dispatchDrawer" aria-hidden="true">
+  <!-- Universal Slide-out Dispatch Drawer -->
+  <div class="drawer-backdrop"></div>
+  <aside class="slide-drawer">
     <div class="drawer-header">
-      <div class="drawer-title-group">
-        <span class="drawer-badge">RAPID DISPATCH PORTAL</span>
-        <h3 class="drawer-title">Schedule Technician Visit</h3>
+      <div>
+        <h3 style="font-size: 1.25rem; color: #fff; margin-bottom: 0.25rem;">Priority Dispatch</h3>
+        <p style="font-size: 0.8rem; color: var(--color-emerald-radar); font-weight: 600;">Direct Akron Dispatch Terminal</p>
       </div>
-      <button class="drawer-close" id="drawerClose" aria-label="Close Drawer">&times;</button>
+      <button class="drawer-close" aria-label="Close Drawer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
     </div>
-
     <div class="drawer-body">
-      <!-- APPLE-STYLE SEGMENTED PROGRESS BAR -->
-      <div class="segmented-progress-bar">
-        <div class="seg-pill active" id="progPill1" data-step="1">
-          <span class="seg-num">1</span>
-          <span class="seg-name">Issue</span>
+      <form id="drawer-form" style="display: flex; flex-direction: column; gap: 1.25rem;">
+        <div class="form-group">
+          <label for="drawer-service-select">Required Service Category *</label>
+          <select id="drawer-service-select" required>
+            <option value="emergency">Emergency AC / No Cooling (Priority)</option>
+            <option value="heating-emergency">Furnace / No Heat Emergency</option>
+            <option value="heat-pump">Heat Pump Replacement Quote & Tax Rebate</option>
+            <option value="tune-up">Precision 26-Point Tune-Up ($89 Special)</option>
+            <option value="commercial">Commercial Facility Maintenance SLA</option>
+          </select>
         </div>
-        <div class="seg-pill" id="progPill2" data-step="2">
-          <span class="seg-num">2</span>
-          <span class="seg-name">Location</span>
+        <div class="form-group">
+          <label for="drawer-name">Full Name *</label>
+          <input type="text" id="drawer-name" placeholder="e.g. Robert Miller" required>
         </div>
-        <div class="seg-pill" id="progPill3" data-step="3">
-          <span class="seg-num">3</span>
-          <span class="seg-name">Arrival</span>
+        <div class="form-group">
+          <label for="drawer-phone">Direct Phone Number *</label>
+          <input type="tel" id="drawer-phone" placeholder="(330) 000-0000" required>
         </div>
-        <div class="seg-pill" id="progPill4" data-step="4">
-          <span class="seg-num">4</span>
-          <span class="seg-name">Contact</span>
+        <div class="form-group">
+          <label for="drawer-address">Property Address & Zip Code *</label>
+          <input type="text" id="drawer-address" placeholder="Street, City, Zip (e.g. Akron, OH 44312)" required>
         </div>
-      </div>
-
-      <form id="dispatchForm" class="drawer-form">
-        <!-- STEP 1: SERVICE TYPE -->
-        <div class="form-step active" id="step1">
-          <label class="form-label">What service do you require today?</label>
-          <div class="radio-cards-grid">
-            <label class="radio-card">
-              <input type="radio" name="serviceType" value="Emergency Repair" checked>
-              <div class="radio-card-content">
-                <span class="rc-icon">🚨</span>
-                <span class="rc-title">Emergency Repair</span>
-                <small class="rc-desc">No heat, warm air, or leak (Urgent)</small>
-              </div>
-            </label>
-            <label class="radio-card">
-              <input type="radio" name="serviceType" value="Free System Estimate">
-              <div class="radio-card-content">
-                <span class="rc-icon">⚡</span>
-                <span class="rc-title">Free System Quote</span>
-                <small class="rc-desc">New furnace, AC or heat pump</small>
-              </div>
-            </label>
-            <label class="radio-card">
-              <input type="radio" name="serviceType" value="Seasonal Tune-Up">
-              <div class="radio-card-content">
-                <span class="rc-icon">🛡️</span>
-                <span class="rc-title">Seasonal Tune-Up</span>
-                <small class="rc-desc">21-point system maintenance</small>
-              </div>
-            </label>
-            <label class="radio-card">
-              <input type="radio" name="serviceType" value="Commercial HVAC">
-              <div class="radio-card-content">
-                <span class="rc-icon">🏢</span>
-                <span class="rc-title">Commercial Service</span>
-                <small class="rc-desc">RTUs, refrigeration & ventilation</small>
-              </div>
-            </label>
-          </div>
-
-          <div class="form-field-group">
-            <label for="drawerIssueNotes" class="form-label">Describe any sounds, smells, or symptoms (optional):</label>
-            <textarea id="drawerIssueNotes" class="form-textarea" placeholder="E.g., clicking sound from basement, AC blowing warm air, breaker tripping..."></textarea>
-          </div>
-
-          <button type="button" class="btn btn-primary btn-block step-next-btn" data-next="2">
-            Continue to Address &rarr;
-          </button>
+        <div class="form-group">
+          <label for="drawer-notes">System Symptoms / Details</label>
+          <textarea id="drawer-notes" rows="3" placeholder="Describe the sounds, smells, or cooling/heating issues..."></textarea>
         </div>
-
-        <!-- STEP 2: LOCATION -->
-        <div class="form-step" id="step2">
-          <label class="form-label">Where is the service property located?</label>
-          <div class="form-field-group">
-            <label for="drawerStreet" class="field-sublabel">Street Address *</label>
-            <input type="text" id="drawerStreet" class="form-input" placeholder="123 Main St" required>
-          </div>
-          <div class="form-row-2">
-            <div class="form-field-group">
-              <label for="drawerCity" class="field-sublabel">City *</label>
-              <input type="text" id="drawerCity" class="form-input" placeholder="Akron" required>
-            </div>
-            <div class="form-field-group">
-              <label for="drawerZip" class="field-sublabel">Zip Code *</label>
-              <input type="text" id="drawerZip" class="form-input" placeholder="44312" maxlength="5" required>
-            </div>
-          </div>
-
-          <div class="step-nav-buttons">
-            <button type="button" class="btn btn-outline-light step-prev-btn" data-prev="1">&larr; Back</button>
-            <button type="button" class="btn btn-primary step-next-btn" data-next="3">Select Time &rarr;</button>
-          </div>
-        </div>
-
-        <!-- STEP 3: TIME WINDOW -->
-        <div class="form-step" id="step3">
-          <label class="form-label">When would you like our technician to arrive?</label>
-          <div class="time-windows-grid">
-            <label class="time-window-card">
-              <input type="radio" name="timeWindow" value="Immediate Dispatch (< 60 Mins)" checked>
-              <div class="tw-content">
-                <div class="tw-head">
-                  <span class="live-dot pulse"></span>
-                  <strong>Immediate Dispatch</strong>
-                </div>
-                <small>Earliest available tech (Under 38–45 mins)</small>
-              </div>
-            </label>
-            <label class="time-window-card">
-              <input type="radio" name="timeWindow" value="Today Afternoon (1 PM - 5 PM)">
-              <div class="tw-content">
-                <strong>Today Afternoon</strong>
-                <small>Window: 1:00 PM – 5:00 PM</small>
-              </div>
-            </label>
-            <label class="time-window-card">
-              <input type="radio" name="timeWindow" value="Tomorrow Morning (8 AM - 12 PM)">
-              <div class="tw-content">
-                <strong>Tomorrow Morning</strong>
-                <small>Window: 8:00 AM – 12:00 PM</small>
-              </div>
-            </label>
-            <label class="time-window-card">
-              <input type="radio" name="timeWindow" value="Weekend Priority Slot">
-              <div class="tw-content">
-                <strong>Weekend Slot ($0 Overtime Fee)</strong>
-                <small>Saturday or Sunday guaranteed window</small>
-              </div>
-            </label>
-          </div>
-
-          <div class="step-nav-buttons">
-            <button type="button" class="btn btn-outline-light step-prev-btn" data-prev="2">&larr; Back</button>
-            <button type="button" class="btn btn-primary step-next-btn" data-next="4">Contact Details &rarr;</button>
-          </div>
-        </div>
-
-        <!-- STEP 4: CONTACT INFO -->
-        <div class="form-step" id="step4">
-          <label class="form-label">Who should we notify when technician is 15 mins away?</label>
-          <div class="form-row-2">
-            <div class="form-field-group">
-              <label for="drawerFirstName" class="field-sublabel">First Name *</label>
-              <input type="text" id="drawerFirstName" class="form-input" placeholder="John" required>
-            </div>
-            <div class="form-field-group">
-              <label for="drawerLastName" class="field-sublabel">Last Name *</label>
-              <input type="text" id="drawerLastName" class="form-input" placeholder="Smith" required>
-            </div>
-          </div>
-
-          <div class="form-field-group">
-            <label for="drawerPhone" class="field-sublabel">Mobile Phone (For Technician Live GPS Tracker SMS) *</label>
-            <input type="tel" id="drawerPhone" class="form-input" placeholder="(330) 000-0000" required>
-          </div>
-
-          <div class="form-field-group">
-            <label for="drawerEmail" class="field-sublabel">Email Address *</label>
-            <input type="email" id="drawerEmail" class="form-input" placeholder="john@example.com" required>
-          </div>
-
-          <div class="opt-in-checkbox">
-            <input type="checkbox" id="smsOptIn" checked>
-            <label for="smsOptIn">Send me SMS dispatch notifications with technician photo, vehicle ETA, and live map link.</label>
-          </div>
-
-          <div class="live-dispatch-reassurance">
-            <span class="live-dot pulse"></span>
-            <span>Van #4 in Cuyahoga Falls is pre-staged for immediate rollout upon submission.</span>
-          </div>
-
-          <div class="step-nav-buttons">
-            <button type="button" class="btn btn-outline-light step-prev-btn" data-prev="3">&larr; Back</button>
-            <button type="submit" class="btn btn-emergency btn-dispatch-submit">
-              <span>🚨 Confirm & Dispatch Technician</span>
-            </button>
-          </div>
-        </div>
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 0.5rem;">
+          Transmit to Central Dispatch →
+        </button>
+        <p style="text-align: center; font-size: 0.78rem; color: var(--text-muted);">
+          🔒 Zero spam guarantee. A factory-trained coordinator will confirm your exact 45-minute arrival window immediately.
+        </p>
       </form>
     </div>
   </aside>
 
-  <!-- ====================================================================
-       INTERACTIVE HVAC QUIZ MODAL ("WHICH UNIT IS RIGHT FOR YOU?")
-       ==================================================================== -->
-  <div class="modal-overlay" id="quizModal">
-    <div class="modal-box">
-      <button class="modal-close" id="quizModalClose">&times;</button>
-      <div class="quiz-header">
-        <span class="quiz-badge">60-SECOND ESTIMATOR</span>
-        <h3 class="quiz-title">Which HVAC Unit Is Right For Your Home?</h3>
-        <p class="quiz-subtitle">Answer 3 quick questions to receive a tailored system recommendation and rebate calculation.</p>
-      </div>
-
-      <div class="quiz-body">
-        <div class="quiz-step active" id="qStep1">
-          <label class="quiz-label">1. What is the approximate square footage of your home?</label>
-          <div class="quiz-options-grid">
-            <button class="quiz-opt-btn" data-q="sqft" data-val="1000-1400">1,000 – 1,399 sq ft</button>
-            <button class="quiz-opt-btn" data-q="sqft" data-val="1400-1800">1,400 – 1,799 sq ft</button>
-            <button class="quiz-opt-btn" data-q="sqft" data-val="1800-2400">1,800 – 2,399 sq ft</button>
-            <button class="quiz-opt-btn" data-q="sqft" data-val="2400+">2,400+ sq ft</button>
-          </div>
-        </div>
-
-        <div class="quiz-step" id="qStep2">
-          <label class="quiz-label">2. Are some rooms in your home significantly hotter or colder than others?</label>
-          <div class="quiz-options-grid">
-            <button class="quiz-opt-btn" data-q="tempBalance" data-val="yes">Yes, uneven temperatures</button>
-            <button class="quiz-opt-btn" data-q="tempBalance" data-val="no">No, fairly consistent</button>
-          </div>
-        </div>
-
-        <div class="quiz-step" id="qStep3">
-          <label class="quiz-label">3. What is your primary priority for the new system?</label>
-          <div class="quiz-options-grid">
-            <button class="quiz-opt-btn" data-q="priority" data-val="bills">Lowest monthly energy bills ($2,000 Tax Rebates)</button>
-            <button class="quiz-opt-btn" data-q="priority" data-val="quiet">Whisper-quiet comfort & humidity balance</button>
-            <button class="quiz-opt-btn" data-q="priority" data-val="budget">Lowest upfront investment ($89/month)</button>
-          </div>
-        </div>
-
-        <div class="quiz-step" id="qResult">
-          <div class="quiz-recommendation-card">
-            <span class="rec-badge">YOUR PERSONALIZED MATCH</span>
-            <h4 class="rec-title" id="recTitle">Bryant 18 SEER2 Preferred Series</h4>
-            <p class="rec-text" id="recText">Based on your square footage and comfort needs, this system cuts electricity draw by up to 45% and qualifies for $1,200 in instant Ohio utility credits.</p>
-            <div class="rec-pricing-box">
-              <span class="rec-price">From $129/mo with $0 Down</span>
-            </div>
-            <button class="btn btn-primary open-drawer-btn" data-service="Quiz Recommended System">
-              Lock In This Price & Get Free In-Home Verification
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ====================================================================
-       CHUNK 10: MOBILE STICKY BOTTOM BAR (<768px)
-       ==================================================================== -->
-  <div class="mobile-sticky-dock">
-    <a href="tel:3309456223" class="dock-btn dock-call">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-      <span>Call (330) 945-6223</span>
-    </a>
-    <button class="dock-btn dock-schedule open-drawer-btn" data-service="Mobile Emergency Dispatch">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      <span>Schedule Online</span>
-    </button>
-  </div>
-
-  <!-- TOAST NOTIFICATION CONTAINER -->
-  <div class="toast-container" id="toastContainer"></div>
-
-  <script src="app.js"></script>
+  <script src="./app.js"></script>
 </body>
 </html>
