@@ -34,54 +34,64 @@ function initHeader() {
 }
 
 /* --------------------------------------------------------------------------
-   2. Mobile Menu Navigation (Supports Sub-menus)
+   2. Mobile Menu Navigation (Supports Smooth CSS Drawer & Sub-menus)
    -------------------------------------------------------------------------- */
 function initMobileMenu() {
   const toggle = document.getElementById('mobileToggle');
   const navMenu = document.getElementById('navMenu');
   if (!toggle || !navMenu) return;
 
-  toggle.addEventListener('click', () => {
-    const isOpen = navMenu.style.display === 'flex';
-    if (isOpen) {
-      navMenu.style.display = 'none';
-      toggle.classList.remove('active');
-    } else {
-      navMenu.style.display = 'flex';
-      navMenu.style.flexDirection = 'column';
-      navMenu.style.position = 'absolute';
-      navMenu.style.top = '74px';
-      navMenu.style.left = '0';
-      navMenu.style.right = '0';
-      navMenu.style.background = '#FFFFFF';
-      navMenu.style.padding = '1.5rem 2rem';
-      navMenu.style.borderBottom = '1px solid #E5E7EB';
-      navMenu.style.boxShadow = '0 12px 30px rgba(15, 23, 42, 0.12)';
-      toggle.classList.add('active');
+  const toggleMenu = (e) => {
+    e.stopPropagation();
+    const isActive = navMenu.classList.toggle('active');
+    toggle.classList.toggle('active');
+    document.body.classList.toggle('menu-open', isActive);
+  };
 
-      // Ensure dropdowns are visible on mobile click
-      const dropdowns = navMenu.querySelectorAll('.nav-dropdown');
-      dropdowns.forEach(d => {
-        d.style.position = 'static';
-        d.style.opacity = '1';
-        d.style.visibility = 'visible';
-        d.style.transform = 'none';
-        d.style.boxShadow = 'none';
-        d.style.border = 'none';
-        d.style.paddingLeft = '1rem';
-      });
-    }
-  });
+  toggle.addEventListener('click', toggleMenu);
 
-  // Close when clicking simple nav links
+  // Close when clicking nav links or dropdown items
   const navLinks = navMenu.querySelectorAll('.nav-dropdown-item, .nav-link:not(.has-sub)');
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
-      if (window.innerWidth <= 768) {
-        navMenu.style.display = 'none';
+      if (window.innerWidth <= 1024) {
+        navMenu.classList.remove('active');
         toggle.classList.remove('active');
+        document.body.classList.remove('menu-open');
       }
     });
+  });
+
+  // Handle accordion submenus on mobile
+  const parentLinks = navMenu.querySelectorAll('.nav-item > .nav-link.has-sub');
+  parentLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      if (window.innerWidth <= 1024) {
+        e.preventDefault();
+        const parentItem = link.closest('.nav-item');
+        if (parentItem) {
+          parentItem.classList.toggle('open');
+        }
+      }
+    });
+  });
+
+  // Close menu on click outside
+  document.addEventListener('click', (e) => {
+    if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !toggle.contains(e.target)) {
+      navMenu.classList.remove('active');
+      toggle.classList.remove('active');
+      document.body.classList.remove('menu-open');
+    }
+  });
+
+  // Close menu on ESC key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+      navMenu.classList.remove('active');
+      toggle.classList.remove('active');
+      document.body.classList.remove('menu-open');
+    }
   });
 }
 
