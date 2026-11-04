@@ -112,7 +112,7 @@ function initQuoteDrawer() {
       setTimeout(() => {
         form.innerHTML = `
           <div style="text-align:center; padding:30px 10px;">
-            <div style="width:60px; height:60px; background:rgba(164,217,51,0.2); border:2px solid var(--color-lime-green); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 20px auto; color:var(--color-lime-green); font-size:24px; font-weight:800;">✓</div>
+            <div style="width:60px; height:60px; background:rgba(0,210,255,0.2); border:2px solid var(--color-lime-green); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 20px auto; color:var(--color-lime-green); font-size:24px; font-weight:800;">✓</div>
             <h3 style="color:#fff; text-transform:uppercase; margin-bottom:10px;">Priority Dispatch Confirmed</h3>
             <p style="color:var(--color-gray-lighter); font-size:15px; margin-bottom:20px;">Your request is en route to our Akron Central Operations Board. An Ohio coordinator will call and text you within 15 minutes.</p>
             <div style="background:#111; border:1px solid var(--color-lime-green); padding:12px; border-radius:8px; font-weight:700; color:var(--color-lime-green);">
