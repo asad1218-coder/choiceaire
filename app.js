@@ -87,7 +87,7 @@ function initQuoteDrawer() {
   openButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      openDrawer();
+      openDrawer(btn.getAttribute('data-service'));
     });
   });
 
