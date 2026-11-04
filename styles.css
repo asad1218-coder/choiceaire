@@ -2569,12 +2569,433 @@ button {
 }
 
 /* ==========================================================================
+   STRATEGIC PARTNERSHIP CALLOUT (LAWNLINE SITEONE PSYCHOLOGY)
+   ========================================================================== */
+.rebate-note {
+  color: var(--safety-lime);
+  font-weight: 700;
+}
+
+.partner-callout-section {
+  padding: 30px 0 0;
+  background: var(--bg-deep);
+}
+
+.partner-callout-card {
+  background: linear-gradient(135deg, #0d1e35 0%, #111a2c 100%);
+  border: 1px solid rgba(0, 180, 216, 0.4);
+  border-radius: var(--radius-lg);
+  padding: 32px 36px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 180, 216, 0.15);
+}
+
+.partner-badge-glow {
+  display: inline-block;
+  background: rgba(0, 180, 216, 0.15);
+  border: 1px solid var(--ice-blue);
+  color: var(--ice-blue-bright);
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  margin-bottom: 14px;
+}
+
+.partner-content-flex {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  align-items: center;
+  gap: 30px;
+}
+
+.partner-title {
+  font-size: 1.375rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.partner-desc {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.partner-perks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.perk-pill {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #cbd5e1;
+}
+
+.perk-pill span {
+  color: var(--safety-lime);
+}
+
+/* ==========================================================================
+   INSTANT ROI & IRA REBATE CALCULATOR
+   ========================================================================== */
+.roi-calculator-box {
+  margin-top: 40px;
+  background: var(--bg-surface-elevated);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.roi-head {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.roi-badge {
+  display: inline-block;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid var(--safety-lime);
+  color: var(--safety-lime);
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+  margin-bottom: 10px;
+}
+
+.roi-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.roi-subtitle {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.roi-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.roi-input-pane {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 24px;
+}
+
+.roi-control {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.roi-control label {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #cbd5e1;
+}
+
+.roi-output-pane {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.roi-stat-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.roi-stat-col {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  text-align: center;
+}
+
+.roi-num {
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: var(--font-mono);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.roi-lbl {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.roi-total-box {
+  background: linear-gradient(135deg, rgba(255, 123, 0, 0.15) 0%, rgba(255, 123, 0, 0.05) 100%);
+  border: 1px solid rgba(255, 123, 0, 0.4);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  text-align: center;
+}
+
+.roi-total-lbl {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #cbd5e1;
+  margin-bottom: 6px;
+}
+
+.roi-total-val {
+  font-size: 2.5rem;
+  font-weight: 900;
+  font-family: var(--font-mono);
+  letter-spacing: -0.02em;
+}
+
+/* ==========================================================================
+   VERIFIED CASE STUDIES (HARDCORE ROI & NUMBERS)
+   ========================================================================== */
+.case-studies-section {
+  background: radial-gradient(circle at 70% 30%, #0d1a2d 0%, #06090e 70%);
+}
+
+.case-studies-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.case-study-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: var(--transition);
+}
+
+.case-study-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 180, 216, 0.4);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.case-study-card.featured-cs {
+  background: linear-gradient(180deg, #132238 0%, #0c1524 100%);
+  border: 2px solid var(--safety-lime);
+  box-shadow: 0 15px 40px rgba(16, 185, 129, 0.2);
+}
+
+.cs-featured-ribbon {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #10b981, #059669);
+  color: #fff;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 3px 14px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+.cs-badge {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--ice-blue-bright);
+  margin-bottom: 8px;
+}
+
+.cs-title {
+  font-size: 1.375rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.cs-property {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+.cs-metrics-box {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.cs-metric-highlight {
+  text-align: center;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+
+.cs-metric-big {
+  font-size: 1.75rem;
+  font-weight: 800;
+  font-family: var(--font-mono);
+  display: block;
+  line-height: 1.1;
+}
+
+.cs-metric-sub {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+.cs-metric-subgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  text-align: center;
+}
+
+.cs-sub-metric .val {
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 800;
+  font-family: var(--font-mono);
+}
+
+.cs-sub-metric .lbl {
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+}
+
+.cs-story {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.cs-story strong {
+  color: #fff;
+}
+
+/* ==========================================================================
+   COMMERCIAL SLA PROGRAMS (B2B SECTION)
+   ========================================================================== */
+.commercial-sla-box {
+  margin-top: 48px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+}
+
+.sla-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sla-badge {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #c084fc;
+}
+
+.sla-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 6px 0;
+}
+
+.sla-sub {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.sla-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.sla-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sla-card.featured-sla {
+  border-color: var(--ice-blue);
+  background: linear-gradient(180deg, #132238 0%, #0d1728 100%);
+}
+
+.sla-tier-tag {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.sla-tier-tag.highlight {
+  color: var(--ice-blue-bright);
+}
+
+.sla-card h4 {
+  font-size: 1.1875rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.sla-card p {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
    RESPONSIVE DESIGN BREAKPOINTS
    ========================================================================== */
 @media (max-width: 1024px) {
   .hero-content-grid {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+
+  .partner-content-flex {
+    grid-template-columns: 1fr;
   }
 
   .diagnostics-grid {
@@ -2591,6 +3012,18 @@ button {
 
   .pricing-card.featured:hover {
     transform: translateY(-4px);
+  }
+
+  .roi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .case-studies-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sla-grid {
+    grid-template-columns: 1fr;
   }
 
   .guarantees-grid {

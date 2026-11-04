@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initDispatchDrawer();
   initDiagnosticCards();
   initFinancingCalculator();
+  initRoiCalculator();
   initBeforeAfterSlider();
   initDivisionTabs();
   initQuizModal();
@@ -240,6 +241,51 @@ function initFinancingCalculator() {
   if (creditSelect) {
     creditSelect.addEventListener('change', updateCalculations);
   }
+}
+
+/* ==========================================================================
+   3B. INSTANT ROI & IRA REBATE CALCULATOR (LAWNLINE HARD NUMBERS PSYCHOLOGY)
+   ========================================================================== */
+function initRoiCalculator() {
+  const ageSelect = document.getElementById('systemAgeSelect');
+  const billSlider = document.getElementById('currentBillSlider');
+  const currentBillVal = document.getElementById('currentBillVal');
+  const annualSavingsVal = document.getElementById('annualSavingsVal');
+  const taxCreditVal = document.getElementById('taxCreditVal');
+  const tenYearSavingsVal = document.getElementById('tenYearSavingsVal');
+
+  if (!billSlider || !annualSavingsVal) return;
+
+  // Efficiency reduction percentages based on age of old unit
+  const ageReductionRates = {
+    old10: 0.32, // ~32% reduction
+    old15: 0.44, // ~44% reduction
+    old20: 0.58  // ~58% reduction
+  };
+
+  function updateRoi() {
+    const monthlyBill = parseInt(billSlider.value, 10);
+    if (currentBillVal) currentBillVal.textContent = `$${monthlyBill}/mo`;
+
+    const ageKey = ageSelect ? ageSelect.value : 'old15';
+    const rate = ageReductionRates[ageKey] || 0.44;
+
+    const monthlySaved = Math.round(monthlyBill * rate);
+    const annualSaved = monthlySaved * 12;
+    const federalCredit = 2000;
+    const tenYearTotal = (annualSaved * 10) + federalCredit;
+
+    if (annualSavingsVal) annualSavingsVal.textContent = `$${annualSaved.toLocaleString()}`;
+    if (taxCreditVal) taxCreditVal.textContent = `$${federalCredit.toLocaleString()}`;
+    if (tenYearSavingsVal) tenYearSavingsVal.textContent = `$${tenYearTotal.toLocaleString()}+`;
+  }
+
+  billSlider.addEventListener('input', updateRoi);
+  if (ageSelect) {
+    ageSelect.addEventListener('change', updateRoi);
+  }
+
+  updateRoi();
 }
 
 /* ==========================================================================
