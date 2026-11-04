@@ -2461,9 +2461,9 @@ ul {
   margin-left: 0.25rem;
 }
 
-/* Mobile Sticky Bottom Bar */
+/* Mobile Sticky Bottom Bar (strictly hidden on desktop/laptop/tablet) */
 .mobile-bottom-bar {
-  display: none;
+  display: none !important;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -2483,7 +2483,7 @@ ul {
 }
 
 /* ==========================================================================
-   Comprehensive Steve Jobs-Grade Mobile Responsive System
+   Comprehensive Multi-Device Responsive Architecture
    ========================================================================== */
 
 /* Comparison Table Horizontal Scroll Wrappers */
@@ -2503,9 +2503,207 @@ ul {
   width: 100%;
 }
 
-/* Tablet & Intermediate Screen Breakpoints (max-width: 1024px) */
-@media (max-width: 1024px) {
-  /* Navigation Menu Off-Canvas Transformation */
+/* ==========================================================================
+   Tier 2: Laptops & Compact Desktops (992px to 1240px)
+   CRITICAL: FULL DESKTOP EXPERIENCE PRESERVED. NO MOBILE HAMBURGER. NO 1-COL COLLAPSE.
+   ========================================================================== */
+@media (max-width: 1240px) and (min-width: 992px) {
+  .mobile-toggle {
+    display: none !important;
+  }
+
+  .mobile-bottom-bar {
+    display: none !important;
+  }
+
+  body {
+    padding-bottom: 0 !important;
+  }
+
+  .header-inner {
+    height: 70px;
+  }
+
+  .logo-wrap img {
+    height: 38px;
+    width: auto;
+  }
+
+  .nav-menu {
+    display: flex !important;
+    position: static !important;
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    gap: 0.8rem !important;
+    overflow: visible !important;
+  }
+
+  .nav-item {
+    border-bottom: none !important;
+    width: auto !important;
+    position: relative !important;
+  }
+
+  .nav-link {
+    font-size: 0.82rem !important;
+    font-weight: 600 !important;
+    padding: 0.4rem 0.15rem !important;
+    gap: 0.2rem !important;
+  }
+
+  .nav-dropdown {
+    position: absolute !important;
+    min-width: 250px !important;
+    background: #FFFFFF !important;
+    border: 1px solid var(--color-border) !important;
+    border-radius: var(--radius-md) !important;
+    box-shadow: var(--shadow-xl) !important;
+    padding: 0.75rem 0 !important;
+  }
+
+  .header-actions {
+    gap: 0.65rem !important;
+  }
+
+  .header-phone-link {
+    display: inline-flex !important;
+    font-size: 0.85rem !important;
+    gap: 0.35rem !important;
+  }
+
+  .header-phone-link svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .header-actions .btn {
+    padding: 0.5rem 0.85rem !important;
+    font-size: 0.82rem !important;
+  }
+
+  /* Keep full desktop multi-column layouts */
+  .hero-grid {
+    grid-template-columns: 1.12fr 0.88fr;
+    gap: 2rem;
+  }
+
+  .hero-title {
+    font-size: 3.1rem;
+  }
+
+  .journeys-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.65rem;
+  }
+
+  .journey-card {
+    padding: 1.1rem 0.75rem;
+  }
+
+  .problem-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.25rem;
+  }
+
+  .solution-content-panel {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 2rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .benefits-cards-wrap {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .services-grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .service-detail-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  .service-detail-row.reverse {
+    direction: rtl;
+  }
+
+  .service-detail-row.reverse > * {
+    direction: ltr;
+  }
+
+  .testimonial-card-single {
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 2.5rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+  }
+
+  .guide-box {
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 2rem;
+  }
+
+  .local-presence-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1.4fr repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  /* Subpages */
+  .page-hero-inner {
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 2rem;
+  }
+
+  .process-grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .commercial-services-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .reviews-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .county-detail-grid {
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 2rem;
+  }
+
+  .contact-layout-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 2.25rem;
+  }
+}
+
+/* ==========================================================================
+   Tier 3: Tablets (769px to 991px)
+   ELEGANT 2-COLUMN TABLET ARCHITECTURE. NO MOBILE BOTTOM BAR. NO 1-COL COLLAPSE.
+   ========================================================================== */
+@media (max-width: 991px) and (min-width: 769px) {
   .mobile-toggle {
     display: flex;
     align-items: center;
@@ -2543,6 +2741,267 @@ ul {
   .nav-menu {
     position: fixed;
     top: 74px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2.5rem 6rem;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease, visibility 0.25s;
+    z-index: 1040;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
+  }
+
+  .nav-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-item {
+    border-bottom: 1px solid var(--color-border-subtle);
+    width: 100%;
+  }
+
+  .nav-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1.1rem 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+  }
+
+  .nav-dropdown {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    background: #F8FAFC;
+    border-radius: var(--radius-sm);
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 0.75rem;
+    display: none;
+  }
+
+  .nav-item.open .nav-dropdown {
+    display: block;
+  }
+
+  .nav-item.open .nav-link svg {
+    transform: rotate(180deg);
+  }
+
+  /* Header Actions on Tablet: Keep phone and CTA accessible */
+  .header-phone-link {
+    display: inline-flex;
+    font-size: 0.9rem;
+  }
+
+  .header-actions .btn {
+    display: inline-flex;
+    padding: 0.55rem 1rem;
+    font-size: 0.88rem;
+  }
+
+  /* Strictly NO mobile bottom bar on tablet */
+  .mobile-bottom-bar {
+    display: none !important;
+  }
+
+  body {
+    padding-bottom: 0 !important;
+  }
+
+  /* Tablet Grids: Polished 2-Column & 2x2 Layouts */
+  .hero-grid {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 2rem;
+  }
+
+  .hero-title {
+    font-size: 2.85rem;
+  }
+
+  .journeys-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .problem-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .solution-content-panel {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 2rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .benefits-cards-wrap {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .services-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .service-detail-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .service-detail-row.reverse {
+    direction: rtl;
+  }
+
+  .service-detail-row.reverse > * {
+    direction: ltr;
+  }
+
+  .testimonial-card-single {
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 2rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .stat-item {
+    border-right: none;
+    border-bottom: 1px solid #1E293B;
+  }
+
+  .guide-box {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 2rem;
+  }
+
+  .local-presence-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
+  /* Subpages */
+  .page-hero-inner {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 2rem;
+  }
+
+  .process-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .commercial-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .reviews-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .county-detail-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .contact-layout-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Mobile Screens (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Prevent horizontal layout shifts */
+  html, body {
+    overflow-x: hidden;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  body {
+    padding-bottom: 74px; /* Space for mobile sticky bottom action bar */
+  }
+
+  .container,
+  .container-wide {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  /* Header on Mobile */
+  .header-inner {
+    height: 64px;
+  }
+
+  .mobile-toggle {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: #F1F5F9;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    z-index: 1060;
+  }
+
+  .mobile-toggle span {
+    display: block;
+    width: 22px;
+    height: 2.2px;
+    background: var(--color-neutral-dark);
+    border-radius: 2px;
+    transition: all var(--transition-base);
+  }
+
+  .mobile-toggle.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .mobile-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-toggle.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 64px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -2606,10 +3065,19 @@ ul {
   }
 
   .header-phone-link {
-    display: none;
+    display: none !important;
   }
 
-  /* Grid Reductions */
+  .header-actions .btn {
+    display: none !important;
+  }
+
+  .logo-wrap img {
+    height: 38px;
+    width: auto;
+  }
+
+  /* Single Column Handheld Grid Stacking */
   .hero-grid,
   .problem-grid,
   .solution-content-panel,
@@ -2629,62 +3097,12 @@ ul {
   .county-detail-grid,
   .contact-layout-grid,
   .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
+    grid-template-columns: 1fr !important;
+    gap: 2.25rem;
   }
 
   .service-detail-row.reverse {
-    direction: ltr;
-  }
-
-  .journeys-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .services-grid-4,
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .stat-item {
-    border-right: none;
-    border-bottom: 1px solid #1E293B;
-  }
-}
-
-/* Mobile Screens (max-width: 768px) */
-@media (max-width: 768px) {
-  /* Prevent horizontal layout shifts */
-  html, body {
-    overflow-x: hidden;
-  }
-
-  body.menu-open {
-    overflow: hidden;
-  }
-
-  body {
-    padding-bottom: 74px; /* Space for mobile sticky bottom action bar */
-  }
-
-  .container,
-  .container-wide {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-
-  /* Header on Mobile */
-  .header-inner {
-    height: 64px;
-  }
-
-  .nav-menu {
-    top: 64px;
-  }
-
-  .logo-wrap img {
-    height: 38px;
-    width: auto;
+    direction: ltr !important;
   }
 
   /* Top Emergency Bar on Mobile */

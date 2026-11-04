@@ -54,7 +54,8 @@ function initMobileMenu() {
   const navLinks = navMenu.querySelectorAll('.nav-dropdown-item, .nav-link:not(.has-sub)');
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
-      if (window.innerWidth <= 1024) {
+      const isMobileNav = window.getComputedStyle(toggle).display !== 'none';
+      if (isMobileNav) {
         navMenu.classList.remove('active');
         toggle.classList.remove('active');
         document.body.classList.remove('menu-open');
@@ -62,11 +63,12 @@ function initMobileMenu() {
     });
   });
 
-  // Handle accordion submenus on mobile
+  // Handle accordion submenus on mobile/tablet drawer
   const parentLinks = navMenu.querySelectorAll('.nav-item > .nav-link.has-sub');
   parentLinks.forEach(link => {
     link.addEventListener('click', (e) => {
-      if (window.innerWidth <= 1024) {
+      const isMobileNav = window.getComputedStyle(toggle).display !== 'none';
+      if (isMobileNav) {
         e.preventDefault();
         const parentItem = link.closest('.nav-item');
         if (parentItem) {
