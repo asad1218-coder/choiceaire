@@ -1,77 +1,219 @@
 /**
- * Choice Aire — Universal Application Logic
- * Powered by Lawnline Interactive Engine
+ * Choice Aire — Steve Jobs-Grade Interaction Engine
+ * Matches the 20-Panel High-Converting HVAC Blueprint
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   initHeader();
   initMobileMenu();
-  initQuoteDrawer();
-  initTriageRouting();
-  initRoiCalculator();
-  initComparisonSlider();
+  initSolutionTabs();
+  initFaqAccordion();
+  initBookingDrawer();
+  initConcierge();
+  initSmoothScroll();
 });
 
 /* --------------------------------------------------------------------------
-   1. Header Sticky Effect
+   1. Header Sticky Elevation
    -------------------------------------------------------------------------- */
 function initHeader() {
-  const header = document.getElementById('header') || document.querySelector('.header');
+  const header = document.getElementById('header');
   if (!header) return;
 
-  const handleScroll = () => {
-    if (window.scrollY > 30) {
+  const onScroll = () => {
+    if (window.scrollY > 25) {
       header.classList.add('scrolled');
     } else {
       header.classList.remove('scrolled');
     }
   };
 
-  window.addEventListener('scroll', handleScroll);
-  handleScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 }
 
 /* --------------------------------------------------------------------------
-   2. Mobile Navigation Toggle
+   2. Mobile Menu Navigation
    -------------------------------------------------------------------------- */
 function initMobileMenu() {
-  const toggle = document.getElementById('mobileToggle') || document.querySelector('.mobile-toggle');
-  const nav = document.getElementById('nav') || document.querySelector('.nav');
-  if (!toggle || !nav) return;
+  const toggle = document.getElementById('mobileToggle');
+  const navMenu = document.getElementById('navMenu');
+  if (!toggle || !navMenu) return;
 
   toggle.addEventListener('click', () => {
-    nav.classList.toggle('active');
-    toggle.classList.toggle('active');
+    const isOpen = navMenu.style.display === 'flex';
+    if (isOpen) {
+      navMenu.style.display = 'none';
+      toggle.classList.remove('active');
+    } else {
+      navMenu.style.display = 'flex';
+      navMenu.style.flexDirection = 'column';
+      navMenu.style.position = 'absolute';
+      navMenu.style.top = '74px';
+      navMenu.style.left = '0';
+      navMenu.style.right = '0';
+      navMenu.style.background = '#FFFFFF';
+      navMenu.style.padding = '1.5rem 2rem';
+      navMenu.style.borderBottom = '1px solid #E5E7EB';
+      navMenu.style.boxShadow = '0 10px 25px rgba(15, 23, 42, 0.1)';
+      toggle.classList.add('active');
+    }
   });
 
-  // Dropdown toggle on mobile
-  const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-  dropdownToggles.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const parent = btn.closest('.has-dropdown');
-      if (parent) {
-        parent.classList.toggle('active');
+  // Close when clicking nav links
+  const navLinks = navMenu.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        navMenu.style.display = 'none';
+        toggle.classList.remove('active');
       }
     });
   });
 }
 
 /* --------------------------------------------------------------------------
-   3. Quote Drawer (Lawnline Style)
+   3. Panel 3: Solution Category Switcher Tabs
    -------------------------------------------------------------------------- */
-function initQuoteDrawer() {
-  const drawer = document.getElementById('quoteDrawer') || document.querySelector('.quote-drawer');
-  const overlay = document.getElementById('quoteOverlay') || document.querySelector('.quote-drawer-overlay');
-  const closeBtn = document.getElementById('quoteClose') || document.querySelector('.quote-drawer-close');
-  const openButtons = document.querySelectorAll('#quoteBtn, #bottomQuoteBtn, .open-quote-btn, .btn-primary[id*="Quote"]');
+const solutionData = {
+  repair: {
+    title: 'Precision Diagnostics & Rapid Repairs',
+    desc: 'From refrigerant leaks and dead capacitors to furnace ignition failures, our factory-trained specialists inspect every component to find the root cause and restore comfort quickly.',
+    img: './assets/images/modern_heat_pump.jpg',
+    serviceKey: 'ac-repair',
+    checks: [
+      'Same-day emergency response in Summit, Stark & Medina',
+      'Transparent upfront quote before any work begins',
+      '100% parts & labor warranty on all completed repairs'
+    ]
+  },
+  installation: {
+    title: 'Energy-Efficient System Replacements',
+    desc: 'Upgrade to high-efficiency Bryant inverter heat pumps or gas furnaces. Cut your seasonal electric and gas utility usage by up to 55% while qualifying for $2,850 in instant rebates.',
+    img: './assets/images/modern_heat_pump.jpg',
+    serviceKey: 'ac-installation',
+    checks: [
+      'Top-tier Bryant Factory Authorized equipment',
+      'Zero-down and 0% APR financing options available',
+      'Full factory 10-year parts & equipment warranty'
+    ]
+  },
+  maintenance: {
+    title: '$89 Precision 26-Point Tune-Up & Safety Audit',
+    desc: 'Seasonal preventative maintenance ensures maximum airflow, prevents unexpected freeze-ups, cleans critical coils, and verifies electrical amp draw and safety shutoffs.',
+    img: './assets/images/technician.png',
+    serviceKey: 'tune-up',
+    checks: [
+      'Comprehensive 26-point furnace and AC inspection',
+      'Signature No-Breakdown seasonal guarantee',
+      'Priority scheduling status for annual club members'
+    ]
+  },
+  iaq: {
+    title: 'Whole-Home Air Purification & Humidity Control',
+    desc: 'Eliminate airborne allergens, bacteria, dust mites, and odors with whole-house MERV-16 hospital-grade filtration, active UV lamps, and automated steam humidifiers.',
+    img: './assets/images/hero_home.jpg',
+    serviceKey: 'general-estimate',
+    checks: [
+      '99.98% capture rate for airborne contaminants',
+      'Relief for allergy and asthma sufferers',
+      'Balanced humidity prevents dry winter skin & wood warping'
+    ]
+  },
+  upgrade: {
+    title: 'Smart Thermostats & Multi-Zone Inverters',
+    desc: 'Take complete control of every room in your home. Smart variable-capacity compressors automatically ramp up or down to keep each living zone at your desired temperature.',
+    img: './assets/images/modern_heat_pump.jpg',
+    serviceKey: 'ac-installation',
+    checks: [
+      'Individual temperature control for bedrooms and living rooms',
+      'Wi-Fi smartphone control and energy usage analytics',
+      'Whisper-quiet decibel levels comparable to a library'
+    ]
+  }
+};
+
+function initSolutionTabs() {
+  const tabsNav = document.getElementById('solutionTabsNav');
+  if (!tabsNav) return;
+
+  const tabButtons = tabsNav.querySelectorAll('.solution-tab-btn');
+  const titleEl = document.getElementById('solutionTabTitle');
+  const descEl = document.getElementById('solutionTabDesc');
+  const imgEl = document.getElementById('solutionTabImg');
+  const checklistEl = document.getElementById('solutionChecklist');
+
+  tabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const tabKey = btn.getAttribute('data-tab');
+      const data = solutionData[tabKey];
+      if (!data) return;
+
+      if (titleEl) titleEl.textContent = data.title;
+      if (descEl) descEl.textContent = data.desc;
+      if (imgEl) imgEl.src = data.img;
+
+      if (checklistEl) {
+        checklistEl.innerHTML = data.checks.map(c => `
+          <div class="solution-check-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>${c}</span>
+          </div>
+        `).join('');
+      }
+    });
+  });
+}
+
+/* --------------------------------------------------------------------------
+   4. Panel 14: FAQ Accordion
+   -------------------------------------------------------------------------- */
+function initFaqAccordion() {
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const questionBtn = item.querySelector('.faq-question');
+    if (!questionBtn) return;
+
+    questionBtn.addEventListener('click', () => {
+      const isAlreadyActive = item.classList.contains('active');
+      faqItems.forEach(i => i.classList.remove('active'));
+      if (!isAlreadyActive) {
+        item.classList.add('active');
+      }
+    });
+  });
+}
+
+/* --------------------------------------------------------------------------
+   5. Panels 18 & 20: Booking Drawer & Modals
+   -------------------------------------------------------------------------- */
+function initBookingDrawer() {
+  const drawer = document.getElementById('bookingDrawer');
+  const overlay = document.getElementById('bookingOverlay');
+  const closeBtn = document.getElementById('drawerCloseBtn');
+  const serviceSelect = document.getElementById('bookService');
+  const bookingForm = document.getElementById('bookingForm');
+  const successMsg = document.getElementById('bookingSuccessMsg');
+  const openButtons = document.querySelectorAll('.open-booking-btn');
 
   if (!drawer || !overlay) return;
 
-  const openDrawer = (serviceVal) => {
-    if (serviceVal) {
-      const select = document.getElementById('quote-service');
-      if (select) select.value = serviceVal;
+  const openDrawer = (serviceKey) => {
+    if (serviceKey && serviceSelect) {
+      // Find matching option or default
+      const exists = Array.from(serviceSelect.options).some(opt => opt.value === serviceKey);
+      if (exists) {
+        serviceSelect.value = serviceKey;
+      } else if (serviceKey === 'tune-up') {
+        serviceSelect.value = 'tune-up';
+      } else if (serviceKey.includes('install')) {
+        serviceSelect.value = 'ac-installation';
+      } else {
+        serviceSelect.value = 'general-estimate';
+      }
     }
     drawer.classList.add('active');
     overlay.classList.add('active');
@@ -87,7 +229,8 @@ function initQuoteDrawer() {
   openButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      openDrawer(btn.getAttribute('data-service'));
+      const serviceVal = btn.getAttribute('data-service') || 'general-estimate';
+      openDrawer(serviceVal);
     });
   });
 
@@ -100,143 +243,73 @@ function initQuoteDrawer() {
     }
   });
 
-  // Drawer Form Submit
-  const form = document.getElementById('mainQuoteForm');
-  if (form) {
-    form.addEventListener('submit', (e) => {
+  if (bookingForm) {
+    bookingForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const submitBtn = form.querySelector('button[type="submit"]');
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = 'Transmitting to Akron Dispatch...';
+      const submitBtn = document.getElementById('submitBookingBtn');
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Submitting Request...';
+      }
 
       setTimeout(() => {
-        form.innerHTML = `
-          <div style="text-align:center; padding:30px 10px;">
-            <div style="width:64px; height:64px; background:#dcfce7; border:2px solid #16a34a; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 20px auto; color:#16a34a; font-size:28px; font-weight:800;">✓</div>
-            <h3 style="color:#0f172a; text-transform:uppercase; margin-bottom:10px;">Priority Dispatch Confirmed</h3>
-            <p style="color:#334155; font-size:15px; line-height:1.6; margin-bottom:20px;">Your request has been routed to our Akron Central Operations Board. An Ohio coordinator will call and text you within 15 minutes.</p>
-            <div style="background:#f0fdf4; border:1.5px solid #16a34a; padding:14px; border-radius:8px; font-weight:700; color:#166534;">
-              Estimated Tech Arrival Window: 35-45 Minutes
-            </div>
-          </div>
-        `;
-      }, 1000);
+        if (successMsg) successMsg.style.display = 'block';
+        if (submitBtn) {
+          submitBtn.textContent = 'Confirmed!';
+          submitBtn.style.background = 'var(--color-accent)';
+        }
+
+        setTimeout(() => {
+          bookingForm.reset();
+          if (successMsg) successMsg.style.display = 'none';
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Confirm Priority Dispatch';
+            submitBtn.style.background = '';
+          }
+          closeDrawer();
+        }, 2200);
+      }, 700);
     });
   }
 }
 
 /* --------------------------------------------------------------------------
-   4. Triage Buttons Pre-Fill
+   6. Floating Concierge Widget Click
    -------------------------------------------------------------------------- */
-function initTriageRouting() {
-  const triageButtons = document.querySelectorAll('.triage-trigger');
-  const drawer = document.getElementById('quoteDrawer');
-  const overlay = document.getElementById('quoteOverlay');
-  const select = document.getElementById('quote-service');
-  const notes = document.getElementById('quote-notes');
+function initConcierge() {
+  const concierge = document.getElementById('conciergeWidget');
+  if (!concierge) return;
 
-  triageButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const issue = btn.getAttribute('data-issue') || 'AC Emergency';
-      if (select) {
-        if (issue.includes('AC')) select.value = 'emergency-ac';
-        else if (issue.includes('Furnace')) select.value = 'furnace-no-heat';
-        else if (issue.includes('Inverter')) select.value = 'heat-pump-inverter';
-        else select.value = 'emergency-ac';
-      }
-      if (notes) {
-        notes.value = `Reported symptom: ${issue}. Please dispatch nearest technician.`;
-      }
-      if (drawer && overlay) {
-        drawer.classList.add('active');
-        overlay.classList.add('active');
-        document.body.style.overflow = 'hidden';
+  concierge.addEventListener('click', () => {
+    const trigger = document.querySelector('.open-booking-btn');
+    if (trigger) {
+      trigger.click();
+    }
+  });
+}
+
+/* --------------------------------------------------------------------------
+   7. Smooth Anchor Scrolling
+   -------------------------------------------------------------------------- */
+function initSmoothScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (!targetId || targetId === '#') return;
+
+      const targetEl = document.querySelector(targetId);
+      if (targetEl) {
+        e.preventDefault();
+        const headerOffset = 80;
+        const elementPosition = targetEl.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
       }
     });
-  });
-}
-
-/* --------------------------------------------------------------------------
-   5. Interactive 10-Year ROI Calculator
-   -------------------------------------------------------------------------- */
-function initRoiCalculator() {
-  const ageSlider = document.getElementById('roi-age-slider');
-  const billSlider = document.getElementById('roi-bill-slider');
-  if (!ageSlider || !billSlider) return;
-
-  const ageVal = document.getElementById('roi-age-val');
-  const billVal = document.getElementById('roi-bill-val');
-  const annualSavingsEl = document.getElementById('roi-annual-savings');
-  const taxCreditEl = document.getElementById('roi-tax-credit');
-  const tenYearTotalEl = document.getElementById('roi-10yr-total');
-
-  const update = () => {
-    const age = parseInt(ageSlider.value, 10);
-    const bill = parseInt(billSlider.value, 10);
-
-    if (ageVal) ageVal.textContent = `${age} Years Old`;
-    if (billVal) billVal.textContent = `$${bill}/mo`;
-
-    let gain = 0.32;
-    if (age >= 12 && age < 16) gain = 0.44;
-    else if (age >= 16) gain = 0.54;
-
-    const annualSavings = Math.round(bill * 12 * gain);
-    const taxCredit = 2000;
-    const tenYear = (annualSavings * 10) + taxCredit;
-
-    if (annualSavingsEl) annualSavingsEl.textContent = `$${annualSavings.toLocaleString()}/yr`;
-    if (taxCreditEl) taxCreditEl.textContent = `$${taxCredit.toLocaleString()}`;
-    if (tenYearTotalEl) tenYearTotalEl.textContent = `$${tenYear.toLocaleString()}`;
-  };
-
-  ageSlider.addEventListener('input', update);
-  billSlider.addEventListener('input', update);
-  update();
-}
-
-/* --------------------------------------------------------------------------
-   6. Touch / Mouse Comparison Slider
-   -------------------------------------------------------------------------- */
-function initComparisonSlider() {
-  const container = document.querySelector('.comparison-slider-box');
-  const afterBox = document.querySelector('.comparison-after');
-  const handle = document.querySelector('.comparison-slider-handle');
-
-  if (!container || !afterBox || !handle) return;
-
-  let dragging = false;
-
-  const setPos = (x) => {
-    const rect = container.getBoundingClientRect();
-    let posX = x - rect.left;
-    if (posX < 0) posX = 0;
-    if (posX > rect.width) posX = rect.width;
-
-    const pct = (posX / rect.width) * 100;
-    afterBox.style.width = `${pct}%`;
-    handle.style.left = `${pct}%`;
-  };
-
-  container.addEventListener('mousedown', (e) => {
-    dragging = true;
-    setPos(e.clientX);
-  });
-
-  window.addEventListener('mouseup', () => { dragging = false; });
-  window.addEventListener('mousemove', (e) => {
-    if (!dragging) return;
-    setPos(e.clientX);
-  });
-
-  container.addEventListener('touchstart', (e) => {
-    dragging = true;
-    setPos(e.touches[0].clientX);
-  });
-
-  window.addEventListener('touchend', () => { dragging = false; });
-  window.addEventListener('touchmove', (e) => {
-    if (!dragging) return;
-    setPos(e.touches[0].clientX);
   });
 }

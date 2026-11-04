@@ -3,304 +3,130 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Choice Aire | Heating & Air Conditioning Repair | Akron & Canton, OH</title>
-  <meta name="description" content="Choice Aire provides 24/7 emergency furnace repair, AC installation, heat pumps, and commercial HVAC across Akron, Canton, Summit, Stark, Portage, and Medina counties. Ohio Lic. #30725 & #30306.">
+  <title>Choice Aire | Expert Heating & Air Conditioning Solutions in Ohio</title>
+  <meta name="description" content="Choice Aire provides 24/7 emergency AC repair, furnace installation, inverter heat pumps, and maintenance across Akron, Canton, and Northeast Ohio. Ohio Lic. #30725 & #30306.">
   
+  <!-- Typography: Plus Jakarta Sans (Headings) & Inter (Body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="./styles.css">
   <link rel="icon" type="image/png" href="./assets/images/logo.png">
 </head>
 <body>
 
-  <!-- Sticky Header -->
+  <!-- ==========================================================================
+       HEADER & NAVIGATION (Panel 1 & 18)
+       ========================================================================== -->
   <header class="header" id="header">
-    <div class="container container-extra-wide">
+    <div class="container container-wide">
       <div class="header-inner">
         <!-- Logo -->
-        <a href="./index.html" class="logo" aria-label="Choice Aire Home">
-          <img src="./assets/images/logo.png" alt="Choice Aire Heating & Air Conditioning Logo" width="220" height="52">
+        <a href="./index.html" class="logo-wrap" aria-label="Choice Aire Home">
+          <img src="./assets/images/logo.png" alt="Choice Aire Heating & Air Conditioning" width="190" height="44">
         </a>
 
-        <!-- Desktop Navigation -->
-        <nav class="nav" id="nav">
-          <ul class="nav-list">
-            <li><a href="./index.html" class="nav-link active">Home</a></li>
-            
-            <!-- Services Dropdown -->
-            <li class="has-dropdown">
-              <div class="nav-link-wrap">
-                <a href="./services.html" class="nav-link">Services</a>
-                <button type="button" class="dropdown-toggle" aria-label="Toggle Services Menu">
-                  <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
-                    <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-                  </svg>
-                </button>
-              </div>
-              <ul class="dropdown-menu">
-                <li>
-                  <a href="./services.html#emergency-ac" class="dropdown-item">
-                    <div class="dropdown-item-icon">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="4"/>
-                        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
-                      </svg>
-                    </div>
-                    <div>
-                      <div class="dropdown-item-title">Air Conditioning Repair & Install</div>
-                      <div class="dropdown-item-sub">Same-day arrival guarantee · 24/7 emergency dispatch</div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="./services.html#furnaces" class="dropdown-item">
-                    <div class="dropdown-item-icon">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 2c5 4 8 8.5 8 13a8 8 0 0 1-16 0c0-4.5 3-9 8-13z"/>
-                        <path d="M12 9c2.5 2 4 4.5 4 7a4 4 0 0 1-8 0c0-2.5 1.5-5 4-7z"/>
-                      </svg>
-                    </div>
-                    <div>
-                      <div class="dropdown-item-title">Furnace Repair & Replacement</div>
-                      <div class="dropdown-item-sub">Up to 98% AFUE stainless steel high-efficiency heat</div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="./services.html#heat-pumps" class="dropdown-item">
-                    <div class="dropdown-item-icon">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-                      </svg>
-                    </div>
-                    <div>
-                      <div class="dropdown-item-title">Inverter Heat Pumps & Hybrid</div>
-                      <div class="dropdown-item-sub">Up to 24 SEER2 + $2,000 Federal IRA Rebates</div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="./services.html#commercial" class="dropdown-item">
-                    <div class="dropdown-item-icon">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <rect x="2" y="7" width="20" height="14" rx="2"/>
-                        <line x1="6" y1="11" x2="10" y2="11"/><line x1="6" y1="14" x2="10" y2="14"/>
-                        <circle cx="16" cy="14" r="3"/>
-                      </svg>
-                    </div>
-                    <div>
-                      <div class="dropdown-item-title">Commercial HVAC & RTUs</div>
-                      <div class="dropdown-item-sub">Enterprise facility maintenance & rapid SLA response</div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="./services.html#air-quality" class="dropdown-item">
-                    <div class="dropdown-item-icon">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M3 15a4 4 0 0 0 4 4h10a4 4 0 0 0 4-4 4 4 0 0 0-4-4 6 6 0 0 0-11-2 4 4 0 0 0-3 6z"/>
-                      </svg>
-                    </div>
-                    <div>
-                      <div class="dropdown-item-title">Whole-Home Air Quality (IAQ)</div>
-                      <div class="dropdown-item-sub">MERV-16 UV air purifiers & whole-house humidifiers</div>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </li>
-
-            <!-- Offers & Pricing Dropdown -->
-            <li class="has-dropdown">
-              <div class="nav-link-wrap">
-                <a href="./pricing.html" class="nav-link">Offers & Pricing</a>
-                <button type="button" class="dropdown-toggle" aria-label="Toggle Pricing Menu">
-                  <svg width="10" height="6" viewBox="0 0 10 6" fill="none">
-                    <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-                  </svg>
-                </button>
-              </div>
-              <ul class="dropdown-menu">
-                <li>
-                  <a href="./pricing.html#packages" class="dropdown-item">
-                    <div class="dropdown-item-icon">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"/><path d="M16 8l-8 8M8 8l8 8"/>
-                      </svg>
-                    </div>
-                    <div>
-                      <div class="dropdown-item-title">Good / Better / Best Tiers</div>
-                      <div class="dropdown-item-sub">Upfront replacement packages from $89/month</div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="./pricing.html#calculator" class="dropdown-item">
-                    <div class="dropdown-item-icon">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/>
-                      </svg>
-                    </div>
-                    <div>
-                      <div class="dropdown-item-title">10-Year Energy ROI Calculator</div>
-                      <div class="dropdown-item-sub">Calculate your exact monthly electric & gas savings</div>
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="./pricing.html#rebates" class="dropdown-item">
-                    <div class="dropdown-item-icon">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-                      </svg>
-                    </div>
-                    <div>
-                      <div class="dropdown-item-title">$2,850 Clean Energy Rebates</div>
-                      <div class="dropdown-item-sub">IRA 25C + FirstEnergy & Dominion instant utility filing</div>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </li>
-
-            <li><a href="./case-studies.html" class="nav-link">Our Work & Reviews</a></li>
-            <li><a href="./about.html" class="nav-link">About Us</a></li>
-            <li><a href="./contact.html" class="nav-link">Contact & Areas</a></li>
-          </ul>
+        <!-- Desktop Navigation Menu -->
+        <nav class="nav-menu" id="navMenu">
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#problem" class="nav-link">Why Choice Aire</a>
+          <a href="#advantage" class="nav-link">Advantage</a>
+          <a href="#guides" class="nav-link">Guides</a>
+          <a href="#reviews" class="nav-link">Reviews</a>
+          <a href="#service-areas" class="nav-link">Service Areas</a>
         </nav>
 
-        <!-- Header Action CTAs -->
-        <div class="nav-cta">
-          <a href="tel:3309456223" class="nav-phone-link">
+        <!-- Header Actions: Direct Call & CTA -->
+        <div class="header-actions">
+          <a href="tel:3309456223" class="header-phone-link">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
             </svg>
             (330) 945-6223
           </a>
-          <button type="button" class="btn btn-primary btn-sm" id="quoteBtn">
-            Schedule Dispatch
+          <button type="button" class="btn btn-primary btn-sm open-booking-btn" data-service="general-estimate">
+            Get a Quote
+          </button>
+          
+          <!-- Mobile Menu Toggle -->
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+            <span></span><span></span><span></span>
           </button>
         </div>
-
-        <!-- Mobile Hamburger Toggle -->
-        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
-          <span></span><span></span><span></span>
-        </button>
       </div>
     </div>
   </header>
 
-  <!-- Slide-Out Booking Drawer -->
-  <div class="quote-drawer-overlay" id="quoteOverlay"></div>
-  <div class="quote-drawer" id="quoteDrawer">
-    <button class="quote-drawer-close" id="quoteClose" aria-label="Close booking drawer">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-        <line x1="18" y1="6" x2="6" y2="18"></line>
-        <line x1="6" y1="6" x2="18" y2="18"></line>
-      </svg>
-    </button>
-    <div class="quote-drawer-content">
-      <h3>Schedule Priority Dispatch</h3>
-      <p>Submit your details below and an Akron coordinator will call within 15 minutes to confirm your exact 45-minute arrival window.</p>
-      
-      <form class="contact-form" id="mainQuoteForm">
-        <div class="form-group">
-          <label for="quote-service">Service Needed <span class="required">*</span></label>
-          <select id="quote-service" name="service" required>
-            <option value="tune-up">$89 Precision 26-Point Tune-Up Special (Save $100)</option>
-            <option value="emergency-ac">Emergency AC Repair / No Cooling</option>
-            <option value="furnace-no-heat">Emergency Furnace Locked Out / No Heat</option>
-            <option value="heat-pump-inverter">Inverter Heat Pump Upgrade & $2,850 Rebates</option>
-            <option value="second-opinion">Free Second Opinion on Red-Tagged Unit</option>
-            <option value="commercial-sla">Commercial RTU Facility Service</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="quote-name">Full Name <span class="required">*</span></label>
-          <input type="text" id="quote-name" name="name" placeholder="John Smith" required>
-        </div>
-        <div class="form-group">
-          <label for="quote-phone">Phone Number <span class="required">*</span></label>
-          <input type="tel" id="quote-phone" name="phone" placeholder="(330) 000-0000" required>
-        </div>
-        <div class="form-group">
-          <label for="quote-address">Street Address & City <span class="required">*</span></label>
-          <input type="text" id="quote-address" name="address" placeholder="Akron, Canton, Cuyahoga Falls, etc." required>
-        </div>
-        <div class="form-group">
-          <label for="quote-notes">Describe Your HVAC Issue</label>
-          <textarea id="quote-notes" name="notes" rows="3" placeholder="Furnace making banging noise, AC blowing lukewarm air..."></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary btn-lg btn-full">
-          Confirm Priority Dispatch
-        </button>
-      </form>
-    </div>
-  </div>
-
   <main>
-    <!-- HERO SECTION (Crisp Light Mode with Real Human Technician) -->
-    <section class="hero" id="hero">
-      <div class="container container-extra-wide">
+    <!-- ==========================================================================
+         PANEL 1: HERO SECTION
+         ========================================================================== -->
+    <section class="section-hero" id="hero">
+      <div class="container container-wide">
         <div class="hero-grid">
           
           <!-- Left Column: High-Trust Copy -->
           <div class="hero-content">
-            <div class="hero-badge">
+            <div class="hero-pill-badge">
               <span class="stars">★★★★★</span>
               <span>4.9-Star Rated · Ohio Lic. #30725 & #30306</span>
             </div>
-            
-            <h1>
-              Locally Owned <span class="highlight-navy">Heating & Air</span> Serving <span class="highlight-red">Akron, Canton</span> & Beyond
+
+            <h1 class="hero-title">
+              Stay Comfortable <br>
+              <span class="text-gradient">All Year Round</span>
             </h1>
-            
-            <p class="hero-subhead">
-              When your furnace locks out in freezing winter or your AC dies during sweltering Ohio heat, our <strong>N.A.T.E. certified master technicians</strong> arrive with upfront transparent pricing, fully stocked trucks, and zero high-pressure sales.
+
+            <div class="hero-subhead">
+              Expert HVAC Services in Ohio (Akron, Canton & Surrounding Areas)
+            </div>
+
+            <p class="hero-desc">
+              When freezing Ohio winters strike or summer humidity peaks, our N.A.T.E. certified master technicians provide rapid same-day diagnosis, transparent upfront quotes, and factory-authorized craftsmanship.
             </p>
 
+            <!-- Value Pills -->
+            <div class="hero-value-pills">
+              <div class="value-pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Fast Same-Day Service</span>
+              </div>
+              <div class="value-pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Licensed Technicians</span>
+              </div>
+              <div class="value-pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>100% Satisfaction Guarantee</span>
+              </div>
+            </div>
+
+            <!-- Dual CTAs -->
             <div class="hero-actions">
-              <button type="button" class="btn btn-primary btn-lg open-quote-btn" data-service="emergency-ac">
-                Schedule Priority Service
+              <button type="button" class="btn btn-primary btn-lg open-booking-btn" data-service="general-estimate">
+                Get a Free Estimate
               </button>
               <a href="tel:3309456223" class="btn btn-outline btn-lg">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                 </svg>
-                (330) 945-6223
+                Call (330) 945-6223
               </a>
-            </div>
-
-            <!-- Trust Guarantees Checklist -->
-            <div class="hero-guarantees">
-              <div class="hero-guarantee-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Same-Day 24/7 Response</span>
-              </div>
-              <div class="hero-guarantee-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Bryant Factory Authorized</span>
-              </div>
-              <div class="hero-guarantee-item">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Upfront Written Pricing</span>
-              </div>
             </div>
           </div>
 
-          <!-- Right Column: Real Choice Aire Technician Photo -->
+          <!-- Right Column: Modern Home Visual with Floating Live Dispatch Pill -->
           <div class="hero-visual">
-            <div class="hero-image-wrapper">
-              <img src="./assets/images/technician.png" alt="Choice Aire Certified Master HVAC Technician" class="hero-technician-img" width="550" height="600">
+            <div class="hero-visual-card">
+              <img src="./assets/images/hero_home.jpg" alt="Modern Ohio home with outdoor HVAC heat pump unit" width="620" height="460">
               
               <!-- Floating Live Dispatch Pill -->
-              <div class="hero-floating-card">
+              <div class="hero-floating-pill">
                 <div class="pulse-dot"></div>
                 <div>
-                  <div class="floating-card-title">Live Dispatch Active</div>
-                  <div class="floating-card-sub">N.A.T.E. Master Techs On-Duty in Akron & Canton</div>
+                  <div class="floating-pill-title">Live Dispatch Active</div>
+                  <div class="floating-pill-sub">N.A.T.E. Master Technicians on-call in Summit & Stark</div>
                 </div>
               </div>
             </div>
@@ -310,39 +136,64 @@
       </div>
     </section>
 
-    <!-- TRUST SEALS & ACCREDITATIONS BAR -->
-    <section class="trust-bar">
-      <div class="container container-extra-wide">
-        <div class="trust-bar-grid">
+    <!-- ==========================================================================
+         PANEL 2: PROBLEM SECTION ("Is Your HVAC System...")
+         ========================================================================== -->
+    <section class="section-problem" id="problem">
+      <div class="container">
+        <div class="problem-grid">
           
-          <div class="trust-logo-item">
-            <img src="./assets/images/bryant_logo.png" alt="Bryant Factory Authorized Dealer Logo" height="48">
-            <div class="trust-logo-text">
-              Bryant Factory Authorized
-              <span>Top 5% Elite Contractor Status</span>
+          <div class="problem-content">
+            <div class="section-eyebrow">Common Warning Signs</div>
+            <h2>Is Your HVAC System Giving You Trouble?</h2>
+            <p>Heating and cooling problems never happen at a convenient time. If your unit is struggling, catching issues early saves thousands in repair bills.</p>
+
+            <div class="problem-cards">
+              <!-- Issue 1 -->
+              <div class="problem-card-item">
+                <div class="problem-icon-alert">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                </div>
+                <div class="problem-text">
+                  <h4>Not Cooling or Heating Properly?</h4>
+                  <p>Rooms feel stuffy, temperatures vary wildly between floors, or the unit blows lukewarm air constantly.</p>
+                </div>
+              </div>
+
+              <!-- Issue 2 -->
+              <div class="problem-card-item">
+                <div class="problem-icon-alert">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                </div>
+                <div class="problem-text">
+                  <h4>Making Strange Noises?</h4>
+                  <p>Banging, screeching, humming, or rattling noises often indicate loose blower components or compressor stress.</p>
+                </div>
+              </div>
+
+              <!-- Issue 3 -->
+              <div class="problem-card-item">
+                <div class="problem-icon-alert">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                </div>
+                <div class="problem-text">
+                  <h4>Driving Up Your Energy Bills?</h4>
+                  <p>Failing efficiency forces your system to run 2x longer, causing sudden and expensive spikes on your electric and gas bills.</p>
+                </div>
+              </div>
             </div>
+
+            <p style="font-weight: 600; color: var(--color-neutral-dark);">
+              You're not alone. Many Ohio homeowners face these exact issues every season change.
+            </p>
           </div>
 
-          <div class="trust-logo-item">
-            <img src="./assets/images/bbb_logo.png" alt="BBB Accredited Business A+ Rating" height="48">
-            <div class="trust-logo-text">
-              BBB Accredited A+
-              <span>Immaculate Consumer Record</span>
-            </div>
-          </div>
-
-          <div class="trust-logo-item">
-            <img src="./assets/images/nate_logo.png" alt="NATE Certified HVAC Technicians" height="48">
-            <div class="trust-logo-text">
-              N.A.T.E. Certified
-              <span>North American Technician Excellence</span>
-            </div>
-          </div>
-
-          <div class="trust-logo-item">
-            <div class="trust-logo-text" style="font-size: 1rem; border-left: 3px solid var(--color-primary); padding-left: 12px;">
-              Ohio Lic. #30725 & #30306
-              <span>Bonded, Insured & EPA Certified</span>
+          <!-- Stressed Homeowner Visual with Reassurance Overlay -->
+          <div class="problem-visual-wrap">
+            <img src="./assets/images/stressed_homeowner.jpg" alt="Homeowner frustrated with thermostat failure" width="560" height="440">
+            <div class="problem-reassurance-badge">
+              <strong>Immediate Relief Is One Call Away</strong>
+              <span>Our master technicians arrive with fully stocked trucks to diagnose and fix 92% of issues on the spot.</span>
             </div>
           </div>
 
@@ -350,448 +201,729 @@
       </div>
     </section>
 
-    <!-- CONSUMER SPECIAL OFFERS (Lawnline-grade irresistible offers) -->
-    <section class="section-offers" id="offers">
-      <div class="container container-extra-wide">
-        <div class="section-header">
-          <span class="section-label">Limited-Time Ohio Specials</span>
-          <h2>Clear, Transparent Pricing Without Surprises</h2>
-          <p>We believe in upfront honesty. Take advantage of our seasonal specials, utility rebates, and flexible monthly payment plans designed for local Northeast Ohio families.</p>
+    <!-- ==========================================================================
+         PANEL 3: SOLUTION OVERVIEW ("Complete HVAC Solutions")
+         ========================================================================== -->
+    <section class="section-solution" id="solutions">
+      <div class="container">
+        
+        <div class="section-head">
+          <div class="section-eyebrow">Comprehensive Expertise</div>
+          <h2>Complete HVAC Solutions Under One Roof</h2>
+          <p>Everything your home needs to maintain balanced temperatures, clean purified air, and maximum energy efficiency year-round.</p>
         </div>
 
-        <div class="offers-grid">
+        <!-- Interactive Category Switcher Tabs -->
+        <div class="solution-tabs-nav" id="solutionTabsNav">
+          <button type="button" class="solution-tab-btn active" data-tab="repair">Repair</button>
+          <button type="button" class="solution-tab-btn" data-tab="installation">Installation</button>
+          <button type="button" class="solution-tab-btn" data-tab="maintenance">Maintenance</button>
+          <button type="button" class="solution-tab-btn" data-tab="iaq">Indoor Air Quality</button>
+          <button type="button" class="solution-tab-btn" data-tab="upgrade">System Upgrade</button>
+        </div>
+
+        <!-- Active Solution Showcase Card -->
+        <div class="solution-content-panel" id="solutionContentPanel">
+          <div class="solution-panel-left">
+            <h3 id="solutionTabTitle">Precision Diagnostics & Rapid Repairs</h3>
+            <p id="solutionTabDesc">
+              From refrigerant leaks and dead capacitors to furnace ignition failures, our factory-trained specialists inspect every component to find the root cause and restore comfort quickly.
+            </p>
+
+            <div class="solution-checklist" id="solutionChecklist">
+              <div class="solution-check-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Same-day emergency response in Summit, Stark & Medina</span>
+              </div>
+              <div class="solution-check-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Transparent upfront quote before any work begins</span>
+              </div>
+              <div class="solution-check-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>100% parts & labor warranty on all completed repairs</span>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-primary open-booking-btn" data-service="ac-repair">
+              Schedule Repair Service →
+            </button>
+          </div>
+
+          <div class="solution-visual-box">
+            <img src="./assets/images/modern_heat_pump.jpg" alt="High-Efficiency HVAC Inverter Heat Pump" id="solutionTabImg" width="460" height="360">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PANEL 4: BENEFITS ("The Choice Aire Advantage")
+         ========================================================================== -->
+    <section class="section-benefits" id="advantage">
+      <div class="container">
+        <div class="benefits-grid">
           
-          <!-- Offer 1 -->
-          <div class="offer-card">
-            <span class="offer-badge offer-badge-red">Seasonal Special · Save $100</span>
-            <div class="offer-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="3"/>
-                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
-              </svg>
+          <!-- Left: 4 Advantage Pillars -->
+          <div class="benefits-cards-wrap">
+            
+            <div class="benefit-card">
+              <div class="benefit-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <h4>Lower Energy Bills</h4>
+              <p>Modern variable-speed inverters adapt output seamlessly, cutting cooling and heating electric usage by up to 55%.</p>
             </div>
-            <div class="offer-title">$89 Precision 26-Point Tune-Up</div>
-            <div class="offer-desc">
-              Comprehensive safety inspection, digital pressure check, electrical amp draw test, and heat exchanger crack detection. Includes our <strong>No-Breakdown Guarantee</strong>: if your unit fails this season, your $89 is 100% credited toward repair.
+
+            <div class="benefit-card">
+              <div class="benefit-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <h4>Longer System Life</h4>
+              <p>Precision calibration and 26-point annual tune-ups protect compressors and heat exchangers from premature wear.</p>
             </div>
-            <a href="#" class="offer-cta-link open-quote-btn" data-service="tune-up">Claim $89 Tune-Up →</a>
+
+            <div class="benefit-card">
+              <div class="benefit-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <h4>24/7 Emergency Service</h4>
+              <p>No waiting days in a freezing cold house or unbearable heatwave. We dispatch real technicians around the clock.</p>
+            </div>
+
+            <div class="benefit-card">
+              <div class="benefit-icon-wrap">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h4>Trusted Local Experts</h4>
+              <p>Over 35 years serving Akron and Canton with an immaculate BBB A+ rating and Bryant Factory Authorized excellence.</p>
+            </div>
+
           </div>
 
-          <!-- Offer 2 -->
-          <div class="offer-card">
-            <span class="offer-badge offer-badge-navy">Instant Utility Cash Back</span>
-            <div class="offer-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          <!-- Right: 3D Trust Shield Showcase -->
+          <div class="benefits-shield-preview">
+            <div class="shield-icon-large">
+              <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <polyline points="9 12 11 14 15 10"/>
               </svg>
             </div>
-            <div class="offer-title">Up to $2,850 in Energy Rebates</div>
-            <div class="offer-desc">
-              Combine $2,000 in Federal IRA 25C Tax Credits with up to $850 in FirstEnergy & Dominion utility rebates on qualifying Bryant Inverter systems. <strong>Choice Aire files 100% of the paperwork</strong> for you.
-            </div>
-            <a href="./pricing.html#rebates" class="offer-cta-link">Calculate Your Rebates →</a>
-          </div>
-
-          <!-- Offer 3 -->
-          <div class="offer-card">
-            <span class="offer-badge offer-badge-red">Low Monthly Payments</span>
-            <div class="offer-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/>
-              </svg>
-            </div>
-            <div class="offer-title">0% APR Financing for up to 60 Months</div>
-            <div class="offer-desc">
-              Upgrade to a whisper-quiet variable-speed inverter system for as low as $89/month with approved credit. Energy bill savings often exceed the monthly payment, creating immediate cash-flow relief.
-            </div>
-            <a href="./pricing.html#packages" class="offer-cta-link">View Financing Options →</a>
-          </div>
-
-          <!-- Offer 4 -->
-          <div class="offer-card">
-            <span class="offer-badge offer-badge-navy">Zero Pressure Guarantee</span>
-            <div class="offer-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/>
-              </svg>
-            </div>
-            <div class="offer-title">Free Second Opinion on Replacements</div>
-            <div class="offer-desc">
-              Did another contractor red-tag your furnace or quote you an exorbitant price for a replacement? Bring us their written diagnosis. A Choice Aire master technician will inspect your system 100% free of charge.
-            </div>
-            <a href="#" class="offer-cta-link open-quote-btn" data-service="second-opinion">Book Free Second Opinion →</a>
+            <h3>The Choice Aire Advantage</h3>
+            <p>
+              We treat your home like our own. Our licensed master technicians arrive in uniform with boot covers, drop cloths, and fully stocked diagnostic rigs.
+            </p>
+            <button type="button" class="btn btn-white btn-lg open-booking-btn" data-service="general-estimate">
+              Claim Your Free Consultation
+            </button>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- CORE SERVICES SECTION -->
-    <section class="section-services" id="services">
-      <div class="container container-extra-wide">
-        <div class="section-header">
-          <span class="section-label navy">Expert Heating & Cooling</span>
-          <h2>Comprehensive Residential & Commercial Services</h2>
-          <p>From rapid same-day emergency repairs to high-efficiency Bryant system replacements, our N.A.T.E. certified staff delivers meticulous workmanship backed by factory warranties.</p>
+    <!-- ==========================================================================
+         PANEL 5: SERVICES OVERVIEW ("Our HVAC Services")
+         ========================================================================== -->
+    <section class="section-services-overview" id="services">
+      <div class="container">
+        
+        <div class="services-top-bar">
+          <div class="section-head">
+            <div class="section-eyebrow">Proven Capabilities</div>
+            <h2>Our HVAC Services</h2>
+            <p>From prompt maintenance to enterprise commercial cooling, explore our specialized solutions.</p>
+          </div>
+          <a href="#service-details" class="service-link-explore" style="font-size: 1rem;">
+            Explore All Services →
+          </a>
         </div>
 
         <div class="services-grid-4">
           
-          <!-- Service 1: Furnace Repair -->
-          <div class="service-card">
-            <div class="service-card-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 2c5 4 8 8.5 8 13a8 8 0 0 1-16 0c0-4.5 3-9 8-13z"/>
-                <path d="M12 9c2.5 2 4 4.5 4 7a4 4 0 0 1-8 0c0-2.5 1.5-5 4-7z"/>
+          <!-- Service 1: AC Repair -->
+          <div class="service-overview-card">
+            <div class="service-card-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="4"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
               </svg>
             </div>
-            <span class="service-tier-badge">24/7 Emergency</span>
-            <div class="service-title">Furnace Repair & Installation</div>
-            <div class="service-desc">
-              Fast diagnostics for no-heat emergencies, pilot light lockouts, cracked heat exchangers, and blower motor failures. High-efficiency 80% to 98% AFUE replacements.
-            </div>
-            <div class="service-features-list">
-              <div class="service-feature-bullet"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Same-day emergency response</div>
-              <div class="service-feature-bullet"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> All makes & models serviced</div>
-              <div class="service-feature-bullet"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> 10-year parts & labor warranty</div>
-            </div>
-            <a href="./services.html#furnaces" class="service-action-link">Explore Furnace Services →</a>
+            <h3>AC Repair</h3>
+            <p>Rapid diagnostics, leak detection, capacitor replacements, and refrigerant recharges to restore cold airflow.</p>
+            <a href="#service-details" class="service-link-explore">Learn More →</a>
           </div>
 
-          <!-- Service 2: AC Repair -->
-          <div class="service-card">
-            <div class="service-card-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="4"/>
-                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+          <!-- Service 2: Heating Services -->
+          <div class="service-overview-card">
+            <div class="service-card-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2c5 4 8 8.5 8 13a8 8 0 0 1-16 0c0-4.5 3-9 8-13z"/><path d="M12 9c2.5 2 4 4.5 4 7a4 4 0 0 1-8 0c0-2.5 1.5-5 4-7z"/>
               </svg>
             </div>
-            <span class="service-tier-badge">Same-Day Arrival</span>
-            <div class="service-title">Air Conditioning Systems</div>
-            <div class="service-desc">
-              Rapid leak detection, compressor diagnostics, capacitor replacements, and 2025 EPA A2L-compliant refrigerant installations designed for Ohio humidity.
-            </div>
-            <div class="service-features-list">
-              <div class="service-feature-bullet"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Refrigerant leak & pressure audit</div>
-              <div class="service-feature-bullet"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Up to 20+ SEER2 cooling</div>
-              <div class="service-feature-bullet"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Whisper-quiet sound dampening</div>
-            </div>
-            <a href="./services.html#emergency-ac" class="service-action-link">Explore AC Services →</a>
+            <h3>Heating Services</h3>
+            <p>Emergency furnace repairs, heat exchanger inspections, burner cleaning, and high-efficiency 98% AFUE replacements.</p>
+            <a href="#service-details" class="service-link-explore">Learn More →</a>
           </div>
 
-          <!-- Service 3: Inverter Heat Pumps -->
-          <div class="service-card">
-            <div class="service-card-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+          <!-- Service 3: Installation -->
+          <div class="service-overview-card">
+            <div class="service-card-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
               </svg>
             </div>
-            <span class="service-tier-badge">$2,850 Rebates</span>
-            <div class="service-title">Inverter Heat Pumps & Dual-Fuel</div>
-            <div class="service-desc">
-              All-electric heating down to -15°F with cold-climate variable compressors. Slash winter heating bills by up to 55% compared to electric baseboard or old heat pumps.
-            </div>
-            <div class="service-features-list">
-              <div class="service-feature-bullet"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> $2,000 Federal IRA 25C Credit</div>
-              <div class="service-feature-bullet"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> $850 Utility Instant Rebate</div>
-              <div class="service-feature-bullet"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Dual-fuel furnace backup</div>
-            </div>
-            <a href="./services.html#heat-pumps" class="service-action-link">Explore Heat Pumps →</a>
+            <h3>Installation</h3>
+            <p>New Bryant heat pumps and AC units installed to strict factory tolerances with instant utility rebates up to $2,850.</p>
+            <a href="#service-details" class="service-link-explore">Learn More →</a>
           </div>
 
-          <!-- Service 4: Commercial HVAC -->
-          <div class="service-card">
-            <div class="service-card-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="2" y="7" width="20" height="14" rx="2"/>
-                <line x1="6" y1="11" x2="10" y2="11"/><line x1="6" y1="14" x2="10" y2="14"/>
-                <circle cx="16" cy="14" r="3"/>
+          <!-- Service 4: Maintenance -->
+          <div class="service-overview-card">
+            <div class="service-card-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
               </svg>
             </div>
-            <span class="service-tier-badge">Enterprise SLA</span>
-            <div class="service-title">Commercial RTUs & Facilities</div>
-            <div class="service-desc">
-              Custom sheet metal fabrication, rooftop packaged unit replacement, refrigeration, and commercial preventative maintenance agreements for Akron & Canton businesses.
-            </div>
-            <div class="service-features-list">
-              <div class="service-feature-bullet"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Under 45-minute emergency SLA</div>
-              <div class="service-feature-bullet"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Custom in-house sheet metal shop</div>
-              <div class="service-feature-bullet"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Preventative filter & coil plans</div>
-            </div>
-            <a href="./services.html#commercial" class="service-action-link">Explore Commercial →</a>
+            <h3>Maintenance</h3>
+            <p>$89 precision 26-point seasonal safety inspections with our signature No-Breakdown guarantee.</p>
+            <a href="#service-details" class="service-link-explore">Learn More →</a>
           </div>
 
         </div>
+
       </div>
     </section>
 
-    <!-- STATS BAND (Royal Navy Contrast) -->
-    <section class="stats-band">
-      <div class="container container-extra-wide">
-        <div class="stats-grid">
-          
-          <div class="stat-item">
-            <div class="stat-number">35+</div>
-            <div class="stat-label">Years of Local Service</div>
-            <div class="stat-sub">Established Northeast Ohio Family Contractor</div>
-          </div>
+    <!-- ==========================================================================
+         PANEL 6 & 7: SERVICE DETAILS — AC REPAIR & INSTALLATION
+         ========================================================================== -->
+    <section class="section-service-details" id="service-details">
+      <div class="container">
+        
+        <!-- Panel 6: Service Details — AC Repair -->
+        <div class="service-detail-row">
+          <div class="detail-content">
+            <span class="detail-badge-pill blue">Same-Day Priority Dispatch</span>
+            <h2>AC Repair</h2>
+            <div class="detail-tagline">Fast. Reliable. Professional.</div>
+            <p>
+              When summer temperatures climb above 90°F in Ohio, an AC breakdown can turn your house into an oven within hours. Our master technicians arrive equipped with fully stocked trucks to diagnose and repair your system without delays.
+            </p>
 
-          <div class="stat-item">
-            <div class="stat-number">14,200+</div>
-            <div class="stat-label">Homes Kept Comfortable</div>
-            <div class="stat-sub">Across Summit, Stark, Portage & Medina</div>
-          </div>
-
-          <div class="stat-item">
-            <div class="stat-number">&lt; 45 Min</div>
-            <div class="stat-label">Average Arrival Window</div>
-            <div class="stat-sub">24/7 Rapid Emergency Response</div>
-          </div>
-
-          <div class="stat-item">
-            <div class="stat-number">100%</div>
-            <div class="stat-label">Satisfaction Guarantee</div>
-            <div class="stat-sub">N.A.T.E. Master Certified Standards</div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- HOW IT WORKS (4-Step Frictionless Flow) -->
-    <section class="section-process" id="how-it-works">
-      <div class="container container-extra-wide">
-        <div class="section-header">
-          <span class="section-label">Frictionless Experience</span>
-          <h2>How Choice Aire Restores Your Comfort</h2>
-          <p>We eliminated the headaches of traditional contractor visits. Here is our simple 4-step promise to you.</p>
-        </div>
-
-        <div class="process-grid">
-          
-          <div class="process-card">
-            <div class="process-step-num">01</div>
-            <div class="process-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-              </svg>
-            </div>
-            <div class="process-title">1. Call or Dispatch</div>
-            <p class="process-desc">Call (330) 945-6223 or tap Schedule Dispatch online. A local coordinator confirms your details immediately.</p>
-          </div>
-
-          <div class="process-card">
-            <div class="process-step-num">02</div>
-            <div class="process-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-              </svg>
-            </div>
-            <div class="process-title">2. Precise Arrival Window</div>
-            <p class="process-desc">No waiting around all day. We give you an exact 45-minute window and send an SMS update when our technician is en route.</p>
-          </div>
-
-          <div class="process-card">
-            <div class="process-step-num">03</div>
-            <div class="process-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
-              </svg>
-            </div>
-            <div class="process-title">3. Upfront Written Quote</div>
-            <p class="process-desc">We thoroughly diagnose your system and show you transparent options with zero surprise fees before any work begins.</p>
-          </div>
-
-          <div class="process-card">
-            <div class="process-step-num">04</div>
-            <div class="process-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/>
-              </svg>
-            </div>
-            <div class="process-title">4. Guaranteed Comfort</div>
-            <p class="process-desc">Repairs and installations are backed by Bryant factory warranties and our 100% money-back satisfaction pledge.</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- REAL VAN & FIELD INSTALLATION SHOWCASE -->
-    <section class="section-real-work">
-      <div class="container container-extra-wide">
-        <div class="work-showcase-grid">
-          
-          <!-- Left: Real Work Van Image -->
-          <div class="work-image-card">
-            <img src="./assets/images/van_work.jpg" alt="Choice Aire Professional HVAC Service Van and Field Installation" width="600" height="440">
-          </div>
-
-          <!-- Right: Trust Checklist -->
-          <div class="work-details">
-            <span class="section-label">Meticulous Craftsmanship</span>
-            <h2>We Treat Your Home Like Our Own</h2>
-            <p>Heating and cooling isn't just about machinery; it's about the safety, comfort, and peace of mind of your family. Choice Aire technicians arrive in fully equipped service vehicles with shoe covers, drop cloths, and state-of-the-art diagnostic instruments.</p>
-
-            <div class="work-checklist">
-              <div class="work-check-item">
-                <div class="work-check-icon">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                </div>
-                <div class="work-check-text">
-                  <strong>Fully Stocked Trucks on Every Call</strong>
-                  <span>92% of common furnace and AC breakdowns resolved on the very first visit.</span>
-                </div>
+            <div class="detail-feature-list">
+              <div class="detail-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Same-Day Emergency Service Across Summit & Stark Counties</span>
               </div>
-
-              <div class="work-check-item">
-                <div class="work-check-icon">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                </div>
-                <div class="work-check-text">
-                  <strong>EPA & N.A.T.E. Certified Master Techs</strong>
-                  <span>Continuous manufacturer factory training on the newest Bryant inverter platforms.</span>
-                </div>
+              <div class="detail-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>All Major Brands Serviced (Bryant, Carrier, Trane, Lennox, Rheem)</span>
               </div>
-
-              <div class="work-check-item">
-                <div class="work-check-icon">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-                </div>
-                <div class="work-check-text">
-                  <strong>Immaculate Property Care Pledge</strong>
-                  <span>Protective floor runners, thorough clean-up, and complete old equipment haul-away.</span>
-                </div>
+              <div class="detail-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Affordable, Transparent Pricing with Zero Hidden Trip Charges</span>
               </div>
             </div>
 
-            <button type="button" class="btn btn-navy open-quote-btn" data-service="emergency-ac">
-              Schedule A Service Visit Now
+            <button type="button" class="btn btn-primary btn-lg open-booking-btn" data-service="ac-repair">
+              Book Now →
             </button>
           </div>
 
-        </div>
-      </div>
-    </section>
-
-    <!-- LOCAL OHIO SERVICE AREA & COUNTIES -->
-    <section class="section-coverage" id="service-areas">
-      <div class="container container-extra-wide">
-        <div class="coverage-grid">
-          
-          <div class="coverage-content">
-            <span class="section-label navy">Local Community Presence</span>
-            <h2>Proudly Serving Summit, Stark, Portage & Medina Counties</h2>
-            <p>From our headquarters on Englewood Ave in Akron, our technicians are stationed throughout Northeast Ohio to provide rapid arrival times to homeowners and businesses.</p>
-            
-            <div class="counties-badges">
-              <span class="county-pill">📍 Summit County (Akron, Cuyahoga Falls, Barberton, Hudson)</span>
-              <span class="county-pill">📍 Stark County (Canton, North Canton, Massillon)</span>
-              <span class="county-pill">📍 Portage County (Kent, Ravenna, Aurora)</span>
-              <span class="county-pill">📍 Medina County (Medina, Wadsworth, Brunswick)</span>
+          <div class="detail-visual">
+            <div class="detail-visual-box">
+              <img src="./assets/images/technician.png" alt="Choice Aire Certified Master HVAC Technician Servicing AC" width="600" height="400">
             </div>
+          </div>
+        </div>
 
-            <p style="font-size: 0.95rem; color: var(--text-muted);">
-              Need emergency service outside these areas? Give us a call at <strong>(330) 945-6223</strong> and our dispatch coordinator will assist you immediately.
+        <!-- Panel 7: Service Details — Installation -->
+        <div class="service-detail-row reverse">
+          <div class="detail-content">
+            <span class="detail-badge-pill amber">High-Efficiency Upgrades</span>
+            <h2>AC & Heat Pump Installation</h2>
+            <div class="detail-tagline">Energy-Efficient & Reliable</div>
+            <p>
+              Replace your aging, noisy air conditioner with a state-of-the-art variable-speed inverter system. Enjoy whisper-quiet operation, consistent humidity control, and dramatic savings on your monthly electric bills.
             </p>
 
-            <a href="tel:3309456223" class="btn btn-primary">
-              Call Dispatch: (330) 945-6223
-            </a>
+            <div class="detail-feature-list">
+              <div class="detail-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Premium Brands & Factory Authorized Bryant Equipment</span>
+              </div>
+              <div class="detail-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Expert Installation by Factory-Certified Master Technicians</span>
+              </div>
+              <div class="detail-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>10-Year Parts & Labor Long-Term Comprehensive Warranty</span>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-secondary btn-lg open-booking-btn" data-service="ac-installation">
+              Get a Quote →
+            </button>
           </div>
 
-          <div class="coverage-map-wrapper">
-            <img src="./assets/images/counties_map.png" alt="Northeast Ohio Service Coverage Map: Summit, Stark, Portage, Medina" width="500" height="380">
+          <div class="detail-visual">
+            <div class="detail-visual-box">
+              <img src="./assets/images/modern_heat_pump.jpg" alt="Premium Inverter Heat Pump and AC Condenser" width="600" height="400">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PANEL 8: TRUST SIGNALS ("Trusted by 10,000+ Homeowners")
+         ========================================================================== -->
+    <section class="section-trust-signals" id="trust-signals">
+      <div class="container">
+        <div class="trust-signals-wrap">
+          
+          <div class="trust-signals-left">
+            <div class="avatar-group">
+              <img src="./assets/images/sarah_testimonial.jpg" alt="Local Ohio Homeowner">
+              <div class="avatar-placeholder">JM</div>
+              <div class="avatar-placeholder">DK</div>
+              <div class="avatar-placeholder">TR</div>
+            </div>
+            
+            <div class="trust-signals-text">
+              <h3>Trusted by 10,000+ Ohio Homeowners</h3>
+              <div class="rating-row">
+                <span class="stars">★★★★★</span>
+                <span><strong>4.9/5 Average Rating</strong> across Google, BBB & Angi</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="trust-brand-badges">
+            <img src="./assets/images/bryant_logo.png" alt="Bryant Factory Authorized Dealer">
+            <img src="./assets/images/bbb_logo.png" alt="BBB Accredited A+">
+            <img src="./assets/images/nate_logo.png" alt="NATE Certified">
+            <a href="#reviews" class="service-link-explore">See Reviews →</a>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- 24/7 EMERGENCY CALLOUT BANNER -->
-    <section class="section-cta-banner">
+    <!-- ==========================================================================
+         PANEL 9: SOCIAL PROOF — TESTIMONIALS
+         ========================================================================== -->
+    <section class="section-testimonials" id="reviews">
       <div class="container">
-        <div class="cta-banner-content">
-          <h2>No Heat or AC Emergency Right Now?</h2>
-          <p>Don't freeze in Ohio winter or suffer in summer heat. Our emergency response team is standing by 24 hours a day, 7 days a week.</p>
-          <div class="cta-banner-actions">
+        
+        <div class="section-head">
+          <div class="section-eyebrow">Real Experiences</div>
+          <h2>What Our Customers Are Saying</h2>
+          <p>Read genuine reviews from local homeowners who rely on Choice Aire for their home comfort.</p>
+        </div>
+
+        <div class="testimonial-card-single">
+          <div class="testimonial-quote-wrap">
+            <div class="quote-mark">“</div>
+            <div class="testimonial-quote-text">
+              Choice Aire fixed our AC the same day when another company told us we had to wait 5 days in a heat wave. Their technician was courteous, explained every repair upfront, and left our basement cleaner than he found it!
+            </div>
+            <div class="testimonial-author-name">Sarah M.</div>
+            <div class="testimonial-author-sub">Toledo / Akron, OH · Verified Homeowner</div>
+          </div>
+
+          <div class="testimonial-avatar-box">
+            <img src="./assets/images/sarah_testimonial.jpg" alt="Sarah M. Choice Aire Customer" width="180" height="180">
+            <div class="testimonial-stars">★★★★★</div>
+            <div class="testimonial-verified-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Verified Service Call</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PANEL 10: STATS SECTION ("Our Impact in Ohio")
+         ========================================================================== -->
+    <section class="section-stats" id="stats">
+      <div class="container">
+        
+        <div class="section-head" style="margin-bottom: 2.5rem;">
+          <h2 style="color: #FFFFFF;">Our Impact in Ohio</h2>
+          <p style="color: #94A3B8;">Decades of steadfast reliability, honest pricing, and master-level craftsmanship.</p>
+        </div>
+
+        <div class="stats-grid">
+          
+          <div class="stat-item">
+            <div class="stat-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="stat-number">10K+</div>
+            <div class="stat-label">Happy Customers</div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="stat-number">4.9★</div>
+            <div class="stat-label">Customer Rating</div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Emergency Service</div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="stat-number">35+</div>
+            <div class="stat-label">Years in Business</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PANEL 11: GUIDE / RESOURCES ("HVAC Tips & Guides")
+         ========================================================================== -->
+    <section class="section-guide" id="guides">
+      <div class="container">
+        
+        <div class="guide-box">
+          <div class="guide-content">
+            <div class="section-eyebrow">Homeowner Knowledge</div>
+            <h2>HVAC Tips & Guides</h2>
+            <p style="font-size: 1.15rem; font-weight: 600; color: var(--color-primary); margin-bottom: 0.5rem;">
+              Keep your system in top shape.
+            </p>
+            <p>
+              Download our complimentary homeowner handbook packed with pro maintenance secrets to prevent surprise breakdowns and reduce annual heating and cooling expenses.
+            </p>
+
+            <div class="guide-feature-bullets">
+              <div class="guide-bullet-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Energy Saving Tips: Save up to $420 yearly on electric & gas</span>
+              </div>
+              <div class="guide-bullet-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>26-Point Maintenance Checklist: What to inspect before each season</span>
+              </div>
+              <div class="guide-bullet-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Seasonal Guide: Air filter schedules and heat pump winter prep</span>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-primary btn-lg open-booking-btn" data-service="download-guide">
+              Explore Guides →
+            </button>
+          </div>
+
+          <div class="guide-visual-wrap">
+            <img src="./assets/images/hvac_guide.jpg" alt="HVAC Guide Homeowner Handbook 3D Mockup" width="340" height="420">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PANEL 12: BLOG SECTION ("Latest Articles")
+         ========================================================================== -->
+    <section class="section-blog" id="blog">
+      <div class="container">
+        
+        <div class="services-top-bar">
+          <div class="section-head">
+            <div class="section-eyebrow">Expert Advice</div>
+            <h2>Latest Articles</h2>
+            <p>Practical HVAC advice, maintenance checklists, and seasonal insights from our certified team.</p>
+          </div>
+          <a href="#blog" class="service-link-explore" style="font-size: 1rem;">
+            View All Articles →
+          </a>
+        </div>
+
+        <div class="blog-grid">
+          
+          <!-- Article 1 -->
+          <div class="blog-card">
+            <div class="blog-thumb">
+              <img src="./assets/images/hero_home.jpg" alt="AC Maintenance Checklist">
+              <span class="blog-category-badge">Maintenance</span>
+            </div>
+            <div class="blog-body">
+              <h3>AC Maintenance Checklist</h3>
+              <p>Crucial steps every Ohio homeowner should complete before firing up their air conditioner for the summer.</p>
+              <a href="#guides" class="blog-link">Read Full Guide →</a>
+            </div>
+          </div>
+
+          <!-- Article 2 -->
+          <div class="blog-card">
+            <div class="blog-thumb">
+              <img src="./assets/images/stressed_homeowner.jpg" alt="Signs You Need AC Repair">
+              <span class="blog-category-badge">Diagnostics</span>
+            </div>
+            <div class="blog-body">
+              <h3>Signs You Need AC Repair</h3>
+              <p>Identify unusual odors, buzzing sounds, and weak airflow early to avoid a total compressor blowout.</p>
+              <a href="#guides" class="blog-link">Read Full Guide →</a>
+            </div>
+          </div>
+
+          <!-- Article 3 -->
+          <div class="blog-card">
+            <div class="blog-thumb">
+              <img src="./assets/images/modern_heat_pump.jpg" alt="Energy Saving Tips">
+              <span class="blog-category-badge">Efficiency</span>
+            </div>
+            <div class="blog-body">
+              <h3>Energy Saving Tips</h3>
+              <p>How inverter heat pumps and smart thermostat schedules slash winter electric and gas utility expenses.</p>
+              <a href="#guides" class="blog-link">Read Full Guide →</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PANEL 13: LOCAL PRESENCE ("Proudly Serving Ohio Communities")
+         ========================================================================== -->
+    <section class="section-local-presence" id="service-areas">
+      <div class="container">
+        
+        <div class="local-presence-grid">
+          <div class="local-presence-content">
+            <div class="section-eyebrow">Local Commitment</div>
+            <h2>Proudly Serving Ohio Communities</h2>
+            <p>
+              Headquartered on Englewood Ave in Akron, our technicians are strategically stationed across Northeast Ohio to guarantee prompt arrival times when you need us most.
+            </p>
+
+            <div class="county-tags-wrap">
+              <div class="county-tag">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>Summit County (Akron, Cuyahoga Falls, Hudson)</span>
+              </div>
+              <div class="county-tag">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>Stark County (Canton, North Canton, Massillon)</span>
+              </div>
+              <div class="county-tag">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>Portage County (Kent, Ravenna, Aurora)</span>
+              </div>
+              <div class="county-tag">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>Medina County (Medina, Wadsworth, Brunswick)</span>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-primary open-booking-btn" data-service="service-area">
+              Find Us In Your Area →
+            </button>
+          </div>
+
+          <div class="map-visual-box">
+            <img src="./assets/images/counties_map.png" alt="Northeast Ohio Service Coverage Map" width="540" height="380">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PANEL 14: FAQ SECTION ("Frequently Asked Questions")
+         ========================================================================== -->
+    <section class="section-faq" id="faq">
+      <div class="container">
+        
+        <div class="section-head">
+          <div class="section-eyebrow">Clear Answers</div>
+          <h2>Frequently Asked Questions</h2>
+          <p>Everything you need to know about our heating, cooling, and maintenance services.</p>
+        </div>
+
+        <div class="faq-list">
+          
+          <div class="faq-item active">
+            <button type="button" class="faq-question">
+              <span>How often should I service my HVAC?</span>
+              <div class="faq-toggle-icon">+</div>
+            </button>
+            <div class="faq-answer">
+              <p>We recommend servicing your system twice per year: once in the spring for your air conditioner and once in the fall for your furnace or heat pump. Routine 26-point maintenance prevents 85% of unexpected breakdowns and keeps manufacturer warranties active.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span>Do you offer emergency service?</span>
+              <div class="faq-toggle-icon">+</div>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! Choice Aire offers 24/7 priority emergency dispatch throughout Akron, Canton, and Northeast Ohio. When temperatures drop below freezing or during extreme heatwaves, our on-call technicians respond promptly with fully equipped trucks.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span>What brands do you work with?</span>
+              <div class="faq-toggle-icon">+</div>
+            </button>
+            <div class="faq-answer">
+              <p>We are a certified Bryant Factory Authorized Dealer, but our N.A.T.E. master technicians service and repair all major HVAC makes and models including Carrier, Trane, Lennox, Rheem, Goodman, American Standard, and Daikin.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question">
+              <span>How much can I save with a new inverter heat pump?</span>
+              <div class="faq-toggle-icon">+</div>
+            </button>
+            <div class="faq-answer">
+              <p>Modern variable-speed inverters cut seasonal heating and cooling electric bills by up to 55%. Additionally, qualifying systems can receive up to $2,000 in Federal IRA 25C clean energy tax credits plus up to $850 in instant utility rebates that we file on your behalf.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PANEL 15: CALL TO ACTION (MID)
+         ========================================================================== -->
+    <section class="section-mid-cta">
+      <div class="container">
+        <div class="mid-cta-box">
+          
+          <div class="mid-cta-text">
+            <h2>Need Help Now?</h2>
+            <p>Get a Free Estimate or Schedule Priority Dispatch Today!</p>
+          </div>
+
+          <div class="mid-cta-actions">
             <a href="tel:3309456223" class="btn btn-white btn-lg">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
               </svg>
-              Call 24/7 Service: (330) 945-6223
+              Call (330) 945-6223
             </a>
-            <button type="button" class="btn btn-outline-white btn-lg open-quote-btn" data-service="furnace-no-heat">
-              Dispatch Technician Online
+            <button type="button" class="btn btn-outline-white btn-lg open-booking-btn" data-service="emergency-call">
+              Book Online
             </button>
           </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PANEL 16: FINAL CTA ("Ready for Ultimate Comfort?")
+         ========================================================================== -->
+    <section class="section-final-cta">
+      <div class="final-cta-bg" style="background-image: url('./assets/images/hero_home.jpg');"></div>
+      <div class="container">
+        <div class="final-cta-content">
+          <h2>Ready for Ultimate Comfort?</h2>
+          <p>Schedule your HVAC service today and feel the difference of authentic Ohio craftsmanship, upfront transparent pricing, and 100% guaranteed satisfaction.</p>
+          <button type="button" class="btn btn-primary btn-lg open-booking-btn" data-service="final-cta">
+            Get Your Free Estimate →
+          </button>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER -->
+  <!-- ==========================================================================
+       PANEL 17: FOOTER ("Your comfort. Our priority.")
+       ========================================================================== -->
   <footer class="footer">
-    <div class="container container-extra-wide">
-      <div class="footer-top">
+    <div class="container container-wide">
+      
+      <div class="footer-grid">
         
-        <div>
-          <img src="./assets/images/logo.png" alt="Choice Aire Logo" class="footer-logo">
-          <p class="footer-desc">
-            Choice Aire provides rapid furnace repair, AC installation, heat pump upgrades, and commercial HVAC across Northeast Ohio. Bryant Factory Authorized Dealer.
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <img src="./assets/images/logo.png" alt="Choice Aire Logo">
+          <div class="footer-slogan">Your comfort. Our priority.</div>
+          <p>
+            Locally owned and operated heating & air conditioning company serving Northeast Ohio for over 35 years. Bryant Factory Authorized Dealer.
           </p>
-          <div style="display:flex; gap:16px; margin-top:16px;">
-            <img src="./assets/images/bbb_logo.png" alt="BBB" height="32" style="background:#fff; border-radius:4px; padding:2px;">
-            <img src="./assets/images/bryant_logo.png" alt="Bryant" height="32" style="background:#fff; border-radius:4px; padding:2px;">
-            <img src="./assets/images/nate_logo.png" alt="NATE" height="32" style="background:#fff; border-radius:4px; padding:2px;">
+          <div style="display: flex; gap: 12px; margin-top: 1rem;">
+            <img src="./assets/images/bbb_logo.png" alt="BBB" height="30" style="background:#fff; border-radius:4px; padding:2px;">
+            <img src="./assets/images/bryant_logo.png" alt="Bryant" height="30" style="background:#fff; border-radius:4px; padding:2px;">
+            <img src="./assets/images/nate_logo.png" alt="NATE" height="30" style="background:#fff; border-radius:4px; padding:2px;">
           </div>
         </div>
 
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="#hero">Home</a>
+            <a href="#services">Services</a>
+            <a href="#advantage">About Us</a>
+            <a href="#guides">Guides & Resources</a>
+            <a href="#reviews">Customer Reviews</a>
+          </div>
+        </div>
+
+        <!-- Services -->
         <div class="footer-col">
           <h4>Services</h4>
           <div class="footer-links">
-            <a href="./services.html#emergency-ac">Air Conditioning Repair</a>
-            <a href="./services.html#furnaces">Furnace & Heating Repair</a>
-            <a href="./services.html#heat-pumps">Inverter Heat Pumps</a>
-            <a href="./services.html#commercial">Commercial RTUs & Facilities</a>
-            <a href="./services.html#air-quality">Indoor Air Quality (IAQ)</a>
-            <a href="./pricing.html#packages">Good/Better/Best Tiers</a>
+            <a href="#service-details">AC Repair</a>
+            <a href="#service-details">Heating & Furnace</a>
+            <a href="#service-details">Inverter Installation</a>
+            <a href="#services">Maintenance Plans</a>
+            <a href="#solutions">Indoor Air Quality</a>
           </div>
         </div>
 
+        <!-- Contact Us -->
         <div class="footer-col">
-          <h4>Offers & Company</h4>
-          <div class="footer-links">
-            <a href="#offers">$89 Precision Tune-Up</a>
-            <a href="./pricing.html#rebates">$2,850 Clean Energy Rebates</a>
-            <a href="./pricing.html#calculator">10-Year ROI Calculator</a>
-            <a href="./case-studies.html">Case Studies & Reviews</a>
-            <a href="./about.html">Why Choice Aire?</a>
-            <a href="./contact.html">Service Areas & Dispatch</a>
+          <h4>Contact Us</h4>
+          <div class="footer-contact-row">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <div>
+              <strong>(330) 945-6223</strong><br>
+              24/7 Live Emergency Line
+            </div>
           </div>
-        </div>
-
-        <div class="footer-col">
-          <h4>Akron Headquarters</h4>
-          <div class="footer-contact-item">
+          <div class="footer-contact-row">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             <div>
               <strong>1940 Englewood Ave.</strong><br>
               Akron, OH 44312
             </div>
           </div>
-          <div class="footer-contact-item">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <div>
-              <strong>(330) 945-6223</strong><br>
-              24-Hour Emergency Line
-            </div>
-          </div>
-          <div class="footer-contact-item">
+          <div class="footer-contact-row">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             <div>
-              <strong>State Licenses:</strong><br>
-              Ohio Lic. #30725 & #30306
+              <strong>Ohio Lic. #30725 & #30306</strong><br>
+              EPA Certified & Bonded
             </div>
           </div>
         </div>
@@ -802,24 +934,94 @@
         <div>© 2026 Choice Aire Heating & Air Conditioning. All rights reserved.</div>
         <div>Serving Summit, Stark, Portage & Medina Counties.</div>
       </div>
+
     </div>
   </footer>
 
-  <!-- MOBILE STICKY BOTTOM ACTION BAR -->
-  <div class="mobile-action-bar">
-    <div class="mobile-action-grid">
+  <!-- ==========================================================================
+       PANEL 18 & 20: STICKY CONCIERGE & BOOKING DRAWER
+       ========================================================================== -->
+  <!-- Floating Live Concierge Widget -->
+  <div class="floating-concierge" id="conciergeWidget" title="Chat with Choice Aire Assistant">
+    <img src="./assets/images/sarah_testimonial.jpg" alt="Support Specialist" class="concierge-avatar">
+    <div class="concierge-text">
+      <div class="concierge-title">How can we help you today?</div>
+      <div class="concierge-sub">N.A.T.E. Master Tech on standby</div>
+    </div>
+    <div class="concierge-chat-bubble-icon">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    </div>
+  </div>
+
+  <!-- Slide-Out Free Estimate Booking Drawer -->
+  <div class="booking-drawer-overlay" id="bookingOverlay"></div>
+  <div class="booking-drawer" id="bookingDrawer">
+    <button type="button" class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close booking drawer">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+
+    <h3 style="font-size: 1.6rem; margin-bottom: 0.5rem;">Schedule Service / Estimate</h3>
+    <p style="font-size: 0.95rem;">Enter your contact information below and our Akron dispatch coordinator will confirm your exact arrival window.</p>
+
+    <form class="booking-form" id="bookingForm">
+      <div class="form-group">
+        <label for="bookService">Service Needed</label>
+        <select id="bookService" name="service" required>
+          <option value="ac-repair">Air Conditioning Repair / No Cooling</option>
+          <option value="ac-installation">High-Efficiency AC & Inverter Installation</option>
+          <option value="furnace-repair">Furnace / Heating Emergency Repair</option>
+          <option value="tune-up">$89 Precision 26-Point Tune-Up</option>
+          <option value="download-guide">Download Free HVAC Guide & Checklist</option>
+          <option value="general-estimate">General Free Estimate / Consultation</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="bookName">Your Full Name</label>
+        <input type="text" id="bookName" name="name" placeholder="John Smith" required>
+      </div>
+
+      <div class="form-group">
+        <label for="bookPhone">Phone Number</label>
+        <input type="tel" id="bookPhone" name="phone" placeholder="(330) 000-0000" required>
+      </div>
+
+      <div class="form-group">
+        <label for="bookAddress">City / Address</label>
+        <input type="text" id="bookAddress" name="address" placeholder="Akron, Canton, Cuyahoga Falls, etc." required>
+      </div>
+
+      <div class="form-group">
+        <label for="bookNotes">Issue Description (Optional)</label>
+        <textarea id="bookNotes" name="notes" rows="3" placeholder="AC making humming sound, blowing warm air, looking for estimate..."></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg btn-full" id="submitBookingBtn">
+        Confirm Priority Dispatch
+      </button>
+
+      <div id="bookingSuccessMsg" style="display:none; padding:1rem; background:var(--color-accent-subtle); border:1px solid var(--color-accent); border-radius:var(--radius-sm); color:var(--color-accent-hover); font-weight:600; text-align:center;">
+        ✓ Request received! An Akron coordinator will call you shortly.
+      </div>
+    </form>
+  </div>
+
+  <!-- ==========================================================================
+       PANEL 19: MOBILE BOTTOM BAR
+       ========================================================================== -->
+  <div class="mobile-bottom-bar">
+    <div class="mobile-bottom-grid">
       <a href="tel:3309456223" class="btn btn-outline btn-full">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-        </svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         Call 24/7
       </a>
-      <button type="button" class="btn btn-primary btn-full open-quote-btn" data-service="emergency-ac">
+      <button type="button" class="btn btn-primary btn-full open-booking-btn" data-service="mobile-book">
         Book Service
       </button>
     </div>
   </div>
 
+  <!-- Application Logic -->
   <script src="./app.js"></script>
 </body>
 </html>
