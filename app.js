@@ -1,7 +1,6 @@
 /**
- * Choice Aire — Universal Multi-Page Application Logic
- * High-performance, zero-friction client-side interactivity
- * Steve Jobs-Grade Polish & Tactile Feedback
+ * Choice Aire — Universal Application Logic
+ * Powered by Lawnline Interactive Engine
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -11,80 +10,89 @@ document.addEventListener('DOMContentLoaded', () => {
   initTriageRouting();
   initRoiCalculator();
   initComparisonSlider();
-  initContactForm();
 });
 
 /* --------------------------------------------------------------------------
    1. Header Sticky Effect
    -------------------------------------------------------------------------- */
 function initHeader() {
-  const header = document.querySelector('.header');
+  const header = document.getElementById('header') || document.querySelector('.header');
   if (!header) return;
 
-  window.addEventListener('scroll', () => {
+  const handleScroll = () => {
     if (window.scrollY > 30) {
       header.classList.add('scrolled');
     } else {
       header.classList.remove('scrolled');
     }
-  });
+  };
+
+  window.addEventListener('scroll', handleScroll);
+  handleScroll();
 }
 
 /* --------------------------------------------------------------------------
    2. Mobile Navigation Toggle
    -------------------------------------------------------------------------- */
 function initMobileMenu() {
-  const toggle = document.querySelector('.mobile-toggle');
-  const navList = document.querySelector('.nav-list');
-  if (!toggle || !navList) return;
+  const toggle = document.getElementById('mobileToggle') || document.querySelector('.mobile-toggle');
+  const nav = document.getElementById('nav') || document.querySelector('.nav');
+  if (!toggle || !nav) return;
 
   toggle.addEventListener('click', () => {
-    navList.classList.toggle('mobile-open');
-    const isOpen = navList.classList.contains('mobile-open');
-    toggle.setAttribute('aria-expanded', isOpen);
+    nav.classList.toggle('active');
+    toggle.classList.toggle('active');
+  });
+
+  // Dropdown toggle on mobile
+  const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+  dropdownToggles.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const parent = btn.closest('.has-dropdown');
+      if (parent) {
+        parent.classList.toggle('active');
+      }
+    });
   });
 }
 
 /* --------------------------------------------------------------------------
-   3. Universal Slide-out Quote & Dispatch Drawer
+   3. Quote Drawer (Lawnline Style)
    -------------------------------------------------------------------------- */
 function initQuoteDrawer() {
-  const backdrop = document.querySelector('.drawer-backdrop');
-  const drawer = document.querySelector('.slide-drawer');
-  const openButtons = document.querySelectorAll('.open-drawer-btn, #quoteBtn');
-  const closeButton = document.querySelector('.drawer-close');
+  const drawer = document.getElementById('quoteDrawer') || document.querySelector('.quote-drawer');
+  const overlay = document.getElementById('quoteOverlay') || document.querySelector('.quote-drawer-overlay');
+  const closeBtn = document.getElementById('quoteClose') || document.querySelector('.quote-drawer-close');
+  const openButtons = document.querySelectorAll('#quoteBtn, #bottomQuoteBtn, .open-quote-btn, .btn-primary[id*="Quote"]');
 
-  if (!backdrop || !drawer) return;
+  if (!drawer || !overlay) return;
 
-  const openDrawer = (serviceType) => {
-    if (serviceType) {
-      const select = document.getElementById('drawer-service-select');
-      if (select) select.value = serviceType;
+  const openDrawer = (serviceVal) => {
+    if (serviceVal) {
+      const select = document.getElementById('quote-service');
+      if (select) select.value = serviceVal;
     }
-    backdrop.classList.add('active');
     drawer.classList.add('active');
+    overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
   };
 
   const closeDrawer = () => {
-    backdrop.classList.remove('active');
     drawer.classList.remove('active');
+    overlay.classList.remove('active');
     document.body.style.overflow = '';
   };
 
   openButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      const service = btn.getAttribute('data-service') || '';
-      openDrawer(service);
+      openDrawer();
     });
   });
 
-  if (closeButton) {
-    closeButton.addEventListener('click', closeDrawer);
-  }
-
-  backdrop.addEventListener('click', closeDrawer);
+  if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+  overlay.addEventListener('click', closeDrawer);
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && drawer.classList.contains('active')) {
@@ -92,23 +100,23 @@ function initQuoteDrawer() {
     }
   });
 
-  // Drawer Form Submission
-  const form = document.getElementById('drawer-form');
+  // Drawer Form Submit
+  const form = document.getElementById('mainQuoteForm');
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const submitBtn = form.querySelector('button[type="submit"]');
       submitBtn.disabled = true;
-      submitBtn.innerHTML = 'Transmitting Priority Dispatch...';
+      submitBtn.innerHTML = 'Transmitting to Akron Dispatch...';
 
       setTimeout(() => {
         form.innerHTML = `
-          <div style="text-align: center; padding: 2rem 1rem;">
-            <div style="width: 58px; height: 58px; background: rgba(2, 132, 199, 0.15); border: 1px solid #38bdf8; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem auto; color: #38bdf8; font-size: 1.6rem;">✓</div>
-            <h3 style="color: #fff; margin-bottom: 0.5rem;">Dispatch Request Confirmed</h3>
-            <p style="font-size: 0.96rem; color: #cbd5e1; margin-bottom: 1.5rem;">Your emergency request has been routed to our Akron Central Dispatcher. A master technician is reviewing your location.</p>
-            <div style="background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.08); padding: 1.15rem; border-radius: 10px; font-size: 0.92rem; color: #fbbf24; font-weight: 700;">
-              Estimated On-Site Arrival Window: 35-45 Minutes
+          <div style="text-align:center; padding:30px 10px;">
+            <div style="width:60px; height:60px; background:rgba(164,217,51,0.2); border:2px solid var(--color-lime-green); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 20px auto; color:var(--color-lime-green); font-size:24px; font-weight:800;">✓</div>
+            <h3 style="color:#fff; text-transform:uppercase; margin-bottom:10px;">Priority Dispatch Confirmed</h3>
+            <p style="color:var(--color-gray-lighter); font-size:15px; margin-bottom:20px;">Your request is en route to our Akron Central Operations Board. An Ohio coordinator will call and text you within 15 minutes.</p>
+            <div style="background:#111; border:1px solid var(--color-lime-green); padding:12px; border-radius:8px; font-weight:700; color:var(--color-lime-green);">
+              Estimated Tech On-Site Window: 35-45 Minutes
             </div>
           </div>
         `;
@@ -118,23 +126,30 @@ function initQuoteDrawer() {
 }
 
 /* --------------------------------------------------------------------------
-   4. Hero Diagnostic Triage Pre-fill Routing
+   4. Triage Buttons Pre-Fill
    -------------------------------------------------------------------------- */
 function initTriageRouting() {
-  const triageButtons = document.querySelectorAll('.triage-btn');
-  const backdrop = document.querySelector('.drawer-backdrop');
-  const drawer = document.querySelector('.slide-drawer');
-  const select = document.getElementById('drawer-service-select');
-  const notes = document.getElementById('drawer-notes');
+  const triageButtons = document.querySelectorAll('.triage-trigger');
+  const drawer = document.getElementById('quoteDrawer');
+  const overlay = document.getElementById('quoteOverlay');
+  const select = document.getElementById('quote-service');
+  const notes = document.getElementById('quote-notes');
 
   triageButtons.forEach(btn => {
     btn.addEventListener('click', () => {
-      const issue = btn.getAttribute('data-issue') || 'AC Emergency Diagnostic';
-      if (select) select.value = 'emergency';
-      if (notes) notes.value = `Issue reported: ${issue}`;
-      if (backdrop && drawer) {
-        backdrop.classList.add('active');
+      const issue = btn.getAttribute('data-issue') || 'AC Emergency';
+      if (select) {
+        if (issue.includes('AC')) select.value = 'emergency-ac';
+        else if (issue.includes('Furnace')) select.value = 'furnace-no-heat';
+        else if (issue.includes('Inverter')) select.value = 'heat-pump-inverter';
+        else select.value = 'emergency-ac';
+      }
+      if (notes) {
+        notes.value = `Reported symptom: ${issue}. Please dispatch nearest technician.`;
+      }
+      if (drawer && overlay) {
         drawer.classList.add('active');
+        overlay.classList.add('active');
         document.body.style.overflow = 'hidden';
       }
     });
@@ -142,7 +157,7 @@ function initTriageRouting() {
 }
 
 /* --------------------------------------------------------------------------
-   5. Interactive 10-Year Energy ROI & IRA Rebate Calculator
+   5. Interactive 10-Year ROI Calculator
    -------------------------------------------------------------------------- */
 function initRoiCalculator() {
   const ageSlider = document.getElementById('roi-age-slider');
@@ -155,103 +170,73 @@ function initRoiCalculator() {
   const taxCreditEl = document.getElementById('roi-tax-credit');
   const tenYearTotalEl = document.getElementById('roi-10yr-total');
 
-  const updateCalculations = () => {
+  const update = () => {
     const age = parseInt(ageSlider.value, 10);
     const bill = parseInt(billSlider.value, 10);
 
     if (ageVal) ageVal.textContent = `${age} Years Old`;
     if (billVal) billVal.textContent = `$${bill}/mo`;
 
-    // Calculation logic based on SEER degradation (older units run 8-10 SEER vs modern 20+ SEER)
-    let efficiencyGain = 0.28;
-    if (age >= 12 && age < 16) efficiencyGain = 0.38;
-    else if (age >= 16) efficiencyGain = 0.52;
+    let gain = 0.32;
+    if (age >= 12 && age < 16) gain = 0.44;
+    else if (age >= 16) gain = 0.54;
 
-    const annualBill = bill * 12;
-    const annualSavings = Math.round(annualBill * efficiencyGain);
-    const federalTaxCredit = 2000; // IRA 25C max heat pump credit
-    const tenYearTotal = (annualSavings * 10) + federalTaxCredit;
+    const annualSavings = Math.round(bill * 12 * gain);
+    const taxCredit = 2000;
+    const tenYear = (annualSavings * 10) + taxCredit;
 
     if (annualSavingsEl) annualSavingsEl.textContent = `$${annualSavings.toLocaleString()}/yr`;
-    if (taxCreditEl) taxCreditEl.textContent = `$${federalTaxCredit.toLocaleString()}`;
-    if (tenYearTotalEl) tenYearTotalEl.textContent = `$${tenYearTotal.toLocaleString()}`;
+    if (taxCreditEl) taxCreditEl.textContent = `$${taxCredit.toLocaleString()}`;
+    if (tenYearTotalEl) tenYearTotalEl.textContent = `$${tenYear.toLocaleString()}`;
   };
 
-  ageSlider.addEventListener('input', updateCalculations);
-  billSlider.addEventListener('input', updateCalculations);
-  updateCalculations();
+  ageSlider.addEventListener('input', update);
+  billSlider.addEventListener('input', update);
+  update();
 }
 
 /* --------------------------------------------------------------------------
-   6. Touch / Mouse Before & After Comparison Slider
+   6. Touch / Mouse Comparison Slider
    -------------------------------------------------------------------------- */
 function initComparisonSlider() {
   const container = document.querySelector('.comparison-slider-box');
-  const afterImgBox = document.querySelector('.comparison-after');
+  const afterBox = document.querySelector('.comparison-after');
   const handle = document.querySelector('.comparison-slider-handle');
 
-  if (!container || !afterImgBox || !handle) return;
+  if (!container || !afterBox || !handle) return;
 
-  let isDragging = false;
+  let dragging = false;
 
-  const moveSlider = (x) => {
+  const setPos = (x) => {
     const rect = container.getBoundingClientRect();
     let posX = x - rect.left;
     if (posX < 0) posX = 0;
     if (posX > rect.width) posX = rect.width;
 
-    const percentage = (posX / rect.width) * 100;
-    afterImgBox.style.width = `${percentage}%`;
-    handle.style.left = `${percentage}%`;
+    const pct = (posX / rect.width) * 100;
+    afterBox.style.width = `${pct}%`;
+    handle.style.left = `${pct}%`;
   };
 
   container.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    moveSlider(e.clientX);
+    dragging = true;
+    setPos(e.clientX);
   });
 
-  window.addEventListener('mouseup', () => {
-    isDragging = false;
-  });
-
+  window.addEventListener('mouseup', () => { dragging = false; });
   window.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-    moveSlider(e.clientX);
+    if (!dragging) return;
+    setPos(e.clientX);
   });
 
-  // Touch Support
   container.addEventListener('touchstart', (e) => {
-    isDragging = true;
-    moveSlider(e.touches[0].clientX);
+    dragging = true;
+    setPos(e.touches[0].clientX);
   });
 
-  window.addEventListener('touchend', () => {
-    isDragging = false;
-  });
-
+  window.addEventListener('touchend', () => { dragging = false; });
   window.addEventListener('touchmove', (e) => {
-    if (!isDragging) return;
-    moveSlider(e.touches[0].clientX);
-  });
-}
-
-/* --------------------------------------------------------------------------
-   7. Contact Page Interactive Form
-   -------------------------------------------------------------------------- */
-function initContactForm() {
-  const form = document.getElementById('contact-page-form');
-  const successBox = document.getElementById('contact-form-success');
-  if (!form || !successBox) return;
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const btn = form.querySelector('button[type="submit"]');
-    btn.disabled = true;
-    btn.innerHTML = 'Connecting to Central Dispatch...';
-
-    setTimeout(() => {
-      form.style.display = 'none';
-      successBox.style.display = 'block';
-    }, 1000);
+    if (!dragging) return;
+    setPos(e.touches[0].clientX);
   });
 }
