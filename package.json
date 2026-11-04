@@ -1,0 +1,12 @@
+{
+  "name": "choice-aire-enterprise-web",
+  "version": "1.0.0",
+  "description": "Choice Aire 7-8 Figure High-Converting Trade Client Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "keywords": ["hvac", "trade-client", "conversion-rate-optimization", "choice-aire"],
+  "author": "Antigravity Growth Agency",
+  "license": "ISC"
+}
