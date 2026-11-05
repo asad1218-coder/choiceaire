@@ -2892,11 +2892,15 @@ ul {
     justify-content: center;
     width: 44px;
     height: 44px;
+    min-width: 44px;
+    min-height: 44px;
     background: #F1F5F9;
     border: 1px solid var(--color-border);
     border-radius: var(--radius-sm);
     cursor: pointer;
-    z-index: 1060;
+    z-index: 100005 !important;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .mobile-toggle span {
@@ -2925,20 +2929,20 @@ ul {
     top: 74px;
     left: 0;
     right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    width: 100vw;
+    height: calc(100vh - 74px);
+    height: calc(100dvh - 74px);
+    background: #FFFFFF;
     display: flex;
     flex-direction: column;
-    padding: 2rem 2.5rem 6rem;
+    padding: 2rem 2.5rem 5rem;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     transform: translateY(-100%);
     opacity: 0;
     visibility: hidden;
-    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease, visibility 0.25s;
-    z-index: 1040;
+    transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.22s ease, visibility 0.22s;
+    z-index: 100001 !important;
     box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
   }
 
@@ -3133,7 +3137,22 @@ ul {
   }
 
   body.menu-open {
-    overflow: hidden;
+    overflow: hidden !important;
+    touch-action: none;
+  }
+
+  body.menu-open .header {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: #FFFFFF !important;
+    z-index: 100000 !important;
+  }
+
+  body.menu-open .mobile-bottom-bar,
+  body.menu-open .floating-concierge {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
   }
 
   body {
@@ -3157,11 +3176,15 @@ ul {
     justify-content: center;
     width: 44px;
     height: 44px;
+    min-width: 44px;
+    min-height: 44px;
     background: #F1F5F9;
     border: 1px solid var(--color-border);
     border-radius: var(--radius-sm);
     cursor: pointer;
-    z-index: 1060;
+    z-index: 100005 !important;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .mobile-toggle span {
@@ -3190,21 +3213,21 @@ ul {
     top: 64px;
     left: 0;
     right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.98);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    width: 100vw;
+    height: calc(100vh - 64px);
+    height: calc(100dvh - 64px);
+    background: #FFFFFF;
     display: flex;
     flex-direction: column;
-    padding: 1.5rem 1.75rem 6rem;
+    padding: 1.5rem 1.75rem 5rem;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     transform: translateY(-100%);
     opacity: 0;
     visibility: hidden;
-    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease, visibility 0.25s;
-    z-index: 1040;
-    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);
+    transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.22s ease, visibility 0.22s;
+    z-index: 100001 !important;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.18);
   }
 
   .nav-menu.active {
@@ -3484,7 +3507,7 @@ ul {
     height: 32px;
   }
 
-  /* Sarah M. Testimonial Card */
+  /* Featured Testimonial Card */
   .testimonial-card-single {
     padding: 2rem 1.25rem;
     gap: 1.75rem;

@@ -43,7 +43,14 @@ function initMobileMenu() {
   const navMenu = document.getElementById('navMenu');
   if (!toggle || !navMenu) return;
 
+  const closeMenu = () => {
+    navMenu.classList.remove('active');
+    toggle.classList.remove('active');
+    document.body.classList.remove('menu-open');
+  };
+
   const toggleMenu = (e) => {
+    e.preventDefault();
     e.stopPropagation();
     const isActive = navMenu.classList.toggle('active');
     toggle.classList.toggle('active');
@@ -58,9 +65,7 @@ function initMobileMenu() {
     link.addEventListener('click', () => {
       const isMobileNav = window.getComputedStyle(toggle).display !== 'none';
       if (isMobileNav) {
-        navMenu.classList.remove('active');
-        toggle.classList.remove('active');
-        document.body.classList.remove('menu-open');
+        closeMenu();
       }
     });
   });
@@ -72,6 +77,7 @@ function initMobileMenu() {
       const isMobileNav = window.getComputedStyle(toggle).display !== 'none';
       if (isMobileNav) {
         e.preventDefault();
+        e.stopPropagation();
         const parentItem = link.closest('.nav-item');
         if (parentItem) {
           parentItem.classList.toggle('open');
@@ -83,18 +89,14 @@ function initMobileMenu() {
   // Close menu on click outside
   document.addEventListener('click', (e) => {
     if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && !toggle.contains(e.target)) {
-      navMenu.classList.remove('active');
-      toggle.classList.remove('active');
-      document.body.classList.remove('menu-open');
+      closeMenu();
     }
   });
 
   // Close menu on ESC key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && navMenu.classList.contains('active')) {
-      navMenu.classList.remove('active');
-      toggle.classList.remove('active');
-      document.body.classList.remove('menu-open');
+      closeMenu();
     }
   });
 }
@@ -108,29 +110,29 @@ const solutionData = {
     desc: 'From refrigerant leaks and dead capacitors to furnace ignition failures, our factory-trained specialists inspect every component to find the root cause and restore comfort quickly.',
     img: './assets/images/modern_heat_pump.webp',
     checks: [
-      'Same-day emergency response in Summit, Stark & Medina',
+      'Rapid response across Summit, Stark, Portage & Medina',
       'Transparent upfront quote before any work begins',
-      '100% parts & labor warranty on all completed repairs'
+      'Service by N.A.T.E. and EPA certified master technicians'
     ]
   },
   installation: {
     title: 'Energy-Efficient System Replacements',
-    desc: 'Upgrade to high-efficiency Bryant inverter heat pumps or gas furnaces. Cut your seasonal electric and gas utility usage by up to 55% while qualifying for $2,850 in instant rebates.',
+    desc: 'Upgrade to high-efficiency Bryant inverter heat pumps or gas furnaces. Optimize seasonal energy efficiency with qualifying utility rebates and flexible financing options with approved credit.',
     img: './assets/images/modern_heat_pump.webp',
     checks: [
       'Top-tier Bryant Factory Authorized equipment',
-      'Zero-down and 0% APR financing options available',
-      'Full factory 10-year parts & equipment warranty'
+      'Special financing options available with approved credit',
+      'Manufacturer warranty protection on new equipment'
     ]
   },
   maintenance: {
-    title: '$89 Precision 26-Point Tune-Up & Safety Audit',
-    desc: 'Seasonal preventative maintenance ensures maximum airflow, prevents unexpected freeze-ups, cleans critical coils, and verifies electrical amp draw and safety shutoffs.',
+    title: 'Precision Seasonal Tune-Up & Safety Audit',
+    desc: 'Seasonal preventative maintenance ensures optimal airflow, cleans critical coils, checks electrical connections, and verifies safe burner and blower operation before seasonal extremes hit.',
     img: './assets/images/technician.webp',
     checks: [
-      'Comprehensive 26-point furnace and AC inspection',
-      'Signature No-Breakdown seasonal guarantee',
-      'Priority scheduling status for annual club members'
+      'Comprehensive safety and performance inspection',
+      'Verify electrical connections, amp draw and safety shutoffs',
+      'Help maintain equipment efficiency and reduce seasonal strain'
     ]
   },
   iaq: {
